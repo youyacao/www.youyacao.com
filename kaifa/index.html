@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>成都市一颗优雅草科技有限公司-关于我们详细介绍页面</title>
+    <meta name="keywords" content="短视频系统,短视频系统开发,短视频系统源码,短视频系统APP,YYC松鼠短视频官网,优雅草技术支持论坛,免费PHP源码,PHP源码,源码分享,YYC松鼠系统系列,直播系统,站长导航">
+    <meta name="description" content="成都市一颗优雅草科技有限公司自2015年起注册专注于PHP网站开发和APP系统定制，2019年自研发YYC松鼠短视频,YYC松鼠聚合/直播系统完整第一个版本开发并发布，现主营业务为YYC松鼠系统，优雅草教育系统和PHP免费技术支持论坛，提供免费的PHP源码分享学习，php免费学习教程，PHP语言讨论以及PHP技术交流的平台">
+  
+  
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            background: none；
+        }
+
+        .navbar-default {
+            background-color: rgba(90, 90, 90, 0.5);
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            height: 70px;
+            border: none;
+        }
+
+		.imgBox{
+			background:url('img/imgBox.png');
+		}
+
+        .row {
+            margin: 0;
+        }
+
+        .maxWidth {
+            max-width: 1920px;
+        }
+
+        .container-fiveparts {
+            /* height: 500px; */
+            background-color: #000;
+            padding-top: 20px;
+        }
+
+        .container-fiveparts2 {
+            margin-bottom: 40px
+        }
+
+        .col-xs-1-5,
+        .col-sm-1-5,
+        .col-md-1-5,
+        .col-lg-1-5 {
+            position: relative;
+            min-height: 1px;
+            text-align: center
+        }
+
+        .col-xs-1-5 {
+            width: 20%;
+            float: left;
+        }
+
+        .designList {
+            text-align: center;
+            min-height: 260px;
+        }
+
+        .chatpart1 {
+            width: 50%;
+            padding: 60px 80px;
+            float: left;
+        }
+
+        .chatpart2 {
+            width: 50%;
+            float: left;
+            padding-top: 180px
+        }
+
+        .teamPic {
+            margin: 100px auto 40px;
+        }
+
+        .p60 {
+            width: 60%;
+        }
+
+        @media (min-width: 768px) {
+            .col-sm-1-5 {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        @media (min-width: 200px) {
+            .col-md-1-5 {
+                width: 20%;
+                float: left;
+                height: 500px;
+                padding-top: 150px
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .col-lg-1-5 {
+                width: 20%;
+                float: left;
+            }
+        }
+
+        /* @media (max-width: 600px){
+            .col-md-1-5>img {
+                width: 60px;
+            }
+        } */
+
+        @media (max-width: 600px) {
+			.buttona{
+				display: none;
+			}
+            .bottom {
+                font-size: 4px;
+                color: #FFFFFF;
+            }
+			.whiteFontTitle {
+				font-size:12px!important;
+			}
+
+            .teamPic {
+                margin: 20px auto 20px;
+            }
+
+            .fs12 {
+                font-size: 12px;
+            }
+            .p60{
+                width: 100%;
+            }
+            .col-md-1-5 {
+                height: 130px;
+                padding-top: 10px
+            }
+
+            .col-md-1-5>div>img {
+                width: 55px!important;
+				height:40px!important;
+            }
+
+            /* .col-md-1-5 .thebox {
+                min-height: 100px;
+            } */
+
+            .whiteFont {
+                font-size: 10px;
+            }
+
+            .whiteFontTitle {
+                font-size: 14px;
+            }
+
+            .chatpart1 {
+                width: 100%;
+                padding: 10px 10px;
+            }
+
+            .chatpart2 {
+                width: 100%;
+                padding: 10px 10px;
+            }
+
+
+            .show-tile .row .col-md-8 img {
+                position: relative;
+                left: -30px;
+                width: 120px;
+                height: 40px;
+            }
+
+            .show-tile .row .col-md-1 img {
+                width: 70px;
+                height: 10px;
+            }
+
+            #moreser>img {
+                width: 100px;
+            }
+
+            #morelist {
+                height: 200px;
+                /* padding-top:50px ; */
+            }
+
+            #morelist>div {
+                min-height: 210px;
+                padding-top: 15px;
+            }
+
+            .service-li {
+                font-size: 12px;
+                text-align: left;
+                white-space:nowrap
+            }
+        }
+
+        .col-md-1-5>div>img {
+			width:110px;
+			height:80px;
+            margin-bottom: 20px;
+        }
+
+        /* .small-part {
+            background: #000;
+        } */
+
+        .small-part:hover {
+            background: #00FF4E;
+        }
+
+		.pic1 {
+            background: #00FF4E;
+        }
+
+		.font1{
+			color: #000!important;
+		}
+
+        /* .col-md-1-5 :hover {
+            background: chocolate;
+        } */
+
+        /* .leftBorder {
+            border-left: 1px solid #000
+        } */
+
+        .whiteFont {
+            color: aliceblue;
+            font-size: 12px;
+        }
+
+        .whiteFontTitle {
+            color: #00FF4E;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .service-li {
+            height: 30px;
+            line-height: 30px;
+            color: #ffffff;
+            list-style: none;
+        }
+
+        .show-tile {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body style="background:#000;">
+    <!-- 头部 -->
+    <nav class="navbar navbar-default" style="margin-bottom:0">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed buttona" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <!-- <span class="sr-only">Toggle navigation</span> -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" alt="" width="120px ;height:70px">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"><span><img src="img/more.png" width="30px" height="30px"
+                                    alt=""></span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#href1">服务产品</a></li>
+                            <li><a href="#href2">经典案例</a></li>
+                            <li><a href="#href3">关于我们</a></li>
+							<li><a href="#href4">联系我们</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 内容部分 -->
+    <div class="container-top">
+        <img src="img/banner.png" alt="" style="width:100%">
+    </div>
+    <div class="container-fiveparts container-fluid imgBox" style="padding-left:0;padding-right:0;">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-md-1-5 small-part pic1" id="pic1" onmouseover="mouseOver(1)" onmouseout="mouseOut(1)">
+                        <div class="thebox">
+                            <img name="img1" src="img/1S.png" alt="">
+
+                        </div>
+                        <div class="whiteFontTitle font1" id="font1">高端定制网页设计</div>
+                        <div class="whiteFont font1" id="info1">一切网站都可专属定制</div>
+                    </div>
+                    <div class="col-md-1-5 small-part leftBorder" onmouseover="mouseOver(2)" onmouseout="mouseOut(2)">
+                        <div class="thebox">
+                            <img name="img2" src="img/2.png" alt="">
+
+                        </div>
+
+                        <div class=" whiteFontTitle" id="font2">微信开发</div>
+                        <div class="whiteFont" id="info2">专业IOS/Android小程序服务</div>
+                    </div>
+                    <div class="col-md-1-5  small-part leftBorder" onmouseover="mouseOver(3)" onmouseout="mouseOut(3)">
+                        <div class="thebox">
+                            <img name="img3" src="img/3.png" alt="">
+
+                        </div>
+                        <div class=" whiteFontTitle" id="font3">移动版本手机端开发</div>
+                        <div class="whiteFont" id="info3">专业IOS/Android开发服务团队</div>
+                    </div>
+                    <div class="col-md-1-5 small-part leftBorder" onmouseover="mouseOver(4)" onmouseout="mouseOut(4)">
+                        <div class="thebox">
+                            <img name="img4" src="img/4.png" alt="">
+
+                        </div>
+                        <div class=" whiteFontTitle" id="font4">软件开发</div>
+                        <div class="whiteFont" id="info4">实现企业专属定制办公软件</div>
+                    </div>
+                    <div class="col-md-1-5 small-part leftBorder" onmouseover="mouseOver(5)" onmouseout="mouseOut(5)">
+                        <div class="thebox">
+                            <img name="img5" src="img/5.png" alt="">
+
+                        </div>
+                        <div class=" whiteFontTitle" id="font5">二次开发</div>
+                        <div class="whiteFont" id="info5">告别过去式老陈的网站优化</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fiveparts container-fiveparts2 container-fluid" id="href1">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1" id="moreser"><img src="img/moreservice.png" alt=""></div>
+        </div>
+        <div class="row" style="margin: 0 auto ;max-width: 1400px;" id="morelist">
+
+            <div class="designList">
+                <ul style="padding:0">
+					<li class="service-li">品牌官网设计</li>
+                    <li class="service-li">购物商城网站设计</li>
+                    <li class="service-li">营销型网站设计</li>
+                    <li class="service-li">H5活动网站</li>
+                    <li class="service-li">站群</li>
+                    <li class="service-li">响应式网站</li>
+                </ul>
+            </div>
+            <div class=" designList">
+                <ul style="padding:0">
+					<li class="service-li">微信小程序</li>
+                    <li class="service-li">微商城</li>
+                    <li class="service-li">微分销</li>
+                    <li class="service-li">微信行业解决方案</li>
+                    <li class="service-li">微信平台定制化开发</li>
+                    <li class="service-li">微信运营</li>
+                </ul>
+            </div>
+            <div class="  designList">
+                <ul style="padding:0">
+					<li class="service-li">手机端网站</li>
+                    <li class="service-li">APP设计与开发</li>
+                    <li class="service-li">移动端用户体验设计</li>
+                    <li class="service-li">智能家居</li>
+                </ul>
+            </div>
+            <div class="  designList">
+                <ul style="padding:0">
+                    <li class="service-li">互联网应用</li>
+                    <li class="service-li">电商系统</li>
+                    <li class="service-li">教育教学</li>
+                    <li class="service-li">仓储物流</li>
+                    <li class="service-li">企业管理</li>
+                    <li class="service-li">游戏开发</li>
+                </ul>
+            </div>
+            <div class="  designList">
+                <ul style="padding:0">
+                    <li class="service-li">设计年服</li>
+                    <li class="service-li">运营年服</li>
+                    <li class="service-li">社区运营</li>
+                    <li class="service-li">微信运营</li>
+                    <li class="service-li">活动策划</li>
+                    <li class="service-li">BMS品牌管理</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    </div>
+    <!-- show all -->
+    <div class="show-tile" id="href2">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-1 col-xs-8 col-xs-offset-1"><img width="200px" height="64px"
+                    src="img/showall.png" alt=""></div>
+            <div class="col-md-1 col-xs-1" style="margin-top: 20px"><img width="180px" height="20px"
+                    src="img/forcustomer.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="show-content" style=" overflow: hidden; max-width: 1260px;margin: 30px auto">
+        <div style="overflow: hidden;">
+            <div class="" style="float: left;width:50%">
+                <img name="img11" onmouseover="mouseOver(11)" onmouseout="mouseOut(11)" src="img/smallpic1.png" width="100%" alt="">
+                <img name="img12" onmouseover="mouseOver(12)" onmouseout="mouseOut(12)" src="img/smallpic2.png" width="100%" alt="">
+            </div>
+            <div style="float: left;width:50%">
+                <img name="img13" onmouseover="mouseOver(13)" onmouseout="mouseOut(13)" src="img/smallpic3.png" width="100%" alt="">
+            </div>
+        </div>
+
+        <div>
+            <div style="float: left;width:50%">
+                <img name="img14" onmouseover="mouseOver(14)" onmouseout="mouseOut(14)" src="img/smallpic4.png" width="100%" alt="">
+            </div>
+            <div style="float: left;width:50%">
+                <img name="img15" onmouseover="mouseOver(15)" onmouseout="mouseOut(15)" src="img/smallpic5.png" width="100%" alt="">
+            </div>
+        </div>
+
+        <div>
+            <div style="float: left;width:50%">
+                <img name="img16" onmouseover="mouseOver(16)" onmouseout="mouseOut(16)" src="img/smallpic6.png" width="100%" alt="">
+            </div>
+            <div class="" style="float: left;width:50%">
+                <img name="img17" onmouseover="mouseOver(17)" onmouseout="mouseOut(17)" src="img/smallpic7.png" width="100%" alt="">
+                <img name="img18" onmouseover="mouseOver(18)" onmouseout="mouseOut(18)" src="img/smallpic8.png" width="100%" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- particepate -->
+    <div style="margin:50px auto;text-align: center ;max-width: 1260px;" id="href3">
+        <div class="teamPic">
+            <img src="img/words.png" alt="" width="80%">
+        </div>
+        <div>
+            <img src="img/team.png" alt="" width="100%">
+        </div>
+
+    </div>
+
+    <!-- be able to do  -->
+    <div style="background: #000;width: 100%;color: #fff" id="href4">
+        <div style="max-width:1260px;margin: 0 auto;overflow: hidden">
+            <div class="chatpart1" >
+                <img src="img/all.png" alt="" width="100%" style="margin-bottom: 20px">
+                <img src="img/bottombanner.png  " width="100%" alt="">
+            </div>
+            <div class="chatpart2">
+                <div>
+                  
+                  
+                <p>  
+              成都市一颗优雅草科技有限公司自2015年起注册专注于PHP网站开发和APP系统定制，2019年自研发YYC松鼠短视频,YYC松鼠聚合/直播系统完整第一个版本开发并发布，现主营业务为YYC松鼠系统，优雅草教育系统和PHP免费技术支持论坛，提供免费的PHP源码分享学习，php免费学习教程，PHP语言讨论以及PHP技术交流的平台
+                   </br>
+                  
+                  蚓无爪牙之利,
+,筋骨之强
+,上食埃土
+,下饮黄泉
+,用心一也
+,锲而不舍，金石可镂
+
+成都市一颗优雅草科技有限公司2015年成立以来一直从事于网站设计、制作、APP研发、系统开发等；我们一直专注于定制类、门户型、P2P类、小型商城等领域的系统研发、销售、服务。；我们集研发、销售、服务于 一体，一切从用户角度出发，以用户的需求为目标，致力于打造高端、品牌、安全、稳定、快捷、专业的网站开发；与此同时，我们一直在 技术和应用上进行创新和突破，2019年自研发松鼠系列系统。
+                  宗旨：盈利不代表升值，而升值才是长期持续盈利的可持续发展之道。
+                  </br>
+                 优雅草科技2020年推出多项优秀产品得到了业界认可，其中有教育类YYC松鼠试卷答题系统，酒店类YYC松鼠酒店管理系统，多媒体类YYC松鼠聚合直播系统，YYC松鼠短视频系统,YYC松鼠智能AI系统，且尚有十余项产品正在研发中...谢谢关注！
+                  
+                  </p>
+                  
+                  
+                  
+                  
+                  
+                    <span><img src="img/qq.png" alt=""> 唯一售前QQ联系422108995 </span>
+                    <br>
+                    <span class="fs12">请返回官网www.youyacao.com查看</span>
+                    <hr class="p60">
+                </div>
+                <div>
+                    <span><img src="img/phone.png" alt=""> 唯一售前联系13708021643 </span>
+                    <br>
+                    <span class="fs12">请返回官网www.youyacao.com查看</span>
+                    <br>
+                    <br>
+                    <!-- <span style="font-size: 10px">2015-2019成都市一颗优雅草科技有限公司蜀1 CP备10036293号</span>
+                    <br>
+                    <span style="font-size: 10px">公司总部地址:四川首成都市香年广场T2栋38层(大型软件开发维护，专注政府以及大型企事业单位)</span>
+                    <br>
+                    <span style="font-size: 10px">公司注册地址:成都市青羊区德盛路91号10楼1009号(负责运营试一哈平台)</span>
+                    <br>
+                    <span style="font-size: 10px">公司分地址：四川省成都市郫都区蜀都万达广场S0H014- 2单元25楼2502- 2503</span> -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- 底部 -->
+    <div class="bottom"
+        style="background:#000;width: 100%;max-width: 1920px;text-align: center;color: #ffffff;padding:50px 20px">
+        <div>2015-2020 copyright 成都市一颗优雅草科技有限公司 唯一官网www.youyacao.com  商标：一颗优雅草 （侵权必究）就喜欢一句话：十年磨一剑！专注！多读书多看报~好好学习天天向上~</div>
+        <!-- <div>公司总部地址:四川首成都市香年广场T2栋38层(大型软件开发维护，专注政府以及大型企事业单位)
+        </div>
+        <div>公司注册地址:成都市青羊区德盛路91号10楼1009号(负责运营试一哈平台)
+        </div>
+        <div>公司分地址：四川省成都市郫都区蜀都万达广场S0H014- 2单元25楼2502- 2503(专注设计服务,附属小型软件/网站/ APP开发以及外包，以及信息流媒体开户推广
+        </div> -->
+    </div>
+
+</body>
+<script src="bootstrap/js/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script>
+    window.onload = function () {
+        if ($(window).width() > 600) {
+            $(".designList").addClass("col-md-1-5")
+        } else {
+            $(".designList").addClass("col-xs-4")
+            $(".whiteFont").hide()
+            $(".small-part").removeClass("leftBorder")
+        }
+    }
+    window.onresize = resizeBannerImage; //当窗口改变宽度时执行此函数
+    function resizeBannerImage() {
+        var winW = $(window).width();
+        if ($(window).width() > 600) {
+            $(".designList").addClass("col-md-1-5")
+            $(".designList").removeClass("col-xs-4")
+            $(".small-part").addClass("leftBorder")
+            $(".whiteFont").show()
+        } else {
+            $(".whiteFont").hide()
+            $(".designList").removeClass("col-md-1-5")
+            $(".designList").addClass("col-xs-4")
+            $(".small-part").removeClass("leftBorder")
+        }
+    }
+	function mouseOver(type) {
+		if(type == 1){
+			document.img1.src = "img/1S.png"
+			$("#font1").addClass("font1");
+			$("#info1").addClass("font1");
+		} else if(type == 2){
+			document.img2.src = "img/2S.png"
+			document.img1.src = "img/1.png"
+			$("#pic1").removeClass("pic1");
+			$("#info2").addClass("font1");
+			$("#font2").addClass("font1");
+			$("#font1").removeClass("font1");
+			$("#info1").removeClass("font1");
+		} else if(type == 3){
+			document.img3.src = "img/3S.png"
+			document.img1.src = "img/1.png"
+			$("#pic1").removeClass("pic1");
+			$("#font3").addClass("font1");
+			$("#info3").addClass("font1");
+			$("#font1").removeClass("font1");
+			$("#info1").removeClass("font1");
+		} else if(type == 4){
+			document.img4.src = "img/4S.png"
+			document.img1.src = "img/1.png"
+			$("#pic1").removeClass("pic1");
+			$("#font4").addClass("font1");
+			$("#info4").addClass("font1");
+			$("#font1").removeClass("font1");
+			$("#info1").removeClass("font1");
+		} else if(type == 5){
+			document.img5.src = "img/5S.png"
+			document.img1.src = "img/1.png"
+			$("#pic1").removeClass("pic1");
+			$("#font5").addClass("font1");
+			$("#info5").addClass("font1");
+			$("#font1").removeClass("font1");
+			$("#info1").removeClass("font1");
+		} else if(type == 11){
+			document.img11.src = "img/a.png"
+		} else if(type == 12){
+			document.img12.src = "img/b.png"
+		} else if(type == 13){
+			document.img13.src = "img/c.png"
+		} else if(type == 14){
+			document.img14.src = "img/d.png"
+		} else if(type == 15){
+			document.img15.src = "img/e.png"
+		} else if(type == 16){
+			document.img16.src = "img/f.png"
+		} else if(type == 17){
+			document.img17.src = "img/g.png"
+		} else if(type == 18){
+			document.img18.src = "img/h.png"
+		}
+	}
+ 
+	function mouseOut(type) {
+		if(type == 1){
+			document.img1.src = "img/1S.png"
+		} else if(type == 2){
+			document.img2.src = "img/2.png"
+			document.img1.src = "img/1S.png"
+			$("#pic1").addClass("pic1");
+			$("#font1").addClass("font1");
+			$("#font2").removeClass("font1");
+			$("#info1").addClass("font1");
+			$("#info2").removeClass("font1");
+		} else if(type == 3){
+			document.img3.src = "img/3.png"
+			document.img1.src = "img/1S.png"
+			$("#pic1").addClass("pic1");
+			$("#font1").addClass("font1");
+			$("#font3").removeClass("font1");
+			$("#info1").addClass("font1");
+			$("#info3").removeClass("font1");
+		} else if(type == 4){
+			document.img4.src = "img/4.png"
+			document.img1.src = "img/1S.png"
+			$("#pic1").addClass("pic1");
+			$("#font1").addClass("font1");
+			$("#font4").removeClass("font1");
+			$("#info1").addClass("font1");
+			$("#info4").removeClass("font1");
+		} else if(type == 5){
+			document.img5.src = "img/5.png"
+			document.img1.src = "img/1S.png"
+			$("#pic1").addClass("pic1");
+			$("#font1").addClass("font1");
+			$("#font5").removeClass("font1");
+			$("#info1").addClass("font1");
+			$("#info5").removeClass("font1");
+		} else if(type == 11){
+			document.img11.src = "img/smallpic1.png"
+		} else if(type == 12){
+			document.img12.src = "img/smallpic2.png"
+		} else if(type == 13){
+			document.img13.src = "img/smallpic3.png"
+		} else if(type == 14){
+			document.img14.src = "img/smallpic4.png"
+		} else if(type == 15){
+			document.img15.src = "img/smallpic5.png"
+		} else if(type == 16){
+			document.img16.src = "img/smallpic6.png"
+		} else if(type == 17){
+			document.img17.src = "img/smallpic7.png"
+		} else if(type == 18){
+			document.img18.src = "img/smallpic8.png"
+		}
+	}
+    // $(function () {
+    //     if ($(window).width() > 600) {
+    //         $(".col-xs-4").addClass("col-md-1-5")
+    //     }
+    // })
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+.lianxi {
+	padding: 10px;
+}
+.lianxi p {
+	line-height: 36px;
+}
+.lianxi a {
+	padding: 0 10px;
+}
+.wiki {
+	padding: 10px;
+	
+}
+.wiki h3{
+	margin:10px 0 0 0
+}
+.wiki p {
+	line-height: 36px;
+}
+strong {
+	background-color: #3a6ea5;
+	padding: 5px 10px;
+	color: #ffffff;
+}
+.xzfl option {
+    margin-right: 10px;
+    white-space: normal;
+    display: inline-block;
+}

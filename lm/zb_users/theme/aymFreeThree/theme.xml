@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme version="php">
+<id>aymFreeThree</id>
+<name>zblog资讯主题aymFreeThree</name>
+<url>http://www.aiyuanma.org/aymfreethree.html</url>
+<note>免费单栏zblog图片资讯主题</note>
+<description>简单的zblog图片资讯模板，响应式结构，小巧快速</description>
+<path>plugin/main.php</path>
+<include>include.php</include>
+<level>1</level>
+<author>
+  <name>爱源码</name>
+  <email>iyuanma@qq.com</email>
+  <url>http://www.aiyuanma.org/</url>
+</author>
+<source>
+  <name>爱源码</name>
+  <email>iyuanma@qq.com</email>
+  <url>http://www.aiyuanma.org/</url>
+</source>
+<adapted>151935</adapted>
+<version>1.0</version>
+<pubdate>2019-12-03</pubdate>
+<modified>2019-12-03</modified>
+<price>0</price>
+<phpver>5.4</phpver>
+<advanced>
+  <dependency>UEditor</dependency>
+  <rewritefunctions></rewritefunctions>
+  <existsfunctions></existsfunctions>
+  <conflict></conflict>
+</advanced>
+<sidebars>
+  <sidebar1></sidebar1>
+  <sidebar2></sidebar2>
+  <sidebar3></sidebar3>
+  <sidebar4></sidebar4>
+  <sidebar5></sidebar5>
+</sidebars>
+</theme>

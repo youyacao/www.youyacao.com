@@ -1,0 +1,16 @@
+@charset "utf-8";
+.code_blue, .code_green, .code_red, .code_yello{padding:10px;font-size: 12px;}
+.code_blue {margin: 20px 0;padding: 27px 15px 22px 70px;text-indent: 0em !important;border: 1px solid #8accff;background: url(../style/image/code_blue.png) no-repeat 20px 20px #c3e5ff;color: #0d70bb;}
+.code_green {margin: 20px 0;padding: 27px 15px 22px 70px;text-indent: 0em !important;border: 1px solid #b7ec82;background: url(../style/image/code_green.png) no-repeat 20px 20px #ebf6e0;color: #649505;}
+.code_red {margin: 20px 0;padding: 27px 15px 22px 70px;text-indent: 0em !important;border: 1px solid #ffacac;background: url(../style/image/code_red.png) no-repeat 20px 20px #ffe9e9;color: #bd0000;}
+.code_yello {margin: 20px 0;padding: 27px 15px 22px 70px;text-indent: 0em !important;border: 1px solid #E1B400;background: url(../style/image/code_yello.png) no-repeat 20px 20px #FFEA97;color: #9F6F26;}
+.code_pt_biaoti{text-indent: 0em !important;margin: 10px 0;padding: 10px 15px;background: #FFF;border: 1px solid #E3E3E3;border-left: 3px solid #3DABCE;}
+.song_name{position: relative;top: -16px;}
+code.code {padding: 2px 4px;background-color: #f6f6f6;border: none;font-size: 12px;white-space: pre-wrap;vertical-align: middle;color: #c7254e;border-radius: 4px;font-family: Menlo,Monaco,Consolas,Courier New,monospace;margin: 0 .2em;}
+blockquote {font-size: 15px;color: #666!important;background: #E8EBF2;padding: 10px 25px;margin: 15px 0;}
+h2{font-size: 16px;margin: 20px 0;background: #EEE;padding: 0px 10px 0px 0px;}
+p.code_h2{display: inline-block;padding: 0px 20px;line-height: 40px;background: #737F99;color: #FFF;}
+h3{font-size: 16px;font-weight: bold;color: #4773b1;padding: 5px 0px 5px 15px;margin: 10px -15px 10px -15px;border-bottom: 1px solid #eee;-webkit-transition: all .5s;-moz-transition: all .5s;-ms-transition: all .5s;-o-transition: all .5s;transition: all .5s;}
+blockquote{font-size: 15px;color: #666!important;background: #E8EBF2;padding: 10px 25px;margin: 15px 0;-webkit-transition: all .2s ease-out;-moz-transition: all .2s ease-out;-ms-transition: all .2s ease-out;-o-transition: all .2s ease-out;transition: all .2s ease-out;}
+blockquote p:first-child {display: inline;}
+blockquote a{padding: 8px 18px;background: #737F99;display: inline-block;border-radius: 5px;color: #FFF;text-decoration: none;}

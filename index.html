@@ -1,0 +1,909 @@
+<html>
+
+<head>
+
+
+
+    <meta charset="utf-8">
+    <title>【短视频系统】-松鼠短视频,蜻蜓直播,APP定制开发-优雅草官网</title>
+    <meta name="keywords"
+        content="短视频系统,短视频系统开发,程序员必备导航,程序员导航,技术站长导航,短视频系统源码,短视频系统APP,YYC松鼠短视频,YYC松鼠系统系列,直播系统,教育系统,成都软件定制,成都APP定制开发,成都短视频系统定制">
+    <meta name="description"
+        content="
+成都市一颗优雅草科技有限公司2015年成立以来一直从事于网站设计、制作、APP研发、系统开发等；我们一直专注于定制类、门户型、P2P类、小型商城等领域的系统研发、销售、服务。；我们集研发、销售、服务于
+                一体，一切从用户角度出发，以用户的需求为目标，致力于打造高端、品牌、安全、稳定、快捷、专业的网站开发；与此同时，我们一直在 技术和应用上进行创新和突破，2019年自研发松鼠系列系统，2020年发布蜻蜓系列系统，持续在大数据推送算法，人脸识别，内容鉴定算法，云计算产品对接与服务，图像算法等人工智能领域研究，2021年将持续提升技术并发布更领先的产品，力争上游 努力奋斗。">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/drawer.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--<script type="text/javascript" src="//trusted.shuidi.cn/trusted.js?id=3592"></script>-->
+    <!-- Demo styles -->
+    <style>
+      
+
+        * {
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .drawer-overlay {
+            z-index: 1000;
+        }
+
+        .drawer-nav {
+            z-index: 1001;
+        }
+
+        .drawer-hamburger {
+            z-index: 1001;
+        }
+
+        .drawer-hamburger-icon,
+        .drawer-hamburger-icon:after,
+        .drawer-hamburger-icon:before {
+            background-color: #2ac340;
+        }
+
+        .drawer-nav {
+            background-color: #222;
+        }
+
+        .drawer-brand,
+        .drawer-menu-item {
+            color: #ffffff;
+        }
+
+        .drawer-menu li a p:first-child {
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .drawer-menu li a p:last-child {
+            font-size: 12px;
+            color: #9E9E9E;
+        }
+
+        .drawer--left .drawer-hamburger {
+            right: 10px;
+        }
+
+        .navi_head>div:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: background-color ease 0.5s;
+        }
+
+        .navi_body {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            overflow: hidden;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.6);
+            transition: height ease 0.5s;
+        }
+
+        .navi_body:hover {
+            height: 500px;
+        }
+
+        .navi_head {
+            display: flex;
+            height: 100px;
+            border-bottom: 1pt solid rgba(255, 255, 255, 0.2);
+        }
+
+        .navi_head>div {
+            width: calc(100% / 6);
+            text-align: center;
+            border-left: 1pt solid rgba(255, 255, 255, 0.2);
+            height: 500px;
+        }
+
+        .navi_head>div:first-child {
+            border-left: 0;
+        }
+
+        .navi_head>div p {
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .navi_head>div>p:hover a {
+            text-decoration: underline;
+        }
+
+        .navi_head>div p:nth-of-type(2) {
+            margin-top: 10px;
+        }
+
+        .navi_head>div p a {
+            color: #FFFFFF;
+            display: block;
+        }
+
+        .navi_head>div p:first-child {
+            height: 100px;
+            line-height: inherit;
+        }
+
+        .navi_head>div p:first-child a {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none !important;
+        }
+
+        .navi_head>div p:first-child a {
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+
+        .navi_head>div p:first-child a strong:after {
+            content: " ";
+            height: 2px;
+            background-color: #2ac340;
+            width: 24pt;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -12pt;
+            transition: background-color 0.45s;
+        }
+
+        .navi_head>div p:first-child a strong {
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .navi_head>div p:first-child a span {
+            font-size: 12px;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6e606d8481f77f858f575e066a105304";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body class="drawer drawer--left drawer-close">
+
+    <!-- Swiper -->
+    <div class="swiper-container banner_swiper swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+        <div class="swiper-wrapper" style="transition-duration: 300ms;">
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                style="background: url(&quot;images/banner003.jpg&quot;) center center / cover no-repeat; width: 2560px; transition-duration: 300ms; opacity: 1; transform: translate3d(0px, 0px, 0px);"
+                data-swiper-slide-index="2"></div>
+            <div class="swiper-slide swiper-slide-duplicate-next"
+                style="background: url(&quot;images/banner001.jpg&quot;) center center / cover no-repeat; width: 2560px; transition-duration: 300ms; opacity: 1; transform: translate3d(-2560px, 0px, 0px);"
+                data-swiper-slide-index="0"></div>
+            <div class="swiper-slide swiper-slide-prev"
+                style="background: url(&quot;images/banner002.jpg&quot;) center center / cover no-repeat; width: 2560px; transition-duration: 300ms; opacity: 1; transform: translate3d(-5120px, 0px, 0px);"
+                data-swiper-slide-index="1"></div>
+            <div class="swiper-slide swiper-slide-active"
+                style="background: url(&quot;images/banner003.jpg&quot;) center center / cover no-repeat; width: 2560px; transition-duration: 300ms; opacity: 1; transform: translate3d(-7680px, 0px, 0px);"
+                data-swiper-slide-index="2"></div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-next"
+                style="background: url(&quot;images/banner001.jpg&quot;) center center / cover no-repeat; width: 2560px; transition-duration: 300ms; opacity: 0; transform: translate3d(-10240px, 0px, 0px);"
+                data-swiper-slide-index="0"></div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+
+    <div
+        class="swiper-container banner_swiper swiper-container-m  swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+        <div class="swiper-wrapper" style="transition-duration: 300ms;">
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                style="background: url(&quot;images/app-003.jpg&quot;) center center / cover no-repeat; width: 400px; transition-duration: 300ms; opacity: 1; transform: translate3d(0px, 0px, 0px);"
+                data-swiper-slide-index="2"></div>
+            <div class="swiper-slide swiper-slide-prev"
+                style="background: url(&quot;images/app-001.jpg&quot;) center center / cover no-repeat; width: 400px; transition-duration: 300ms; opacity: 1; transform: translate3d(-400px, 0px, 0px);"
+                data-swiper-slide-index="0"></div>
+            <div class="swiper-slide swiper-slide-active"
+                style="background: url(&quot;images/app-002.jpg&quot;) center center / cover no-repeat; width: 400px; transition-duration: 300ms; opacity: 1; transform: translate3d(-800px, 0px, 0px);"
+                data-swiper-slide-index="1"></div>
+            <div class="swiper-slide swiper-slide-next"
+                style="background: url(&quot;images/app-003.jpg&quot;) center center / cover no-repeat; width: 400px; transition-duration: 300ms; opacity: 0; transform: translate3d(-1200px, 0px, 0px);"
+                data-swiper-slide-index="2"></div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                style="background: url(&quot;images/app-001.jpg&quot;) center center / cover no-repeat; width: 400px; transition-duration: 300ms; opacity: 0; transform: translate3d(-1600px, 0px, 0px);"
+                data-swiper-slide-index="0"></div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+
+    <div class="main">
+        <img src="images/about-us.png" class="about-img" alt="成都市一颗优雅草科技有限公司">
+        <h1>成都市一颗优雅草科技有限公司</h1>
+    
+      <p >
+    励志：你若坚持，定会发光，时间是所向披靡的武器，它能集腋成裘，也能聚沙成塔，将人生的不可能都变成可能。
+    
+</p>
+        
+         
+      
+        </br>
+
+        <div class="swiper-container" id="announcement">
+            <div class="swiper-wrapper">
+                
+                 <div class="swiper-slide">
+                  
+                    <p style="width: 50%;"><a
+                            href="https://www.youyacao.com/news/post/120.html">相比同为开源框架的uniapp和flutter未来生态前景大对比</a>——2021-2-23
+                    </p>
+                </div>
+                
+          
+              <div class="swiper-slide">
+                  
+                    <p style="width: 50%;"><a
+                            href="https://www.youyacao.com/news/post/115.html">美狐直播美颜sdk-uniapp官方合作发布插件说明-一颗优雅草科技</a>——2021-1-2
+                    </p>
+                </div>
+                
+              
+                    <div class="swiper-slide">
+                  
+                    <p style="width: 50%;"><a
+                            href="https://www.youyacao.com/news/post/117.html">抵制网络谣言和伪科普，原生APP开发与混开究竟有什么实质区别和优劣势？</a>——2021-1-24
+                    </p>
+                </div>
+                
+                
+                   <div class="swiper-slide">
+                  
+                    <p style="width: 50%;"><a
+                            href="https://www.youyacao.com/news/post/116.html">优雅草科技团队办公点搬迁至华蓝盾大楼-配备五险一金+员工宿舍---2021年将开始在年后2月招聘</a>——2021-1-20
+                    </p>
+                </div>
+                
+                
+                
+                
+                
+              
+                   
+            </div>
+        </div>
+
+      
+
+        <footer class="footer">
+            <div class="footer-info">
+                <p>Copyright © 2015-2021 真·奥义·成都市一颗优雅草科技有限公司 </p>
+
+                
+            <p>  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51011402000287" rel="nofollow" target="_blank">  <img src="https://www.youyacao.com/images/gongan.png" style="float:left;" />川公网安备 51011402000287号</a>|<a href="http://beian.miit.gov.cn/" rel="nofollow" target="_blank"> 工信部蜀ICP备10036293号-7</a></p>
+
+
+
+                <p>地址：四川省成都市温江区科兴路东段759号华蓝盾大楼2楼201室-202室 【认准官网谨防诈骗】</p>
+
+                <p> 系统正版验证 <a href="https://zhengban.youyacao.com"><img src="images/zhengban.png" style="width: 75px;"
+     alt="正版">  QQ:422108995 <a href="https://bbs.youyacao.com/thread-1603-1-1.html" rel="nofollow">   点击查看： 唯一客服-谨防诈骗-为什么？</a>
+                   
+                </p>
+                <script>
+                    (function (b, a, e, h, f, c, g, s) {
+                        b[h] = b[h] || function () { (b[h].c = b[h].c || []).push(arguments) };
+                        b[h].s = !!c; g = a.getElementsByTagName(e)[0]; s = a.createElement(e);
+                        s.src = "//s.union.360.cn/" + f + ".js"; s.defer = !0; s.async = !0; g.parentNode.insertBefore(s, g)
+                    })(window, document, "script", "_qha", 336300, false);
+                </script>
+                </p>
+
+               
+                <p>合作伙伴：<a rel="nofollow" href="https://partners.cloud.tencent.com/invitation/1000009941225fd73659498d2">腾讯云</a> |<a rel="nofollow" href="http://www.zzidc.com/main/member/initRegister?agentpand=630187">景安</a> | <a rel="nofollow" href="https://secop.yunaq.com/customer/api/v1/public/biz-opp/0/5a9f449545475e77a85657f6
+">知道创宇</a> |<a rel="nofollow" href="http://tutucloud.com/">涂图</a> | <a rel="nofollow"
+                        href="https://www.csdn.net" target="_blank">CSDN</a> | <a rel="nofollow"
+                        href="https://www.west.cn/cloudhost/gaofang/?ReferenceID=608552" target="_blank">西部数码</a> | <a
+                        rel="nofollow"
+                        href="https://www.qiniu.com/?utm_campaign=SEM&utm_content=pinzhuan&utm_medium=pinzhuan&utm_source=baiduSEM&utm_term=pinzhuan"
+                        target="_blank">七牛云</a> | <a rel="nofollow" href="https://gitee.com/" target="_blank">GITEE</a>
+                </p>
+
+
+            </div>
+            <div class="footer-icon">
+                <!--<a target="cyxyv" rel="nofollow" href="https://songshu.youyacao.com/video.html">-->
+                <!--    <img src="https://www.youyacao.com/images/yycbottom.png" alt="">-->
+                <!--</a>-->
+
+
+
+                <a target="cyxyv" rel="nofollow"
+                    href="https://v.yunaq.com/certificate?domain=www.youyacao.com&amp;from=label&amp;code=90020">
+                    <img src="https://www.youyacao.com/images/chuangyu.png" alt=""></a>
+                <a target="cyxyv" rel="nofollow"
+                    href="https://v.anquan.org/cert/site/?site=www.youyacao.com&at=business">
+                    <img src="https://www.youyacao.com/images/quanguo.png">
+                </a>
+
+
+
+
+
+                <a rel="nofollow" target="_blank" rel="nofollow" href="http://c.trustutn.org/s/www.youyacao.com">
+                    <img src="https://www.youyacao.com/images/pingan.png" alt="">
+                </a>
+                <a rel="nofollow" target="_blank"
+                    href="https://si.trustutn.org/info?sn=789200226039209898635&certType=1">
+                    <img src="https://www.youyacao.com/images/lianmeng.png" alt="">
+                </a>
+                <a rel="nofollow" target="_blank"
+                    href="https://si.trustutn.org/info?sn=789200226039209898635&certType=1">
+                    <img src="https://www.youyacao.com/images/shuidi.png" alt="">
+                </a>
+             
+               <a rel="nofollow" target="_blank"
+                    href="https://baike.shuidi.cn/wikicertificate?digest=54ddefac53fa44e9746a4efa366435b5"><img
+                        src="https://www.youyacao.com/images/baike.png" /></a>
+                <a
+                    href="https://www.so.com/s?q=成都市一颗优雅草科技有限公司&src=srp&fr=360chrome_toolbar_search&psid=3fcf30ba46b6c21375ac5396e945b201">
+                    <img src="https://www.youyacao.com/images/360.png" alt="">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <div class="navi_body">
+        <div class="navi_head">
+            <div class="d-flex align-items-center justify-content-center" style="height: 100px;">
+                <img src="images/logo.png" height="80" alt="">
+              
+              
+            </div>
+            <div>
+                <p>
+                    <a href="#" onclick="show()">
+                        <strong>关于我们</strong>
+                        <span>ABOUT US</span>
+                    </a>
+                </p>
+             
+            <p><a href="https://zhengban.youyacao.com" target="_blank" rel="nofollow" >正版授权查询</a></p>
+           
+              <p><a href="https://www.youyacao.com/kaifa/" target="_blank" rel="nofollow" >软件定制</a></p>
+                               <p><a href="https://www.youyacao.com/news/" target="_blank" rel="nofollow" >官方资讯</a></p>
+                 <p><a href="https://www.youyacao.com/lm/" target="_blank" rel="nofollow" >技术站长导航</a></p>
+             
+               <p><a href="https://www.youyacao.com/seo/" target="_blank"  >高端优化服务</a></p>
+                   <p><a href="https://bbs.youyacao.com/" target="_blank"  >技术支持论坛</a></p>
+                    <p><a href="https://baike.shuidi.cn/companywiki-54ddefac53fa44e9746a4efa366435b5.html" target="_blank" rel="nofollow" >百科介绍</a></p>
+           
+            </div>
+            
+              <div>
+                <p>
+                    <a href="https://www.youyacao.com/kaifa/">
+                        <strong>企业核心服务</strong>
+                        <span>development</span>
+                    </a>
+                </p>
+				
+				<p><a href="/kaifa/flutter" target="_blank">flutter定制/二次开发</a></p>
+				
+                              <p><a href="/kaifa/uniapp" target="_blank">uniapp定制/二次开发</a></p>
+						   
+							     <p><a href="/kaifa/app" target="_blank">纯原生APP定制/二次开发</a></p>
+                                <p><a href="/kaifa/wx" target="_blank">小程序定制/二次开发</a></p>
+                                              <p><a href="/kaifa/pc/" target="_blank">桌面应用定制/二次开发</a></p>
+                                            <p><a href="/kaifa/web/" target="_blank">网站定制/二次开发</a></p>
+     
+                <p><a href="/" target="_blank">原生SDK插件定制/二次</a></p>
+            
+           
+                  <p><a href="/" target="_blank">数据接口定制/二次开发</a></p>
+              
+            </div>
+            
+            <div>
+                <p>
+                    <a href="https://songshu.youyacao.com">
+                        <strong>核心自研产品</strong>
+                        <span>development</span>
+                    </a>
+                </p>
+                              <p><a href="https://songshu.youyacao.com/qingting.html" target="_blank">蜻蜓A系统·flutter版【JAVA/PHP】</a></p>
+                                <p><a href="https://songshu.youyacao.com/qingting.html" target="_blank">蜻蜓S系统·uniapp版【JAVA/PHP】</a></p>
+                                              <p><a href="https://songshu.youyacao.com/g.html" target="_blank">蜻蜓G系统·纯原生版【JAVA/PHP】</a></p>
+                                            <p><a href="https://songshu.youyacao.com/film.html" target="_blank">蜻蜓F影视APP系统【JAVA/PHP】</a></p>
+     
+                <p><a href="https://songshu.youyacao.com/video.html" target="_blank">YYC松鼠短视频系统【初代目】</a></p>
+            
+           
+                  <p><a href="https://songshu.youyacao.com/" target="_blank">松鼠系统官网</a></p>
+              
+            </div>
+            
+                 <div>
+                <p>
+                    <a href="">
+                        <strong>自研插件/SDK</strong>
+                        <span>plug-in/sdk</span>
+                    </a>
+                </p>
+            
+               <p><a target="_blank" href="https://ext.dcloud.net.cn/publisher?id=258588"  rel="nofollow">uniapp插件-主页</a></p>
+                    <p><a target="_blank" href="https://addon.dismall.com/developer-99529.html"  rel="nofollow">DIscuz插件-主页</a></p>
+                <p><a target="_blank" href="#"  rel="nofollow">微擎插件【开发完善上架中】</a></p>
+                <p><a target="_blank" href="#"  rel="nofollow">flutter插件【开发完善上架中】</a></p>
+
+              
+            </div>
+            
+            <div>
+                <p>
+                    <a href="/kaifa">
+                        <strong>优雅草运维/工具</strong>
+                        <span>Tool</span>
+                    </a>
+                </p>
+                     <p><a href="https://zhengban.youyacao.com">产品正版查询</a></p>
+                <p><a href="https://www.youyacao.com/tool/makepw/">随机密码生成</a></p>
+                <p><a href="/kaifa">md5在线转换</a></p>
+           
+               
+                <p><a href="https://www.zhuoivan.com">卓伊凡</a></p>
+               
+            </div>
+            <div>
+                <p>
+                    <a target="_blank" href="https://www.knownsec.com/#/service"  rel="nofollow">
+                        <strong>合作伙伴</strong>
+                        <span>SAFE</span>
+                    </a>
+                </p>
+                     <p><a href="https://secop.yunaq.com/customer/api/v1/public/biz-opp/0/5a9f449545475e77a85657f6" target="_blank" rel="nofollow" >知道创宇</a></p>
+                   <p><a target="_blank" href="https://partners.cloud.tencent.com/invitation/1000009941225fd73659498d2"  rel="nofollow">腾讯云</a></p>
+                          <p><a target="_blank" href="https://www.zzidc.com/main/member/initRegister?agentpand=630187"  rel="nofollow">景安</a></p>
+                 <p><a target="_blank" href="https://tutucloud.com/?bd_vid=10721482495623757648"  rel="nofollow">涂图</a></p>
+                            <p><a target="_blank" href="http://www.facegl.com/"  rel="nofollow">美狐</a></p>
+                            
+                         <p><a target="_blank" href="https://www.dcloud.io/"  rel="nofollow">dcloud</a></p>
+              
+                 
+           
+                  <p><a target="_blank" href="https://wx.52piaoduoduo.cn/build/index.html?inviteuid=652206#/updateVip"  rel="nofollow">票哆哆官方</a></p>
+  
+                   
+                 
+                  
+
+                     
+              
+            </div>
+       
+        </div>
+    </div>
+
+
+    <header role="banner" class="header-m">
+        <div class="nav-m">
+            <img src="images/logo.png" alt="">
+            <button type="button" class="drawer-toggle drawer-hamburger">
+                <span class="sr-only">toggle navigation</span>
+                <span class="drawer-hamburger-icon"></span>
+            </button>
+        </div>
+        <nav class="drawer-nav" role="navigation">
+            <ul class="drawer-menu"
+                style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                <li>
+                    <a class="drawer-menu-item" href="#" onclick="show()">
+                        <p>关于我们</p>
+                        <p>INTRODUCTION</p>
+                    </a>
+                </li>
+                
+               
+            
+                
+                     <li>
+                    <a class="drawer-menu-item" href="https://partners.cloud.tencent.com/invitation/1000009941225fd73659498d2">
+                        <p>合作伙伴</p>
+                        <p>Partner</p>
+                    </a>
+					
+					
+					<a href="https://secop.yunaq.com/customer/api/v1/public/biz-opp/0/5a9f449545475e77a85657f6" target="_blank"  class="second_a" rel="nofollow" >知道创宇</a>
+					  <a target="_blank" href="https://partners.cloud.tencent.com/invitation/1000009941225fd73659498d2"    class="second_a" rel="nofollow">腾讯云</a>
+					        <a target="_blank" href="https://www.zzidc.com/main/member/initRegister?agentpand=630187"  class="second_a"  rel="nofollow">景安</a>
+					<a target="_blank" href="https://tutucloud.com/?bd_vid=10721482495623757648"  rel="nofollow"  class="second_a">涂图</a>
+					          <a target="_blank" href="http://www.facegl.com/"  rel="nofollow"  class="second_a">美狐</a>
+					           
+					      <a target="_blank" href="https://www.dcloud.io/"   class="second_a" rel="nofollow">dcloud</a>
+					              
+					
+					           
+					<a target="_blank" href="https://wx.52piaoduoduo.cn/build/index.html?inviteuid=652206#/updateVip"   class="second_a" rel="nofollow">票哆哆官方</a>
+					  
+					  
+					
+                </li>
+
+
+                <li>
+                    <a class="drawer-menu-item" href="https://songshu.youyacao.com">
+                        <p>核心自研发系统</p>
+                        <p>development</p>
+                    </a>
+                      <a href="https://songshu.youyacao.com/g.html" class="second_a">蜻蜓G【纯原生】</a>
+                    <a href="https://songshu.youyacao.com/qingting.html" class="second_a">蜻蜓系统</a>
+                        <a href="https://songshu.youyacao.com/film.html" class="second_a">蜻蜓F影视系统</a>
+                    <a href="https://songshu.youyacao.com/video.html" class="second_a">松鼠系统</a>
+             
+                    <a href="https://doc.youyacao.com/web/#/16?page_id=93" class="second_a">蜻蜓系统API（php）</a>
+                    <a href="https://doc.youyacao.com/web/#/18?page_id=226" class="second_a">蜻蜓系统API（java）</a>
+                    <a href="https://doc.youyacao.com/web/#/17?page_id=199" class="second_a">松鼠系统API（php）</a>
+                 
+                </li>
+            
+            
+            
+            
+
+                <li>
+                  <a class="drawer-menu-item"    href="https://bbs.youyacao.com/forum.php?mod=forumdisplay&fid=60&filter=typeid&typeid=127">
+                        <p>企业核心服务</p>
+                        <p>Service</p>
+                    </a>
+					
+					
+					
+					
+					<a href="/" target="_blank" class="second_a">uniapp定制/二次开发</a>
+							   
+								     <a href="/" target="_blank" class="second_a">纯原生APP定制/二次开发</a>
+					                <a href="/" target="_blank" class="second_a">小程序定制/二次开发</a>
+					                              <a href="/" target="_blank" class="second_a">桌面应用定制/二次开发</a>
+					                            <a href="/" target="_blank" class="second_a">网站定制/二次开发</a>
+					     
+					<a href="/" target="_blank" class="second_a">原生SDK插件定制/二次</a>
+					            
+					           
+					  <a href="/" target="_blank" class="second_a">数据接口定制/二次开发</a>
+					
+                </li>
+
+              
+
+                <li>
+                    <a class="drawer-menu-item" href="https://www.youyacao.com/kaifa/">
+                        <p>自研插件/SDK</p>
+                        <p>plug-in/sdk</p>
+                    </a>
+					
+			
+				            
+				<a target="_blank" href="https://ext.dcloud.net.cn/publisher?id=258588"  class="second_a"  rel="nofollow">uniapp插件-主页</a>
+				     <a target="_blank" href="https://addon.dismall.com/developer-99529.html"  class="second_a" rel="nofollow">DIscuz插件-主页</a>
+				 <a target="_blank" href="#" class="second_a"  rel="nofollow">微擎插件【开发完善上架中】</a>
+				 <a target="_blank" href="#"  class="second_a" rel="nofollow">flutter插件【开发完善上架中】</a>
+					
+					
+                </li>
+
+            <li>
+                <p>
+					<a class="drawer-menu-item" href="#">
+                        <p>优雅草运维/工具</p>
+                        <p>Tool</p>
+                    </a>
+                  
+                </p>
+                     <a href="https://zhengban.youyacao.com" class="second_a">产品正版查询</a>
+               <a href="https://www.youyacao.com/tool/makepw/" class="second_a">随机密码生成</a>
+               <a href="/kaifa" class="second_a">md5在线转换</a>
+           
+               
+               <a href="https://www.zhuoivan.com" class="second_a">卓伊凡</a>
+               
+            </li>
+                <li>
+                    <a class="drawer-menu-item" href="#">
+                        <p>优雅草相关</p>
+                        <p>About</p>
+                    </a>
+					
+					<a href="https://www.youyacao.com/kaifa/" target="_blank" rel="nofollow" class="second_a" >软件定制</a>
+					               <a href="https://www.youyacao.com/news/" target="_blank" rel="nofollow"  class="second_a">官方资讯</a>
+					   <a href="https://www.youyacao.com/lm/" target="_blank" rel="nofollow" class="second_a" >技术站长导航</a>
+					             
+					<a href="https://www.youyacao.com/seo/" target="_blank" class="second_a"  >高端优化服务</a>
+					    <a href="https://bbs.youyacao.com/" target="_blank" class="second_a" >技术支持论坛</a>
+					      <a href="https://baike.shuidi.cn/companywiki-54ddefac53fa44e9746a4efa366435b5.html" target="_blank" rel="nofollow"  class="second_a">百科介绍</a>
+					           
+                </li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact">
+        <ul>
+            <li style="border-bottom: 1px solid #ffffff;">
+                <a href="#">
+                    <img src="images/gfwx.png" style="
+    width: 100px;
+    height: 100px;
+" alt="企业微信扫码">
+                    <p class="title">官方客服</p>
+                    <p class="tap">微信联系</p>
+                </a>
+            </li>
+
+
+          
+
+
+        </ul>
+    </div>
+
+    <div class="introduction-box">
+        <div class="introduction-content">
+            <div class="close" onclick="hide()">
+                <span>
+                    <img src="images/close.svg" alt="">
+                </span>
+            </div>
+            <span>蚓无爪牙之利</span>
+            <span>筋骨之强</span>
+            <span>上食埃土</span>
+            <span>下饮黄泉</span>
+            <span>用心一也</span>
+            <span>锲而不舍，金石可镂</span>
+            <br>
+            <p>成都市一颗优雅草科技有限公司2015年成立以来一直从事于网站设计、制作、APP研发、系统开发等；我们一直专注于定制类、门户型、P2P类、小型商城等领域的系统研发、销售、服务。；我们集研发、销售、服务于
+                一体，一切从用户角度出发，以用户的需求为目标，致力于打造高端、品牌、安全、稳定、快捷、专业的网站开发；与此同时，我们一直在 技术和应用上进行创新和突破，2019年自研发松鼠系列系统，2020年发布蜻蜓系列系统，持续在大数据推送算法，人脸识别，内容鉴定算法，云计算产品对接与服务，图像算法等人工智能领域研究，2021年将持续提升技术并发布更领先的产品，力争上游 努力奋斗。</p>
+                
+                  <p>   团队介绍：
+                  核心技术成员均是股东，共计9人，均是全栈开发工程师，985/211大学毕业8人，硕士研究生5位，在读博士研究生2位，博士研究生1位，同事遍布在国内知名教育机构大厂一位，国内顶级防御单位一位，国内三大运营商单位一位，国内顶级游戏公司一位，国内BAT三大帝国其一的2位，各自有擅长的领域和编程语言，均在互联网一线大厂任职，优雅草科技有限公司除ceo和cto其他核心股东为兼职创业，诸位同事均是技术合伙人，另配备完善的全职技术服务售前售后成员，优雅草团队每天不断的学习，不断的接受新事物，做到真正的与时俱进，既在大厂得到了提升又在公司获得了盈利，名利双收，目前优雅草科技团队正在与多家软件公司合并，想加入我们的小伙伴请联系我们，目前独立有一个部门负责开发政府项目。
+                  </p>
+                  
+                    
+                <p>合作伙伴：<a rel="nofollow" href="https://partners.cloud.tencent.com/invitation/1000009941225fd73659498d2">腾讯云</a> |<a rel="nofollow" href="http://www.zzidc.com/main/member/initRegister?agentpand=630187">景安</a> | <a rel="nofollow" href="https://secop.yunaq.com/customer/api/v1/public/biz-opp/0/5a9f449545475e77a85657f6">知道创宇</a> |<a rel="nofollow" href="http://tutucloud.com/">涂图</a> | <a rel="nofollow"
+                        href="https://www.csdn.net" target="_blank">CSDN</a> | <a rel="nofollow"
+                        href="https://www.west.cn/cloudhost/gaofang/?ReferenceID=608552" target="_blank">西部数码</a> | <a
+                        rel="nofollow"
+                        href="https://www.qiniu.com/?utm_campaign=SEM&utm_content=pinzhuan&utm_medium=pinzhuan&utm_source=baiduSEM&utm_term=pinzhuan"
+                        target="_blank">七牛云</a> | <a rel="nofollow" href="https://gitee.com/" target="_blank">GITEE</a>
+                </p>
+                  
+            <br>
+            <span>重大转型：</span>
+            2015年-2018年专注于网站开发，软件开发，广告联盟，网站/软件开发曾服务开发超过1200多企业/个人，宗旨：盈利不代表升值，而升值才是长期持续盈利的可持续发展之道。<br>
+            旗下主打运营网站：<br>
+            优雅草PHP技术社区：bbs.youyacao.com<br>
+
+            2019-2020年主打自研发APP产品：松鼠直播/短视频/聚合直播系列产品 songshu.youyacao.com<br>
+            
+          2021年重点项目目标为YOYO电子导航系统，YOYO商场查询机系统以及YOYO在线聊天系统等YOYO系列产品!
+
+            <p></p>
+            <span>发展历程：</span>
+            <p>2015年成都市一颗优雅草科技有限公司正式成立 -专注于 网站开发 软件开发外包</p>
+            <p>2016延续开发业务 投入自主研发 YYC云商系统（运营失败告终）</p>
+            <p>2017年重建优雅草广告联盟并且快速积累渠道资源发展（短暂成功）</p>
+            <p>2018年广告联盟转型（运营失败告终），自主研发UB电竞系统（运营失败告终），蛰伏。</p>
+            <p>2018年下半年延续联盟业务并投入推出大象分发APP托管以及分发业务</p>
+            <p>2019年上半年大规模推广分发业务以及APP封装APP签名业务，公司购入大量企业证书。</p>
+            <p>2019年4月接应上级主管部门要求，由于担心对分发业务监管问题关闭大象分发停运，签名业务不变。</p>
+            <p>2019年5月至今转型为苹果APP周办服务商并推出主营APP游戏评测平台 试一哈APP游戏评测。</p>
+
+            <p>2019年9月至今 试一哈APP 改版中。。。。预计2020年上线。</p>
+
+            <p>2019年11月至今 不断完善自研发系统 -松鼠小视频系统 松鼠直播系统 松鼠聚合直播系统（均已获得原始软件著作权）</p>
+            <p>2020继续完善售卖中的松鼠系列产品，并推出更多自研发系统（敬请期待）继续运维大象分发，全新运营试一哈APP</p>
+
+            <p>2020年2月5日起优雅草技术论坛从服务于客户已经对外开放，做有态度有质量的论坛----https://bbs.youyacao.com </p>
+
+       <p>2020年4月5日蜻蜓系统X3开始进入研发阶段同期开始额外衍生所有系列的JAVA版本，此后系统均PHP/JAVA </p>
+          <p>2020年4月蜻蜓系统H5短视频版本初始版发布</p>
+<p>2020年5月1日松鼠短视频系统JAVA版本第一个版本发布 </p>
+<p>2020年7月1日蜻蜓社交版本发布 </p>
+          <p>2020年7月23日蜻蜓精简版-第一个带初级算法推荐的版本发布 </p>
+          
+
+      <p >大事记：2020年9月15日优雅草科技正式成为票哆哆大中华区核心战略合作伙伴！！！</p>
+      
+  <p >2020年10月做最后完善，YOYO电子导航系统，YOYO商场查询机系统以及YOYO在线聊天系统即将完善发布并且发布！</p>
+  <p>2021年重点项目目标为YOYO电子导航系统，YOYO商场查询机系统以及YOYO在线聊天系统等YOYO系列产品!</p>
+  
+  <P>大事记:2020年12月1日优雅草科技成为新三板上市公司景安（股票代码景安网络832757）的核心合作伙伴，正式开启景安系列产品。  （优雅草论坛积分可免费兑换景安服务器）</P>
+  <P>大事记:2020年12月12日优雅草科技和杭州禾微科技（涂图科技）达成深度战略合作-蜻蜓系列系统默认对接涂图图像剪辑，美颜，美妆，微整形。  </P>
+<P>大事记:2020年12月14日优雅草科技成为腾讯控股（港股代码00700.HK）旗下腾讯云（腾讯云计算（北京）有限责任公司）平台合作伙伴。  </P>
+<p>2020年12月20日优雅草发布第一个蜻蜓F影视系统公开测试版本V1.5版本，将于12月完善至V1.8版本正式发行销售</p>
+<a href="https://songshu.youyacao.com/detail/206.html" >
+<p >2020年1月15日优雅草科技团队正式搬迁至华蓝盾大楼，配备完善的设施拥有技术独立的办公间以及员工宿舍（年后开启新招聘）</p></a>
+<p >2020年1月26日一颗优雅草科技正式申请通过discuz开发者中心并发布第一款插件-强制发帖弹出公告</p></a>
+<p >2020年2月1日第一款腾讯云原生sdk插件发布-腾讯云播放器原生sdk在uniapp市场发布</p></a>
+<p >2020年2月23日第完善版---优雅草产品系统正版查询验证系统上线zhengban.youyacao.com支持查询QQ号和域名反馈授权版本授权时间是否授权</p></a>
+            <p>结尾：创业就是要不断的接受新事物不断去创新，不断去挑战不断去更进，在一步步想法失败中吸取了宝贵经验，所有的项目研发来源于主营开发业务的支持，也在过程中不断提升了自身的研发技术，终身学习才可以不被淘汰，在it行业更是如此，更新迭代如此迅速的行业，不断学习，终身学习，永无止境。备注：励志：你若坚持，定会发光，时间是所向披靡的武器，它能集腋成裘，也能聚沙成塔，将人生的不可能都变成可能。
+            
+        
+            </p>
+            
+            
+            
+             <p class="mb-2"> <a
+            href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=松鼠官网&Menu=yes&from=songshu"   rel="nofollow" >售前主客服QQ：42210895 </a>|<a
+            href="http://wpa.qq.com/msgrd?V=3&uin=2362059584&Site=松鼠官网&Menu=yes&from=songshu"  rel="nofollow" >售前主客服QQ:2362059584 </a>
+            |<a
+            href="http://wpa.qq.com/msgrd?V=3&uin=903960&Site=松鼠官网&Menu=yes&from=songshu"  rel="nofollow" >售前主TOUQQ:903960 </a>
+            
+    </p>
+    
+    
+     <p class="mb-2"> 
+     
+        <a
+            href="http://wpa.qq.com/msgrd?V=3&uin=410063478&Site=松鼠官网&Menu=yes&from=songshu"  rel="nofollow" >售前优雅：410063478 </a>|<a
+            href="http://wpa.qq.com/msgrd?V=3&uin=511905011&Site=松鼠官网&Menu=yes&from=songshu"  rel="nofollow" >售前锋QQ:511905011 </a>|<a
+            href="http://wpa.qq.com/msgrd?V=3&uin=271710471&Site=松鼠官网&Menu=yes&from=songshu"  rel="nofollow"  >售前超超:271710471 </a>
+     </p>
+        <p class="mb-2"> 
+     <a
+            href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=松鼠官网&Menu=yes&from=songshu"  rel="nofollow" >售前豆子QQ：42210895 </a>|<a
+            href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=松鼠官网&Menu=yes&from=songshu"  rel="nofollow"  >售前云桧QQ:2362059584 </a>|<a
+            href="http://wpa.qq.com/msgrd?V=3&uin=331908934&Site=松鼠官网&Menu=yes&from=songshu"  rel="nofollow" >售前勇QQ:331908934 </a>
+            
+            
+    </p>
+    </br>
+    
+    <a href="https://bbs.youyacao.com/thread-1603-1-1.html">禁止私下与销售人员任何私人交易行为，后果自负</a>
+   <a href="https://bbs.youyacao.com/thread-206-1-1.html">人员一览表</a>
+            联系我们（微信扫码）： <img src="images/gfwx.png" style="
+    width: 100px;
+    height: 100px;
+" alt="企业微信扫码">
+
+         
+
+
+
+
+
+
+
+
+         
+
+
+            </p>
+
+
+
+        </div>
+    </div>
+
+
+    <audio autoplay="1" loop="1">
+        <source src="https://www.youyacao.com/123.mp3"></audio>
+
+
+    <div class="modal-bg"></div>
+
+    <!-- Swiper JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/iscroll.min.js"></script>
+    <script src="js/drawer.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper('.banner_swiper', {
+            autoplay: true,
+            loop: true,
+            effect: 'fade',
+        });
+
+        const mySwiper = new Swiper ('#announcement', {
+            direction: 'vertical', // 垂直切换选项
+            autoplay: true,
+            loop: true, // 循环模式选项
+        });
+
+        $(document).ready(function () {
+            $('.drawer').drawer();
+            /*$('.drawer').drawer({
+                class: {
+                    nav: 'drawer-nav',
+                    toggle: 'drawer-toggle',
+                    overlay: 'drawer-overlay',
+                    open: 'drawer-open',
+                    close: 'drawer-close',
+                    dropdown: 'drawer-dropdown'
+                },
+                iscroll: {
+                    // Configuring the iScroll
+                    // https://github.com/cubiq/iscroll#configuring-the-iscroll
+                    mouseWheel: true,
+                    preventDefault: false
+                },
+                showOverlay: true
+            });*/
+            /**去除UC广告*/
+            setTimeout(function () {
+                $("[id^='_']").hide();
+            }, 500);
+        });
+
+        function hide() {
+            $('.introduction-box, .modal-bg').fadeOut();
+        }
+        function show() {
+            $('.modal-bg').fadeIn();
+            $('.introduction-box').css({
+                display: 'flex'
+            });
+        }
+    </script>
+    <div class="drawer-overlay drawer-toggle"></div>
+</body>
+
+</html>

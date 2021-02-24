@@ -1,0 +1,139 @@
+﻿*, ::after, ::before {
+    box-sizing: border-box;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+.col,  .col-10{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+.night-view {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid rgba(135, 150, 165, .1);
+    border-radius: 4px 4px 0 0;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.night-view-browser.colored:before {
+    box-shadow: inset 0 0 0 8px #fc605c, 14px 0 #fdbc40, 28px 0 #34c84a;
+}
+.night-view-browser:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 8px rgba(135, 150, 165, .1), 14px 0 rgba(135, 150, 165, .1), 28px 0 rgba(135, 150, 165, .1);
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+.night-view-mb {
+    position: relative;
+}
+element.style {
+    width: 50%;
+}
+.night-view.loaded .night-view-mb-inner {
+    background-image: url(*, ::after, ::before {
+    box-sizing: border-box;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+.col,  .col-10{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+.night-view {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid rgba(135, 150, 165, .1);
+    border-radius: 4px 4px 0 0;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.night-view-browser.colored:before {
+    box-shadow: inset 0 0 0 8px #fc605c, 14px 0 #fdbc40, 28px 0 #34c84a;
+}
+.night-view-browser:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 8px rgba(135, 150, 165, .1), 14px 0 rgba(135, 150, 165, .1), 28px 0 rgba(135, 150, 165, .1);
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+.night-view-mb {
+    position: relative;
+}
+element.style {
+    width: 50%;
+}
+.night-view.loaded .night-view-mb-inner {
+    background-image: url("https://www.youyacao.com/log/style/css/img/H97f41f29c9c8457ca7c4bfa61307b00bi.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: left top;
+    position: absolute;
+}
+.night-view-mb-inner.leave {
+    -webkit-transition: width .3s;
+    -o-transition: width .3s;
+    transition: width .3s;
+}
+.night-view-mb-inner {
+    width: 50%;
+    height: 100%;
+}
+.panle h5{
+    text-align: left; 
+}
+/*技能*/ "https://www.youyacao.com/log/style/css/img/H97f41f29c9c8457ca7c4bfa61307b00bi.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: left top;
+    position: absolute;
+}
+.night-view-mb-inner.leave {
+    -webkit-transition: width .3s;
+    -o-transition: width .3s;
+    transition: width .3s;
+}
+.night-view-mb-inner {
+    width: 50%;
+    height: 100%;
+}
+.panle h5{
+    text-align: left; 
+}
+/*技能*/
