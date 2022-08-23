@@ -1,5 +1,0 @@
-<?php echo'404';die();?>
-{if $article.Category.Metas.offdetails}
-<li><a {if $article->Metas->Setwailian}target="_blank" href="{$article->Metas->Setwailian}"{/if}{if $zbp->Config('hnysweb')->nofollow} rel="nofollow"{/if}>{if $zbp->Config('hnysweb')->icoapioff}<i class="iconfont">&#xe6a6;</i>{else}<img src="{if $zbp->Config( 'hnysweb' )->icoapi}{$zbp->Config( 'hnysweb' )->icoapi}{else}https://ico.hnysnet.com/get.php?url={/if}{$article->Metas->Setwailian}" alt="{$article.Title}">{/if}{$article.Title}</a></li>
-{else}
-<li>{if $zbp->Config('hnysweb')->wzdetails}<a href="{$article.Url}">{else}<a {if $article->Metas->Setwailian}target="_blank" href="{$article->Metas->Setwailian}"{/if}{if $zbp->Config('hnysweb')->nofollow} rel="nofollow"{/if}>{/if}{if $zbp->Config('hnysweb')->icoapioff}<i class="iconfont">&#xe6a6;</i>{else}<img src="{if $zbp->Config( 'hnysweb' )->icoapi}{$zbp->Config( 'hnysweb' )->icoapi}{else}https://ico.hnysnet.com/get.php?url={/if}{$article->Metas->Setwailian}" alt="{$article.Title}">{/if}{$article.Title}</a></li>{/if} 
