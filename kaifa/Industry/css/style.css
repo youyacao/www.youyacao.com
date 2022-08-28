@@ -107,7 +107,7 @@ a.navbar-brand {
 }
 .banner {
 	background:url(../images/1.jpg) no-repeat;
-	min-height:600px;
+	min-height:800px;
 	background-position:center;
 	background-size:cover;
 	-webkit-background-size:cover;
