@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'adineue';
+    src: url('../fonts/adineuepro-regular.eot');
+    src: url('../fonts/adineuepro-regular.eot') format('embedded-opentype'),
+    url('../fonts/adineuepro-regular.woff2') format('woff2'),
+    url('../fonts/adineuepro-regular.woff') format('woff'),
+    url('../fonts/adineuepro-regular.ttf') format('truetype'),
+    url('../fonts/adineuepro-regular.svg#alibabapuhuitir') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*使用选择器指定字体*/
+.digit{
+    font-family: "adineue", sans-serif;
+}

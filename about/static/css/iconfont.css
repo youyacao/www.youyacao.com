@@ -1,0 +1,77 @@
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot'); /* IE9 */
+  src: url('../fonts/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/f9627750900b42afb50928f1fbc5293e.woff') format('woff2'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('../fonts/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fenxiang:before {
+  content: "\e605";
+}
+
+.icon-dianhua:before {
+  content: "\e67d";
+}
+
+.icon-weixin:before {
+  content: "\e679";
+}
+
+.icon-next:before {
+  content: "\e600";
+}
+
+.icon-weibo:before {
+  content: "\e646";
+}
+
+.icon-chanpin:before {
+  content: "\e61c";
+}
+
+.icon-lanmu:before {
+  content: "\e628";
+}
+
+.icon-anli:before {
+  content: "\e637";
+}
+
+.icon-wenjiandai:before {
+  content: "\e655";
+}
+
+.icon-prev:before {
+  content: "\e609";
+}
+
+.icon-kefu:before {
+  content: "\e674";
+}
+
+.icon-qq:before {
+  content: "\e63e";
+}
+
+.icon-index:before {
+  content: "\e601";
+}
+
+.icon-diqiu:before {
+  content: "\e6f4";
+}
+
+.icon-local:before {
+  content: "\e7ba";
+}
+
