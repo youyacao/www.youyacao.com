@@ -1928,15 +1928,3 @@ body {
 @media (max-width: 800px){
 	.fixedPanel{display: none;}
 }
-#newBridge #nb_toolbar_wrap.qiao-toolbar-wrapper-new{
-    padding: 0;
-    border: none;
-}
-#newBridge #nb_toolbar_wrap.qiao-toolbar-btn-two .nb_toolbar_enable_btn{
-    width: 50%;
-    margin-right: 0;
-    border-radius: 0!important;
-    font-size: 14px!important;
-    height: 50px!important;
-    line-height: 50px!important;
-}
