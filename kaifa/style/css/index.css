@@ -3,6 +3,7 @@
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+	background: url(img/bg_1.jpg);
 }
 #banner {
 	left: 50%;
