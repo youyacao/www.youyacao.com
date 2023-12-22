@@ -484,10 +484,10 @@ img {
 	overflow: hidden;
 }
 .center_intrl {
-	float: left;
-	margin-left: 162px;
-	text-align: center;
-	margin-top: 34px;
+    float: left;
+    margin-left: -55px;
+    text-align: center;
+    margin-top: 60px;
 }
 .center_intrl h4 {
 	font-size: 28px;
