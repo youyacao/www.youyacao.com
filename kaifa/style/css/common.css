@@ -485,7 +485,7 @@ img {
 }
 .center_intrl {
     float: left;
-    margin-left: -55px;
+    margin-left: 55px;
     text-align: center;
     margin-top: 60px;
 }
