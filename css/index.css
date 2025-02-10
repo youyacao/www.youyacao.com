@@ -26,6 +26,15 @@ body {
     line-height: 18px;
 }
 
+  h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+       
+
 .header {
     background-color: rgba(0, 0, 0, 0.6);
     height: 75pt;
