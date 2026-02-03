@@ -520,7 +520,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <img src="images/logo.png" alt="优雅草科技" class="h-10 w-auto">
+                    <img id="theme-logo" src="images/logo_light.png" alt="优雅草科技" class="h-14 w-auto">
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -1385,10 +1385,13 @@
 
         // Function to set theme
         function setTheme(theme) {
+            const themeLogo = document.getElementById('theme-logo');
             if (theme === 'dark') {
                 html.classList.add('dark');
+                if (themeLogo) themeLogo.src = 'images/logo_dark.png';
             } else {
                 html.classList.remove('dark');
+                if (themeLogo) themeLogo.src = 'images/logo_light.png';
             }
             localStorage.setItem('theme', theme);
             updateThemeToggleIcons();
