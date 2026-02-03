@@ -1,399 +1,1022 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-<meta content="yes" name="apple-mobile-web-app-capable">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="renderer" content="webkit">
-<meta http-equiv = "refresh"    content = "120;url=https://www.youyacao.com/index.html" > 
-<meta name="force-rendering" content="webkit">
-<title>成都市一颗优雅草科技有限公司-2025开源计划-全面开源</title>
-<meta name="description" content="这是成都市一颗优雅草科技有限公司-松鼠/蜻蜓系列产品·一个单页，成都市一颗优雅草科技有限公司自2015年起从事于网站开发后经过大量的学习以及时间经验的积累，现已经成为全栈软件开发公司并仍在持续学习，2019年自研松鼠短视频，2020年自研蜻蜓系列产品，2022年将自研软硬件结合物联网产品，业精于勤荒于嬉，行成于思而毁于随。">
-<meta name="keywords" content="优雅草AI绘画业务,优雅草AI视频业务,蜻蜓短视频,松鼠短视频,优雅草蜻蜓q系统,优雅草蜻蜓q旗舰版,优雅草蜻蜓系统,优雅草松鼠短视频v5.x,优雅草蜻蜓q时尚版,优雅草蜻蜓G纯原生系统">
-<meta name="robots" content="max-image-preview:large">
-<script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
-<script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-<link rel="stylesheet" id="wp-block-library-css" href="css/style.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="contact-form-7-css" href="css/styles.css" type="text/css" media="all">
-<link rel="stylesheet" id="wpd-css-css" href="css/db.min.css" type="text/css" media="screen">
-<link rel="stylesheet" id="fonts-css" href="css/fonts.css" type="text/css" media="all">
-<link rel="stylesheet" id="iconfont-css" href="css/iconfont.css" type="text/css" media="all">
-<link rel="stylesheet" id="style-css" href="css/style.css" type="text/css" media="all">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="refresh" content="120;url=https://www.youyacao.com/index.html">
+    <meta name="force-rendering" content="webkit">
+    <title>成都市一颗优雅草科技有限公司-2025开源计划-全面开源</title>
+    <meta name="description"
+        content="这是成都市一颗优雅草科技有限公司-松鼠/蜻蜓系列产品·一个单页，成都市一颗优雅草科技有限公司自2015年起从事于网站开发后经过大量的学习以及时间经验的积累，现已经成为全栈软件开发公司并仍在持续学习，2019年自研松鼠短视频，2020年自研蜻蜓系列产品，2022年将自研软硬件结合物联网产品，业精于勤荒于嬉，行成于思而毁于随。">
+    <meta name="keywords"
+        content="优雅草AI绘画业务,优雅草AI视频业务,蜻蜓短视频,松鼠短视频,优雅草蜻蜓q系统,优雅草蜻蜓q旗舰版,优雅草蜻蜓系统,优雅草松鼠短视频v5.x,优雅草蜻蜓q时尚版,优雅草蜻蜓G纯原生系统">
+    <meta name="robots" content="max-image-preview:large">
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        :root {
+            --neon-blue: #00d4ff;
+            --neon-purple: #b24bff;
+            --neon-pink: #ff2d92;
+            --dark-bg: #0a0a0f;
+            --card-bg: rgba(20, 20, 35, 0.6);
+            --border-glow: rgba(0, 212, 255, 0.3);
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: var(--dark-bg);
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
 
+        /* Background Canvas */
+        .star-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
 
+        .star-bg canvas {
+            width: 100%;
+            height: 100%;
+        }
 
-	  
-	  
+        /* Floating Nav */
+        .floating-nav {
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .nav-logo {
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .nav-countdown {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-countdown-text {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .countdown-circle {
+            min-width: 40px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--neon-blue);
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            margin-bottom: 2rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero-badge-indicator {
+            width: 8px;
+            height: 8px;
+            background: var(--neon-blue);
+            border-radius: 50%;
+            animation: pulse-glow 2s infinite;
+        }
+
+        .hero-badge-text {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 5px var(--neon-blue);
+                opacity: 1;
+            }
+            50% {
+                box-shadow: 0 0 15px var(--neon-blue);
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-title {
+            font-size: clamp(4rem, 15vw, 12rem);
+            font-weight: 900;
+            line-height: 0.9;
+            margin-bottom: 2rem;
+            background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.3) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: scaleIn 1s ease-out 0.2s both;
+            letter-spacing: 0.02em;
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.5em;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.25rem 3rem;
+            background: transparent;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--neon-blue);
+            text-decoration: none;
+            transition: all 0.4s ease;
+            animation: fadeIn 1s ease-out 0.6s both;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 2rem;
+            right: 2rem;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .hero-cta:hover {
+            color: #fff;
+            border-color: rgba(0, 212, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .hero-cta:hover::before {
+            opacity: 1;
+        }
+
+        /* Danmaku Background */
+        .danmaku-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .danmaku-item {
+            position: absolute;
+            white-space: nowrap;
+            font-weight: 500;
+            color: rgba(0, 212, 255, 0.3);
+            animation: danmaku linear infinite;
+            text-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .danmaku-item:nth-child(1) { font-size: 1rem; top: 8%; animation-duration: 30s; }
+        .danmaku-item:nth-child(2) { font-size: 1.1rem; top: 20%; animation-duration: 28s; animation-delay: -10s; }
+        .danmaku-item:nth-child(3) { font-size: 0.9rem; top: 32%; animation-duration: 32s; animation-delay: -5s; }
+        .danmaku-item:nth-child(4) { font-size: 1.05rem; top: 44%; animation-duration: 26s; animation-delay: -15s; }
+        .danmaku-item:nth-child(5) { font-size: 1rem; top: 56%; animation-duration: 35s; animation-delay: -8s; color: rgba(178, 75, 255, 0.3); }
+        .danmaku-item:nth-child(6) { font-size: 1.15rem; top: 68%; animation-duration: 25s; animation-delay: -20s; color: rgba(178, 75, 255, 0.3); }
+        .danmaku-item:nth-child(7) { font-size: 0.85rem; top: 80%; animation-duration: 38s; animation-delay: -12s; }
+        .danmaku-item:nth-child(8) { font-size: 1.1rem; top: 92%; animation-duration: 29s; animation-delay: -25s; }
+
+        @keyframes danmaku {
+            0% { transform: translateX(100vw); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(178, 75, 255, 0.2);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--neon-purple);
+            margin-bottom: 1rem;
+            letter-spacing: 0.2em;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .product-card {
+            position: relative;
+            padding: 2.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+            border-color: var(--neon-blue);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-index {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(180deg, var(--neon-blue), transparent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.3;
+            margin-bottom: -1rem;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-desc {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--neon-blue);
+        }
+
+        /* Info Section - Terminal/Data Style */
+        .info-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5), transparent);
+            position: relative;
+        }
+
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, var(--neon-blue), transparent);
+        }
+
+        .info-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .info-row:hover {
+            background: rgba(0, 212, 255, 0.03);
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .info-row:hover::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--neon-blue);
+            font-weight: 700;
+            animation: blinkCursor 1s infinite;
+        }
+
+        @keyframes blinkCursor {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .info-key {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--neon-purple);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .info-separator {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            margin: 0 2rem;
+        }
+
+        .info-number {
+            font-family: 'Courier New', monospace;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+            min-width: 120px;
+            text-align: right;
+            letter-spacing: -0.05em;
+        }
+
+        .info-row:hover .info-number {
+            color: var(--neon-blue);
+            text-shadow: 0 0 40px var(--neon-blue);
+        }
+
+        /* Links Section - Minimal Line Style */
+        .links-section {
+            padding: 4rem 2rem 6rem;
+            text-align: center;
+        }
+
+        .links-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .links-title {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 2rem;
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .link-row {
+            position: relative;
+            padding: 1rem 0;
+        }
+
+        .link-row::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .link-row:last-child::after {
+            display: none;
+        }
+
+        .link-main {
+            display: inline-block;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .link-main::before {
+            content: '// ';
+            color: var(--neon-blue);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .link-main:hover {
+            color: var(--neon-blue);
+            letter-spacing: 0.15em;
+        }
+
+        .link-main:hover::before {
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(5, 5, 10, 0.95);
+            border-top: 1px solid var(--border-glow);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-col h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: #fff;
+            letter-spacing: 0.1em;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--neon-blue);
+        }
+
+        .footer-partners {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-glow);
+        }
+
+        .footer-partners h5 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .partners-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .partners-list a {
+            padding: 0.5rem 1.25rem;
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .partners-list a:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: var(--neon-blue);
+            color: var(--neon-blue);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-glow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-badges {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .floating-nav {
+                padding: 0.75rem 1.5rem;
+                gap: 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-row {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .info-row:hover {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .info-separator {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--neon-blue);
+            outline-offset: 4px;
+        }
+    </style>
 </head>
 
-<nav id="site-navigation" class="navigation-main header-area" role="navigation">
-
-<a href="" target="_blank" rel="nofollow"><span></span></a>
-</div>
-<div class="site-icon">
-<input type="checkbox" id="menu-toggle">
-<div class="menu-widgets">
-<div class="details-modal-content">
-<div class="site-icon">
-
-</div>
-<div class="login">
-
-
-
-<label>
-
-<div class="widget-area" role="complementary">
-<div class="widget-area-page">
-<div class="widget-container">
-
-<div class="header-description"><a href="index.html">前程似锦·点击直接进入详细官网</a></div>
-<logo></logo>
-</div>
-</div>
-</div>
-</nav>
-<div class="body-bg"></div>
-<div class="header-gotop"></div><style type="text/css">.index-one{display:flex;margin:0 0 -1rem;position:relative;height:100vh;align-items:center;justify-content:space-between;overflow:hidden;box-shadow:0 0 10px 2px rgb(0 0 0 / 30%);padding:3.5rem 3.5rem 2rem;}.index-welcome-thanks{font-size:1.75rem;font-family:'YouSheBiaoTiHei';animation:margin 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,opacity 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both;animation-delay:.3s;-webkit-mask:linear-gradient(#000 30%,rgba(0,0,0,.7) 70%);}.index-welcome-greetings{font-family:'OPPOSans-M';text-transform:capitalize;animation:margin 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,opacity 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both;}.weclome{position:absolute;height:1rem;bottom:2rem;line-height:1;opacity:.8;}.weclome-bg{position:absolute;bottom:2.5rem;letter-spacing:.1em;}.weclome span{font-family:'Edo-SZ';font-size:.75rem;vertical-align:middle;}.weclome i{height:.65rem;width:.65rem;position:absolute;top:0;bottom:0;margin:auto;border-radius:50%;border:.1rem solid #fff;display:block;animation:weclome-i 3s cubic-bezier(0.62,0.21,0.25,1) infinite both;}.weclome h1,.weclome h2,.weclome h3,.weclome h4,.weclome h5{animation:weclome-pc 3s cubic-bezier(0.62,0.21,0.25,1) 1 forwards;overflow:hidden;width:0;height:.625rem;position:absolute;font-size:.625rem;left:1.5rem;top:0;bottom:0;margin:auto;}.weclome h1{animation-delay:.5s;}.weclome h2{animation-delay:3s;}.weclome h3{animation-delay:6s;}.weclome h4{animation-delay:9s;}.weclome h5{animation:weclome-pcf 4s cubic-bezier(0.62,0.21,0.25,1) 1 12s forwards;}.site-header{min-height:100%;width:100%;position:absolute;top:0;left:0;margin:0;z-index:-2;box-shadow:none !important;border-radius:0;}.site-header:after{content:"";height:100%;width:100%;background:#060c19;position:absolute;z-index:-3;}.nav-links{display:flex;justify-content:flex-end;margin:0 0 -1rem -1rem;}.nav-previous,.nav-next{width:50%;}body.night .nav-previous a,body.night .nav-next a,.nav-previous a,.nav-next a{opacity:.6;color:inherit;background:var(--s-background,rgb(255 255 255 / 5%)) !important;box-shadow:none;width:calc(100% - 1rem);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}canvas{width:100%;height:100%;position:absolute;object-fit:cover;}.index-old-post,.index-rand-post{margin:2rem 0 0;font-size:.55rem;line-height:3;max-width:70%;opacity:.8;display:block;animation:margin 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,opacity 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both;animation-delay:.5s;}.index-old-post span,.index-rand-post span{padding:.5em;background:var(--s-background,rgb(255 255 255 / 10%));box-shadow:0 0 10px 2px rgb(0 0 0 / 10%);margin:0 .5em 0 0;}.index-old-post a:after,.index-rand-post:after{content:"\e627";font-family:'iconfont';opacity:0;transform:translateX(-10px);transition:all .5s;display:inline-block;}.index-old-post a:hover:after,.index-rand-post:hover:after{opacity:.6;transform:translateX(0);}.index-old-post span{display:inline;}.index-new-post{display:flex;width:40%;flex-direction:column;margin:auto 0 0;align-items:flex-end;max-width:20rem;}.index-new-post .part-title{text-align:right;animation:marginx 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,opacity 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both;}.index-new-post li{display:block;margin:1rem 0 0;width:100%;transition:all .5s;}.index-new-post li:hover .entry-post{opacity:1;transform:scale(1);}.entry-post img{object-fit:cover;height:100%;width:100%;aspect-ratio:16 / 9;}.entry-header{transition:all .5s;z-index:2;position:relative;padding:1rem;border-radius:var(--border-radius);}.index-new-post li:nth-child(2) .entry-header{animation-delay:.3s;}.index-new-post li:nth-child(3) .entry-header{animation-delay:.4s;}.index-new-post li:nth-child(4) .entry-header{animation-delay:.5s;}.index-new-post .paging-navigation{animation:marginx 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,opacity 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both;animation-delay:.6s;}.entry-title{border-bottom:1px solid rgb(124 124 124 / 20%);opacity:.8;padding:0 0 .5em;}.post-categories{opacity:1;margin:0;display:inline;}.post_content{margin:0;font-size:.55rem;}.entry-date{float:right;}.post-views,.comments-number{float:right;margin:0 1em 0 0;}.post-views span:before{margin:0 .5em 0 0;font-family:'iconfont';}.comments-number a:before{margin:0 .5em 0 0;font-family:'iconfont';content:'\e633';font-size:90%;}.part-title{position:relative;font-size:1rem;font-family:'YouSheBiaoTiHei';}.part-title span{font-size:1.5rem;opacity:.1;text-transform:uppercase;display:block;margin:-1rem 0 0;line-height:1;}@keyframes hue-rotate{0%{filter:hue-rotate(0deg);}100%{filter:hue-rotate(360deg);}}@keyframes space{0%{transform:scale(1.5);}100%{transform:scale(1);}}@keyframes marginx{0%{transform:translateX(100%);}100%{transform:translateX(0);}}@media (min-width:1025px){.index-one,.index-one a{color:rgb(255 255 255 / 85%);text-shadow:0 1px 5px rgb(0 0 0 / 30%);}.entry-title{font-size:inherit;}.entry-header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:var(--s-background,rgb(255 255 255 / 5%));box-shadow:0 0 10px 2px rgb(0 0 0 / 10%);animation:marginx 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,opacity 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both;}.entry-post{opacity:0;position:absolute;top:0;left:0;width:100%;height:100%;transition:all 1s;transform:scale(1.1);filter:brightness(.8);z-index:-1;}.post_content,.entry-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}.index-new-post li:hover .entry-header{background:var(--s-background,rgb(0 0 0 / 10%));}.index-new-post li:hover{width:120%;}canvas{animation:space 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,opacity 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,hue-rotate 15s cubic-bezier(0.62,0.21,0.25,1) infinite;}}@media (max-width:1024px){.site-header{min-height:50%;position:fixed;}.index-one{display:flex;flex-direction:column;height:auto;padding:0;margin:0;align-items:stretch;}.index-welcome-thanks{font-size:1.25rem;padding:0 1rem;}.weclome{position:static;margin:1rem;animation:margin 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,opacity 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both;animation-delay:.4s;}.index-welcome{margin:max(30vh,6rem) 0 1rem;text-shadow:0 1px 5px rgb(0 0 0 / 30%);color:rgb(255 255 255 / 80%);}.index-new-post{width:100%;max-width:none;align-items:stretch;padding:1rem;background:var(--s-background,#fafafa);border-radius:var(--border-radius) var(--border-radius) 0 0;box-shadow:0 0 10px 2px rgb(0 0 0 / 10%);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);animation:margin 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both,opacity 1.5s cubic-bezier(0.62,0.21,0.25,1) 1 both;animation-delay:.5s;}.index-new-post li{background:var(--s-background,white);border-radius:var(--border-radius);box-shadow:0 5px 30px 0 rgb(0 0 0 / 5%);}.entry-post img{border-radius:var(--border-radius);}.index-new-post .part-title{text-align:left;animation:none;}.index-rand-post{display:none;}.index-rand-post a{width:100%;max-width:none;}.index-welcome-greetings{padding:0 1rem;}canvas{height:300%;width:200%;transform:translate(-50%,-30%);left:50%;}}</style>
-<div class="index-one">
-<div class="site-header">
-<canvas id="canvas"></canvas>
-</div>
-<div class="index-welcome">
-<div class="index-welcome-greetings">嗨~引导单页·120秒后跳转官网</div>
-<h2 class="index-welcome-thanks"><a href="index.html">前程似锦·点击直接进入详细官网</a></h2>
-<div class="weclome">
-<i></i>
-
-<h3>这里是一颗优雅草科技关于系统和公司介绍的一个引导页</h3>
-<h5>欢迎联系我们合作-以下是公司座右铭</h5>
-</div>
-<a class="index-rand-post"  ><span>2025年·优雅草脱颖囊锥·得到青睐</span><br>韬光养晦·养精蓄锐·厚积薄发
-学习如春起之苗，不见其增，日有所长；辍学似磨刀之石，不见其损，年有所亏<br>
-问渠那得清如许？为有源头活水来。<br>
-不积跬步，无以至千里；不积小流，无以成江海<br>
-
-聚沙成塔,集腋成裘,涓涓细流,汇成大河<br>
-优雅草2025年·产品开源计划·完全开源！<br>优雅草科技QQ群:929353806<br>
-
-优雅草2025年·产品合营计划！资源整合·合作共赢！<br>优雅草CTO的QQ:422108995<br>
-
-优雅草已经加入大开源计划！呼吁所有有志人才直接加入开源计划，侠之大者，为国为民<br>
-
-<a href="https://doc2.youyacao.com/web/#/22/338" target="_blank" >优雅草科技已经不接纯粹外包项目，要么合营，要么与学习相关，要么与产品相关，点击查看</a>
-
-更多其他同事联系方式：<a href="https://doc2.youyacao.com/web/#/22/1024" target="_blank" >点击跳转联系方式</a><br>
-
-本官网代码已经开源，开源地址-<a href="https://gitee.com/youyacao/www.youyacao.com"> gitee优雅草企业官网 </a>
-
-更多开源产品	<a href="https://gitee.com/youyacao/"> gitee优雅草官网 </a>
-
-</a>
-</div>
-<div class="index-new-post">
-	
-<h2 class="part-title">优雅草推荐业务<span>YOUYACAO</span></h2>
-
-
-
-
-
-
-<li>
-	<div class="entry-post"><img width="2000" height="1335" src="img/2.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""></div>
-	<div class="entry-header">
-	<h5 class="entry-title"><a href="https://xingyun.youyacao.com" rel="bookmark">星云智控</a></h5> <div class="post_content">
-	<span class="entry-date">2025年·重磅产品·星云智控</time></a></span>
-	<div class="comments-number">优雅草的星云智控</a></div>
-	<div class="post-views"><span>重磅产品</span></div>
-	<div class="post-categories"><span class="tag vcard"><a href="https://xingyun.youyacao.com" rel="category tag">优雅草2025年重磅产品星云智控-2025年5月15日即将发布本重磅产品</a></span></div>
-	</div>
-	</div>
-	</li>
-	
-
-
-
-<li>
-<div class="entry-post"><img width="2000" height="1335" src="img/1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""></div>
-<div class="entry-header">
-<h5 class="entry-title"><a href="https://doc2.youyacao.com/web/#/22/2451" rel="bookmark">创作路线</a></h5> <div class="post_content">
-<span class="entry-date">2025年开启新纪元</time></a></span>
-<div class="comments-number">优雅草的原创作品</a></div>
-<div class="post-views"><span>重磅产品</span></div>
-<div class="post-categories"><span class="tag vcard"><a href="https://doc2.youyacao.com/web/#/22/2451" rel="category tag">优雅草2025年主要在以下内容方面进行创造，音乐，游戏，小说三个业务板块，做深度创作，优雅草科技不再接受单纯的外包项目【除非定制化价格很高】，只接受1，合营项目，让优雅草加入联合运营开发的项目，2，定制化价格很高，远超市场价的项目3，定制项目与优雅草技术研究试验相关，项目本身方向与优雅草学习方向相关【或者是与优雅草自身产品迭代有关，优雅草自研产品相关】，其他一切外包项目都不接受。</a></span></div>
-</div>
-</div>
-</li>
-
-
-
-
-
-
-
-
-<li>
-<div class="entry-post"><img width="2000" height="1335" src="img/1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""></div>
-<div class="entry-header">
-<h5 class="entry-title"><a href="https://www.youyacao.cn" rel="bookmark">APP内测分发</a></h5> <div class="post_content">
-<span class="entry-date">2025年APP内测分发平台</time></a></span>
-<div class="comments-number">优雅草内测分发</a></div>
-<div class="post-views"><span>重磅产品</span></div>
-<div class="post-categories"><span class="tag vcard"><a href="https://www.youyacao.cn" rel="category tag">专业的APP内测分发平台，app分发,app分发平台,app应用分发,App打包,app在线打包,苹果IPA分发平台,app应用内测分发,iOS分发平台,安卓APK分发平台,ios分发平台</a></span></div>
-</div>
-</div>
-</li>
-
-
-
-
-
-
-<li>
-<div class="entry-post"><img width="2000" height="1335" src="img/1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""></div>
-<div class="entry-header">
-<h5 class="entry-title"><a href="https://doc2.youyacao.com/web/#/22/2309" rel="bookmark">AI绘图·AI视频</a></h5> <div class="post_content">
-<span class="entry-date">2024年12月新发行</time></a></span>
-<div class="comments-number">AI绘图·AI视频处理业务</a></div>
-<div class="post-views"><span>重磅产品</span></div>
-<div class="post-categories"><span class="tag vcard"><a href="https://doc2.youyacao.com/web/#/22/2309" rel="category tag">优雅草image图像处理商城，优雅草将结合AI技术+人工技术，提供以下AI服务： AI产品背景摄影，包装场景生成，企业AI包装设计，AI广告banner图设计，AI人像摄影处理，AI微缩视觉处理，AI自然摄影处理，AI动漫卡通头像处理，IP设计处理，AI-logo设计处理，AI手绘处理，AI视频处理，AI插画处理，AI企业/文旅宣传视频生成，AI老照片修复，AI照片精修，AI换衣换装，AI让图片动起来，AI让图片开口说话等等图像处理业务，AI处理的图像是拥有商业版权行为的，并且没有任何一张图和视频是可以相同的，单广告设计领域涵盖：海报，公众号封面首图，电子邀请函，营销长图，竖版海报，横版海报，展架，电商全屏海报，商品主图，3D海报 视频，PPT，摄影海报，GIF等，AI在其他领域上的用途和发挥也有待我们进行挖掘！</a></span></div>
-</div>
-</div>
-</li>
-
-
-
-<li>
-<div class="entry-post"><img width="5742" height="3648" src="img/2.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy"></div>
-<div class="entry-header">
-<h5 class="entry-title"><a href="https://songshu.youyacao.com/dragon.html" rel="bookmark">蜻蜓z龙年限定版</a></h5> <div class="post_content">
-<span class="entry-date"><a href="https://songshu.youyacao.com/dragon.html" rel="bookmark">2024年心血融一体</time></a></span>
-<div class="comments-number"><a href="https://songshu.youyacao.com/dragon.html">z龙年限定版</a></div>
-<div class="post-views"><a href="https://songshu.youyacao.com/dragon.html"><span>集团企业级客户-FF社交</span></div>
-<div class="post-categories"><span class="tag vcard"><a href="https://songshu.youyacao.com/dragon.html" rel="category tag">蜻蜓z龙年限定版是一款纪念2024年的产品，为纪念2024年获得的产品研发成果，本款产品集蜻蜓z系统雪花版的基础上进行高度融合，将即时通讯，直播推流，直播带货商城，朋友圈社交，SNS社交，短视频功能，实时音视频（单人，多人音视频），实时弹幕功能（涉及websocket），影视剧集，影视追剧，全部融合在一款产品，这是首款大融合产品。</a></span></div>
-</div>
-</div>
-</li> 
-
-
-
-
-
-
-
-
-
-
-<li>
-<div class="entry-post"><img width="2000" height="1335" src="img/3.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""></div>
-<div class="entry-header">
-<h5 class="entry-title"><a href="https://songshu.youyacao.com/z.html" rel="bookmark">企业级·蜻蜓Z系统</a></h5> <div class="post_content">
-<span class="entry-date">2022年9月新发</time></a></span>
-<div class="comments-number">JAVA第四代</a></div>
-<div class="post-views"><span>重磅产品</span></div>
-<div class="post-categories"><span class="tag vcard"><a href="https://songshu.youyacao.com/z.html" rel="category tag">蜻蜓Z系统</a></span></div>
-</div>
-</div>
-</li>
-
-
-
-
-
-
-
-
-
-<nav class="navigation paging-navigation" role="navigation">
-<h1 class="screen-reader-text">Posts navigation</h1>
-<div class="nav-links">
-</div>
-</nav>
-</div>
-</div>
-<script type="text/javascript">"use strict";var canvas =document.getElementById('canvas'),ctx =canvas.getContext('2d'),w =canvas.width =window.innerWidth,h =canvas.height =window.innerHeight,hue =217,stars =[],count =0,maxStars =1000;var canvas2 =document.createElement('canvas'),ctx2 =canvas2.getContext('2d');canvas2.width =100;canvas2.height =100;var half =canvas2.width/2,gradient2 =ctx2.createRadialGradient(half,half,0,half,half,half);gradient2.addColorStop(0.025,'#fff');gradient2.addColorStop(0.1,'hsl(' + hue + ', 61%, 33%)');gradient2.addColorStop(0.25,'hsl(' + hue + ', 64%, 6%)');gradient2.addColorStop(1,'transparent');ctx2.fillStyle =gradient2;ctx2.beginPath();ctx2.arc(half,half,half,0,Math.PI *2);ctx2.fill();function random(min,max) {if (arguments.length < 2) {max =min;min =0;}
-if (min >max) {var hold =max;max =min;min =hold;}
-return Math.floor(Math.random() *(max - min + 1)) + min;}
-var Star =function() {this.orbitRadius =random(w / 2 - 50);this.radius =random(100,this.orbitRadius) / 10;this.orbitX =w / 2;this.orbitY =h / 2;this.timePassed =random(0,maxStars);this.speed =random(this.orbitRadius) / 1000000;this.alpha =random(2,10) / 10;count++;stars[count] =this;}
-Star.prototype.draw =function() {var x =Math.sin(this.timePassed + 1) *this.orbitRadius + this.orbitX,y =Math.cos(this.timePassed) *this.orbitRadius/2 + this.orbitY,twinkle =random(10);if (twinkle ===1 &&this.alpha >0) {this.alpha -=0.05;} else if (twinkle ===2 &&this.alpha < 1) {this.alpha +=0.05;}
-ctx.globalAlpha =this.alpha;ctx.drawImage(canvas2,x - this.radius / 2,y - this.radius / 2,this.radius,this.radius);this.timePassed +=this.speed;}
-for (var i =0;i < maxStars;i++) {new Star();}
-function animation() {ctx.globalCompositeOperation ='source-over';ctx.globalAlpha =0.8;ctx.fillStyle ='hsla(' + hue + ', 64%, 6%, 1)';ctx.fillRect(0,0,w,h)
-ctx.globalCompositeOperation ='lighter';for (var i =1,l =stars.length;i < l;i++) {stars[i].draw();};window.requestAnimationFrame(animation);}
-animation();</script>
-<div class="site-footer-bg">
-<footer id="colophon" class="site-footer" role="contentinfo">
-<div class="footer-menu">
-<div class="menu-bottom-container"><ul id="menu-bottom" class="menu"><li id="menu-item-50825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50825"><a rel="footer-title">一颗优雅草科技</a>
-<ul class="sub-menu">
-<li id="menu-item-50760" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50760"><a href="https://doc.youyacao.com/web/#/22/1024">关于优雅草</a></li>
-<li id="menu-item-50759" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50759"><a href="https://doc.youyacao.com/web/#/22/1024">联系优雅草</a></li>
-<li id="menu-item-50758" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50758"><a href="https://doc.youyacao.com/web/#/22/1027">加入优雅草</a></li>
-<li id="menu-item-50757" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50757"><a href="https://doc.youyacao.com/web/#/22/1025">代理商招募</a></li>
-<li id="menu-item-50757" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50757"><a href="https://doc.youyacao.com/web/#/9/1654">软件更新日志</a></li>
-</ul>
-</li>
-<li id="menu-item-50826" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50826"><a rel="footer-title">核心产品</a>
-<ul class="sub-menu">
-	
-		<li id="menu-item-50763" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50763"><a href="https://www.youyacao.cn">优雅草分发</a></li>
-	
-			<li id="menu-item-50763" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50763"><a href="https://aitool.youyacao.com">AI视频/AI绘图</a></li>
-			
-			<li id="menu-item-50763" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50763"><a href="https://api.youyacao.com">API大数据接口</a></li>
-			<li id="menu-item-50763" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50763"><a href="https://songshu.youyacao.com/dragon.html">蜻蜓Z龙年</a></li>
-			<li id="menu-item-50763" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50763"><a href="https://songshu.youyacao.com/snow.html">蜻蜓Z雪花限定</a></li>
-
-		<li id="menu-item-50763" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50763"><a href="https://songshu.youyacao.com/shadow.html">蜻蜓Z暗影</a></li>
-	<li id="menu-item-50763" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50763"><a href="https://songshu.youyacao.com/z.html">蜻蜓Z系统</a></li>
-<li id="menu-item-50763" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50763"><a href="https://songshu.youyacao.com/stq.html">蜻蜓Q旗舰版</a></li>
-<li id="menu-item-50766" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50766"><a href="https://songshu.youyacao.com/ec.html">蜻蜓ec商城</a></li>
-<li id="menu-item-50764" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50764"><a href="https://songshu.youyacao.com/q.html">蜻蜓q系统·开源</a></li>
-<li id="menu-item-50764" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50764"><a href="https://doc.youyacao.com/web/#/22/1632">桌面客户端软件</a></li>
-		
-<li id="menu-item-50765" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50765"><a href="https://songshu.youyacao.com/video.html">松鼠短视频·开源</a></li>
-
-
-</ul>
-</li>
-<li id="menu-item-50730" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50730"><a rel="footer-title">荣誉资质</a>
-<ul class="sub-menu">
-	
-	
-	<li id="menu-item-51320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51320"><a href="https://doc.youyacao.com/web/#/22/1289">国家高新技术企业</a></li>
-	
-	<li id="menu-item-51320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51320"><a href="https://doc.youyacao.com/web/#/22/1060">国家重点软件企业</a></li>
-<li id="menu-item-50771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50771"><a href="https://doc.youyacao.com/web/#/22/1023">科技中小企业</a></li>
-<li id="menu-item-50773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50773"><a href="https://doc.youyacao.com/web/#/22/867">软件产品企业</a></li>
-<li id="menu-item-50773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50773"><a href="https://doc.youyacao.com/web/#/22/1202">ISO9001质量认证</a></li>
-<li id="menu-item-50773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50773"><a href="https://doc.youyacao.com/web/#/22/710">AAA信誉企业</a></li>
-
-</ul>
-
-
-<li id="menu-item-51109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51109"><a rel="footer-title">核心服务</a>
-<ul class="sub-menu">
-	
-	<li id="menu-item-50814" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50814"><a href="https://api.youyacao.com">优雅草API服务</a></li>
-	
-<li id="menu-item-22476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22476"><a href="https://www.youyacao.com/kaifa/">软件开发</a></li>
-<li id="menu-item-22176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22176"><a href="https://www.youyacao.com/kaifa/app/index.html">App开发</a></li>
-<li id="menu-item-22176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22176"><a href="https://www.youyacao.com/kaifa/flutter/index.html">flutter开发</a></li>
-<li id="menu-item-22176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22176"><a href="https://www.youyacao.com/kaifa/uniapp/index.html">uniapp开发</a></li>
-<li id="menu-item-50768" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-50768"><a href="https://www.youyacao.com/kaifa/Industry/index.html">智慧工业</a></li>
-<li id="menu-item-51111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51111"><a target="_blank" rel="noopener" href="https://zhengban.youyacao.com">正版查询</a></li>
-</ul>
-</li>
-
-
-
-</li>
-<li id="menu-item-50827" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50827"><a rel="footer-title">声明</a>
-<ul class="sub-menu">
-	
-		<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://doc.youyacao.com/119/2284">花开绽放</a></li>
-	
-	<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://doc.youyacao.com/22/1805">产品使用说明</a></li>
-		<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://doc.youyacao.com/web/#/22/1774">产品git库大全</a></li>
-	
-	<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://songshu.youyacao.com/detail/290.html">产品大全</a></li>
-	
-		<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://doc.youyacao.com/web/#/22/624">著作权</a></li>
-
-<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://songshu.youyacao.com/detail/240.html">开源协议</a></li>
-<li id="menu-item-50814" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50814"><a href="https://bbs.youyacao.com/thread-1025-1-1.html">论坛版规</a></li>
-
-</ul>
-</li>
-
-
-<li id="menu-item-50827" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50827"><a rel="footer-title">旗下子公司</a>
-<ul class="sub-menu">
-	<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://xingyun.youyacao.com">星云智控物联网AI</a></li>
-	<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://yingnuo.youyacao.com">盈诺汇通财税</a></li>
-		<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://qingcheng.youyacao.com">倾城智语知识产权</a></li>
-	
-	<li id="menu-item-50732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50732"><a href="https://lanruo.youyacao.com">兰若书香文化</a></li>
-	
-		
-
-
-</ul>
-</li>
-
-
-
-
-
-
-</ul></div> <div class="footer-friends">
-<div class="footer-friends-title">
-<a href="#" rel="footer-title">成功·案例——以下知名单位选择过优雅草</a>
-</div>
-<ul>
-<li><a href="https://www.winshare.com.cn/" rel="noopener" title="教育改革的重大成果之一" target="_blank">国企·新华文轩</a></li>
-<li><a href="http://www.minmetals.com.cn/" rel="noopener" title="腾讯云，腾讯集团倾力打造的云计算品牌" target="_blank">央企·五矿资本</a></li>
-<li><a href="http://www.sino-commercial.com/" rel="noopener" title="创始于1954年，前身是以香港中资出版机构" target="_blank">国企·中华商务</a></li>
-<li><a href="https://www.chuanjiujituan.com/" rel="friend noopener" title="经四川省委、省政府同意组建的大型综合性国有企业" target="_blank">国企·川酒集团</a></li>
-<li><a href="https://secop.yunaq.com/customer/api/v1/public/biz-opp/0/5a9f449545475e77a85657f6" rel="noopener" title="国内顶级B/S端防御单位·权威安全联盟" target="_blank">知道创宇</a></li>
-
-
-<li><a href="https://www.volcengine.com/?utm_source=5&utm_medium=sembaidu&utm_term=sem_baidu_vg_pz_dc01&utm_campaign=vgbdpzztn1&utm_content=guanwang" rel="noopener" title="字节跳动旗下AI赋能产业计划" target="_blank">字节·火山引擎</a></li>
-
-<li><a href="http://www.sunyard.com/index-cn" rel="noopener" title="金融科技创新先锋，1996年成立于中国杭州" target="_blank">信雅达</a></li>
-
-
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1915010633&auto=1&height=66"></iframe>
-  
-<li><a href="#" rel="noopener" title="
-	" target="_blank">卓伊凡:yikeyouyacao</a></li>
-  <li><a href="#" rel="noopener" title="
-  " target="_blank">QQ群:929353806</a></li>
-  
-  
-
-</ul>
-</div>
-</div>
-</footer>
-<logo></logo>
-</div>
-<div class="site-footer-bg site-footer-bottom-bg">
-<footer id="colophon" class="site-footer" role="contentinfo">
-<div class="footer-bottom">
-<div class="site-link">
-<a target="_blank" href="http://beian.miit.gov.cn/"><img src="images/icp.png"><span>工信部蜀ICP备10036293号-7</span></a>
-<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51011402000287"><img src="images/gongan.png"><span>川公网安备 51011402000287号</span></a>
-
-<a target="_blank" href="https://doc.youyacao.com/web/#/22/1297"><img src="images/gaoqi.png"><span>国家高新技术企业：GR202251001737</span></a>
-</div>
-<div class="footer-info">
-© 成都市一颗优雅草科技有限公司·官方网站 www.youyacao.com
-</div>
-</div>
-</footer>
-
-</div>
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6e606d8481f77f858f575e066a105304";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-<script type="text/javascript" src="js/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>
-<script type="text/javascript" src="js/wp-polyfill.min.js" id="wp-polyfill-js"></script>
-<script type="text/javascript" src="js/index.js" id="contact-form-7-js"></script>
-<script type="text/javascript" src="js/db.min.js" id="wpdjs-js"></script>
-<script type="text/javascript" src="js/imagesloaded.min.js" id="imagesloaded-js"></script>
-<script type="text/javascript" src="js/masonry.min.js" id="masonry-js"></script>
-<script type="text/javascript" src="js/functions.js" id="bushwick-functions-js"></script>
-</body></html>
+<body>
+    <!-- Background -->
+    <div class="star-bg">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Danmaku Background -->
+    <div class="danmaku-layer">
+        <div class="danmaku-item">学习如春起之苗，不见其增，日有所长</div>
+        <div class="danmaku-item">问渠那得清如许？为有源头活水来</div>
+        <div class="danmaku-item">不积跬步，无以至千里；不积小流，无以成江海</div>
+        <div class="danmaku-item">聚沙成塔，集腋成裘，涓涓细流，汇成大河</div>
+        <div class="danmaku-item">优雅草2025年·产品开源计划·完全开源！</div>
+        <div class="danmaku-item">优雅草2025年·产品合营计划！资源整合·合作共赢！</div>
+        <div class="danmaku-item">业精于勤荒于嬉，行成于思而毁于随</div>
+        <div class="danmaku-item">呼吁所有有志人才直接加入开源计划，侠之大者，为国为民</div>
+    </div>
+
+    <!-- Floating Nav -->
+    <nav class="floating-nav">
+        <div class="nav-logo">优雅草科技</div>
+        <div class="nav-countdown">
+            <span class="nav-countdown-text">跳转官网</span>
+            <div class="countdown-circle" id="countdown">120</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">
+            <span class="hero-badge-indicator"></span>
+            <span class="hero-badge-text">2025年·优雅草脱颖囊锥·得到青睐</span>
+        </div>
+        <h1 class="hero-title">前程似锦</h1>
+        <p class="hero-subtitle">韬光养晦 · 养精蓄锐 · 厚积薄发</p>
+        <a href="index.html" class="hero-cta">点击直接进入详细官网</a>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="section-header">
+            <span class="section-tag">YOUYACAO</span>
+            <h2 class="section-title">优雅草推荐业务</h2>
+        </div>
+
+        <div class="products-grid">
+            <a href="https://xingyun.youyacao.com" target="_blank" class="product-card">
+                <div class="product-index">01</div>
+                <h3 class="product-name">星云智控</h3>
+                <p class="product-desc">2025年重磅产品，2025年5月15日即将发布，敬请期待。</p>
+                <div class="product-meta">重磅产品</div>
+            </a>
+
+            <a href="https://doc2.youyacao.com/web/#/22/2451" target="_blank" class="product-card">
+                <div class="product-index">02</div>
+                <h3 class="product-name">创作路线</h3>
+                <p class="product-desc">2025年主要在音乐、游戏、小说三个业务板块进行深度创作，做原创作品。</p>
+                <div class="product-meta">新纪元</div>
+            </a>
+
+            <a href="https://www.youyacao.cn" target="_blank" class="product-card">
+                <div class="product-index">03</div>
+                <h3 class="product-name">APP内测分发</h3>
+                <p class="product-desc">专业的APP内测分发平台，支持iOS/Android分发，在线打包等功能。</p>
+                <div class="product-meta">分发平台</div>
+            </a>
+
+            <a href="https://aitool.youyacao.com" target="_blank" class="product-card">
+                <div class="product-index">04</div>
+                <h3 class="product-name">AI绘图·AI视频</h3>
+                <p class="product-desc">AI图像处理商城，提供AI背景摄影、广告设计、人像处理、视频生成等服务。</p>
+                <div class="product-meta">AI服务</div>
+            </a>
+
+            <a href="https://songshu.youyacao.com/dragon.html" target="_blank" class="product-card">
+                <div class="product-index">05</div>
+                <h3 class="product-name">蜻蜓Z龙年限定版</h3>
+                <p class="product-desc">集即时通讯、直播推流、短视频、音视频等功能于一体的大融合产品。</p>
+                <div class="product-meta">企业级</div>
+            </a>
+
+            <a href="https://songshu.youyacao.com/z.html" target="_blank" class="product-card">
+                <div class="product-index">06</div>
+                <h3 class="product-name">蜻蜓Z系统</h3>
+                <p class="product-desc">JAVA第四代企业级系统，2022年9月发布，稳定可靠。</p>
+                <div class="product-meta">JAVA</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-row">
+                <span class="info-key">QQ群号</span>
+                <span class="info-separator"></span>
+                <span class="info-number">929353806</span>
+            </div>
+            <div class="info-row">
+                <span class="info-key">CTO QQ</span>
+                <span class="info-separator"></span>
+                <span class="info-number">422108995</span>
+            </div>
+            <div class="info-row">
+                <span class="info-key">成立年份</span>
+                <span class="info-separator"></span>
+                <span class="info-number">2015</span>
+            </div>
+            <div class="info-row">
+                <span class="info-key">开源计划</span>
+                <span class="info-separator"></span>
+                <span class="info-number">2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section class="links-section">
+        <div class="links-container">
+            <p class="links-title">Quick Links</p>
+            <div class="links-list">
+                <div class="link-row">
+                    <a href="https://doc2.youyacao.com/web/#/22/338" target="_blank" class="link-main">项目合作说明</a>
+                </div>
+                <div class="link-row">
+                    <a href="https://doc2.youyacao.com/web/#/22/1024" target="_blank" class="link-main">联系方式</a>
+                </div>
+                <div class="link-row">
+                    <a href="https://gitee.com/youyacao/www.youyacao.com" target="_blank" class="link-main">官网代码开源</a>
+                </div>
+                <div class="link-row">
+                    <a href="https://gitee.com/youyacao/" target="_blank" class="link-main">更多开源产品</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1024">关于优雅草</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1024">联系优雅草</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1027">加入优雅草</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1025">代理商招募</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/9/1654">软件更新日志</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>核心产品</h4>
+                <ul>
+                    <li><a href="https://www.youyacao.cn">优雅草分发</a></li>
+                    <li><a href="https://aitool.youyacao.com">AI视频/AI绘图</a></li>
+                    <li><a href="https://api.youyacao.com">API大数据接口</a></li>
+                    <li><a href="https://songshu.youyacao.com/dragon.html">蜻蜓Z龙年</a></li>
+                    <li><a href="https://songshu.youyacao.com/snow.html">蜻蜓Z雪花限定</a></li>
+                    <li><a href="https://songshu.youyacao.com/shadow.html">蜻蜓Z暗影</a></li>
+                    <li><a href="https://songshu.youyacao.com/z.html">蜻蜓Z系统</a></li>
+                    <li><a href="https://songshu.youyacao.com/stq.html">蜻蜓Q旗舰版</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>更多产品</h4>
+                <ul>
+                    <li><a href="https://songshu.youyacao.com/ec.html">蜻蜓ec商城</a></li>
+                    <li><a href="https://songshu.youyacao.com/q.html">蜻蜓q系统·开源</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1632">桌面客户端软件</a></li>
+                    <li><a href="https://songshu.youyacao.com/video.html">松鼠短视频·开源</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>荣誉资质</h4>
+                <ul>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1289">国家高新技术企业</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1060">国家重点软件企业</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1023">科技中小企业</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/867">软件产品企业</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1202">ISO9001质量认证</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/710">AAA信誉企业</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>核心服务</h4>
+                <ul>
+                    <li><a href="https://api.youyacao.com">优雅草API服务</a></li>
+                    <li><a href="https://www.youyacao.com/kaifa/">软件开发</a></li>
+                    <li><a href="https://www.youyacao.com/kaifa/app/index.html">App开发</a></li>
+                    <li><a href="https://www.youyacao.com/kaifa/flutter/index.html">flutter开发</a></li>
+                    <li><a href="https://www.youyacao.com/kaifa/uniapp/index.html">uniapp开发</a></li>
+                    <li><a href="https://www.youyacao.com/kaifa/Industry/index.html">智慧工业</a></li>
+                    <li><a href="https://zhengban.youyacao.com">正版查询</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>子公司</h4>
+                <ul>
+                    <li><a href="https://xingyun.youyacao.com">星云智控物联网AI</a></li>
+                    <li><a href="https://yingnuo.youyacao.com">盈诺汇通财税</a></li>
+                    <li><a href="https://qingcheng.youyacao.com">倾城智语知识产权</a></li>
+                    <li><a href="https://lanruo.youyacao.com">兰若书香文化</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-partners">
+            <h5>成功案例——以下知名单位选择过优雅草</h5>
+            <div class="partners-list">
+                <a href="https://www.winshare.com.cn/" target="_blank">国企·新华文轩</a>
+                <a href="http://www.minmetals.com.cn/" target="_blank">央企·五矿资本</a>
+                <a href="http://www.sino-commercial.com/" target="_blank">国企·中华商务</a>
+                <a href="https://www.chuanjiujituan.com/" target="_blank">国企·川酒集团</a>
+                <a href="https://www.volcengine.com/" target="_blank">字节·火山引擎</a>
+                <a href="http://www.sunyard.com/index-cn" target="_blank">信雅达</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-badges">
+                <span>工信部蜀ICP备10036293号-7</span>
+                <span>川公网安备 51011402000287号</span>
+                <span>国家高新技术企业：GR202251001737</span>
+            </div>
+            <div class="footer-copy">© 成都市一颗优雅草科技有限公司·官方网站 www.youyacao.com</div>
+        </div>
+    </footer>
+
+    <!-- Starfield Animation -->
+    <script>
+        "use strict";
+        var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d'),
+            w = canvas.width = window.innerWidth,
+            h = canvas.height = window.innerHeight,
+            hue = 217,
+            stars = [],
+            count = 0,
+            maxStars = 1000;
+
+        var canvas2 = document.createElement('canvas'),
+            ctx2 = canvas2.getContext('2d');
+        canvas2.width = 100;
+        canvas2.height = 100;
+        var half = canvas2.width / 2,
+            gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+        gradient2.addColorStop(0.025, '#fff');
+        gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+        gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+        gradient2.addColorStop(1, 'transparent');
+        ctx2.fillStyle = gradient2;
+        ctx2.beginPath();
+        ctx2.arc(half, half, half, 0, Math.PI * 2);
+        ctx2.fill();
+
+        function random(min, max) {
+            if (arguments.length < 2) { max = min; min = 0; }
+            if (min > max) { var hold = max; max = min; min = hold; }
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var Star = function () {
+            this.orbitRadius = random(w / 2 - 50);
+            this.radius = random(100, this.orbitRadius) / 10;
+            this.orbitX = w / 2;
+            this.orbitY = h / 2;
+            this.timePassed = random(0, maxStars);
+            this.speed = random(this.orbitRadius) / 1000000;
+            this.alpha = random(2, 10) / 10;
+            count++;
+            stars[count] = this;
+        }
+
+        Star.prototype.draw = function () {
+            var x = Math.sin(this.timePassed + 1) * this.orbitRadius + this.orbitX,
+                y = Math.cos(this.timePassed) * this.orbitRadius / 2 + this.orbitY,
+                twinkle = random(10);
+            if (twinkle === 1 && this.alpha > 0) { this.alpha -= 0.05; }
+            else if (twinkle === 2 && this.alpha < 1) { this.alpha += 0.05; }
+            ctx.globalAlpha = this.alpha;
+            ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+            this.timePassed += this.speed;
+        }
+
+        for (var i = 0; i < maxStars; i++) { new Star(); }
+
+        function animation() {
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.globalAlpha = 0.8;
+            ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 1)';
+            ctx.fillRect(0, 0, w, h);
+            ctx.globalCompositeOperation = 'lighter';
+            for (var i = 1, l = stars.length; i < l; i++) { stars[i].draw(); }
+            window.requestAnimationFrame(animation);
+        }
+        animation();
+
+        window.addEventListener('resize', function () {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        });
+
+        // Countdown
+        let countdown = 120;
+        const countdownEl = document.getElementById('countdown');
+        setInterval(() => {
+            countdown--;
+            if (countdownEl) countdownEl.textContent = countdown;
+        }, 1000);
+    </script>
+
+    <!-- Baidu Analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6e606d8481f77f858f575e066a105304";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+
+</html>
