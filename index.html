@@ -1,619 +1,1540 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-
-
-
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【软件开发】-2025开源计划-全面开源·优雅草科技</title>
-    <meta name="keywords"
-        content="成都软件开发,成都系统集成,成都APP定制,成都二次开发,成都网站开发,成都小程序开发,短视频系统,短视频系统开发,程序员必备导航,程序员导航,技术站长导航,短视频系统源码,短视频系统APP,YYC松鼠短视频,YYC松鼠系统系列,直播系统,教育系统,成都软件定制,成都APP定制开发,成都短视频系统定制,成都即时通讯软件开发,蜻蜓I即时通讯软件.">
-    <meta name="description"
-        content="成都市一颗优雅草科技有限公司2015年成立以来一直从事于网站设计、制作、APP研发、系统开发等；集研发、销售、服务于 一体，与此同时，我们一直在 技术和应用上进行创新和突破，2019年自研发松鼠系列系统，2020年发布蜻蜓系列系统，持续在大数据，人脸识别，内容算法，云计算产品，中间件开发与对接与服务，图像算法等人工智能领域研究，2021年将持续提升技术并发布更领先的产品，力争上游 努力奋斗，2022年新开拓散仙建模，松鼠拍视频两条业务线，2022年7月起重心转移至大型行业应用软件，工业软件。">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="keywords" content="成都软件开发,成都系统集成,成都APP定制,成都二次开发,成都网站开发,成都小程序开发,短视频系统,短视频系统开发,程序员必备导航,程序员导航,技术站长导航,短视频系统源码,短视频系统APP,YYC松鼠短视频,YYC松鼠系统系列,直播系统,教育系统,成都软件定制,成都APP定制开发,成都短视频系统定制,成都即时通讯软件开发,蜻蜓I即时通讯软件.">
+    <meta name="description" content="成都市一颗优雅草科技有限公司2015年成立以来一直从事于网站设计、制作、APP研发、系统开发等；集研发、销售、服务于一体，与此同时，我们一直在技术和应用上进行创新和突破，2019年自研发松鼠系列系统，2020年发布蜻蜓系列系统，持续在大数据，人脸识别，内容算法，云计算产品，中间件开发与对接与服务，图像算法等人工智能领域研究，2021年将持续提升技术并发布更领先的产品，力争上游努力奋斗，2022年新开拓散仙建模，松鼠拍视频两条业务线，2022年7月起重心转移至大型行业应用软件，工业软件。">
     <link rel="shortcut icon" href="favicon.ico">
-	
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/drawer.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/index.css?v=1.2.0">
- 
-    <!-- Demo styles -->
-   <script>
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?6e606d8481f77f858f575e066a105304";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-      </script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-	  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-</head>
-
-<body class="drawer drawer--left drawer-close">
-
-    <!-- Swiper -->
-    <div class="swiper-container banner_swiper swiper-container-fade swiper-container-initialized swiper-container-horizontal">
-        <div class="swiper-wrapper" style="transition-duration: 300ms;">
-            <div class="swiper-slide swiper-slide-duplicate-next"
-                style="background: url(&quot;images/banner01.jpg&quot;) center center / cover no-repeat; width: 2560px; transition-duration: 300ms; opacity: 1; transform: translate3d(-2560px, 0px, 0px);"
-                data-swiper-slide-index="0"></div>
-            <div class="swiper-slide swiper-slide-prev"
-                style="background: url(&quot;images/banner02.jpg&quot;) center center / cover no-repeat; width: 2560px; transition-duration: 300ms; opacity: 1; transform: translate3d(-5120px, 0px, 0px);"
-                data-swiper-slide-index="1"></div>
-            <div class="swiper-slide swiper-slide-active"
-                style="background: url(&quot;images/banner03.jpg&quot;) center center / cover no-repeat; width: 2560px; transition-duration: 300ms; opacity: 1; transform: translate3d(-7680px, 0px, 0px);"
-                data-swiper-slide-index="2"></div>
-        </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-    </div>
-
-    <div
-        class="swiper-container banner_swiper swiper-container-m  swiper-container-fade swiper-container-initialized swiper-container-horizontal">
-        <div class="swiper-wrapper" style="transition-duration: 300ms;">
-            <div class="swiper-slide swiper-slide-prev"
-                style="background: url(&quot;images/app01.jpg&quot;) center center / cover no-repeat; width: 400px; transition-duration: 300ms; opacity: 1; transform: translate3d(-400px, 0px, 0px);"
-                data-swiper-slide-index="0"></div>
-            <div class="swiper-slide swiper-slide-active"
-                style="background: url(&quot;images/app02.jpg&quot;) center center / cover no-repeat; width: 400px; transition-duration: 300ms; opacity: 1; transform: translate3d(-800px, 0px, 0px);"
-                data-swiper-slide-index="1"></div>
-            <div class="swiper-slide swiper-slide-next"
-                style="background: url(&quot;images/app03.jpg&quot;) center center / cover no-repeat; width: 400px; transition-duration: 300ms; opacity: 0; transform: translate3d(-1200px, 0px, 0px);"
-                data-swiper-slide-index="2"></div>
-        </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-    </div>
-
-    <div class="main">
-       <img src="images/about-us.png" class="about-img" alt="成都市一颗优雅草科技有限公司">
-       <h1>优雅草开源计划-2025年·优雅草集团</h1>
-	   
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1915010633&auto=1&height=66"></iframe>
-<!-- 	 
-	 <div class="swiper-container" id="announcement">
-	     <div class="swiper-wrapper">
-	         
-	          <div class="swiper-slide">
-	           
-	             <p style="width: 50%;">人的生命，似洪水奔流，不遇着岛屿和暗礁，难以激起美丽的浪花。——佚名
-	             </p>
-				 <p style="width: 50%;">一分钟的成功付出的代价却是好些年的失败。——勃朗宁
-				 </p>
-				 <p style="width: 50%;">不要怕被人利用，人家利用你，说明你还有利用的价值---如果你足够废物，就没人能利用你。
-				 </p>
-				  <p style="width: 50%;">黑发不知勤学早，白首方悔读书迟。——《劝学》
-
-				 </p>
-				 <p style="width: 50%;">见兔而顾犬，未为晚也；亡羊而补牢，未为迟也。——《战国策》
-
-				 </p>
-				  <p style="width: 50%;">路漫漫其修远今，吾将上下而求索。——屈原
-
-				 </p>
-				   <p style="width: 50%;">老当益壮，宁知白首之心；穷且益坚，不坠青云之志。——王勃
-
-
-				 </p>
-	         </div>
-	         
-	   
-	     
-	           
-	            
-	     </div>
-	 </div>
-	 -->
-    
-
-	
-      <p >
-		  
-		
-<!-- <iframe frameborder="no" border="0" marginwidth="0" display = "none"  marginheight="0" width=400 height=86 src="https://music.163.com/outchain/player?type=2&id=32717174&auto=1&height=66"></iframe> 
-    
- -->
- 
-
-</p>
-        
-         
-      
-       
-
-        <div class="swiper-container" id="announcement">
-            <div class="swiper-wrapper">
-               
-                
-
-
-                <div class="swiper-slide">
-              
-                    <p style="width: 50%;"><a
-                            href="https://xingyun.youyacao.com">优雅草星云物联网AI智控系统-成都星云智控科技有限公司</a> 
-                    </p>
-                </div>
-          
-          
-          <div class="swiper-slide">
-              
-                <p style="width: 50%;"><a
-                        href="https://doc.youyacao.com/119/2284">花开绽放·优雅草开源产品大全·全面开源·留核心企业级产品</a> 
-                </p>
-            </div>
-				
-				
-				
-				  
-				  
-				  <div class="swiper-slide">
-				      
-				        <p style="width: 50%;"><a
-				                href="https://ai.youyacao.com/">优雅草AI聚合工具-主营业务之一</a>
-				        </p>
-				    </div>
-				
-			
-		
-              
-			  
-			  
-                
-               
-            
-     
-	 <div class="swiper-slide">
-	     
-	       <p style="width: 50%;"><a
-	               href="https://aitool.youyacao.com/">优雅草AI图像视频处理·聚合工具-主营业务之一</a>
-	       </p>
-	   </div>
-	   
-	   
-                   
-            </div>
-        </div>
-
-      
-
-        <footer class="footer">
-            <div class="footer-info">
-                <p>Copyright © 2015-2025 优雅草科技 技术QQ:422108995 </p>
-
-                
-            <p> 	 <img src="https://www.youyacao.com/images/icp.png" style="float:left;" /> <a href="http://beian.miit.gov.cn/" rel="nofollow" target="_blank">工信部蜀ICP备10036293号-7</a></p>
-
-<p> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51011402000287" rel="nofollow" target="_blank">  <img src="https://www.youyacao.com/images/gongan.png" style="float:left;" />川公网安备 51011402000287号</a></p>
-               <p><a href="https://doc.youyacao.com/web/#/22/1859">地址：青羊工业总部基地H区8栋807号</a></p>
-
-               
-
-           
-                   
-            
-  <p><!-- WPA start -->
-<script id="qd2885750701da9f1fb2d57d20b73c58df1eb155fa29" src="https://wp.qiye.qq.com/qidian/2885750701/da9f1fb2d57d20b73c58df1eb155fa29" charset="utf-8" async defer></script>
-<!-- WPA end --> <a href="https://doc.youyacao.com/web/#/22/338">点击查看更多联系方式 </a></p>
-         <p>  QQ群:929353806</p>  
-    <p> <img src="https://www.youyacao.com/images/gaoqi.png" style="float:left;" /> <a href="https://doc.youyacao.com/web/#/22/1297">国家高新技术企业：GR202251001737</a></p>  
-
-            </div>
-            <div class="footer-icon">
-                <!--<a target="cyxyv" rel="nofollow" href="https://songshu.youyacao.com/video.html">-->
-                <!--    <img src="https://www.youyacao.com/images/yycbottom.png" alt="">-->
-                <!--</a>-->
-
-     <a href="https://zhengban.youyacao.com">
-		 <img src="images/zhengban.png" 
-     alt="正版"></a>  
-
-                <a target="cyxyv" rel="nofollow"
-                    href="https://xinyong.yunaq.com/certificate?domain=%E4%BC%98%E9%9B%85%E8%8D%89">
-                    <img src="https://www.youyacao.com/images/chuangyu.png" alt=""></a>
-                <a target="cyxyv" rel="nofollow"
-                    href="https://xinyong.yunaq.com/certificate?domain=%E4%BC%98%E9%9B%85%E8%8D%89">
-                    <img src="https://www.youyacao.com/images/quanguo.png">
-                </a>
-
-
-           
-              
-            </div>
-        </footer>
-    </div>
-
-    <div class="navi_body">
-        <div class="navi_head">
-            <div class="d-flex align-items-center justify-content-center" style="height: 100px;">
-        <img src="images/logo.png" height="80" alt=""> 
-           
-              
-            </div>
-            <div>
-                <p>
-                    <a href="#" onclick="show()">
-                        <strong>关于我们</strong>
-                        <span>ABOUT US</span>
-                    </a>
-					
-                </p>
-				
-				        <p><a href="https://www.youyacao.com/about/" target="_blank" rel="nofollow" >关于优雅草·简介</a></p>
-				
-		
-                         <p><a href="https://doc.youyacao.com/web/#/22/338" target="_blank" >详细的·关于我们</a></p>
-			 
-			             <p><a href="https://www.youyacao.com/licheng/" target="_blank" rel="nofollow" >详细的里程碑</a></p>
-            <p><a href="https://zhengban.youyacao.com" target="_blank" rel="nofollow" >正版授权查询</a></p>
-			 <p><a href="https://www.youyacao.com/news/category-anli.html" target="_blank"  >经典客户案例</a></p>
-      <p>    <a href="https://doc.youyacao.com/web/#/88/1302" target="_blank" rel="nofollow"  >常见问题整理</a></p>
-        
-              <p><a href="https://www.youyacao.com/kaifa/" target="_blank" rel="nofollow" >软件定制</a></p>
-                    
-           
-            </div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			 <div>
-			     <p>
-			         <a target="_blank" href="#"  rel="nofollow">
-			             <strong>集团成员企业</strong>
-			             <span>Group</span>
-			         </a>
-			     </p>
-							
-							<p>	<a rel="nofollow"  target="_blank"  href="https://xingyun.youyacao.com">星云智控科技公司</a> </p>
-							       <p>	<a rel="nofollow"  target="_blank"  href="#">盈诺汇通财税公司</a> </p>
-				
-			
-			        <p>	<a rel="nofollow"  target="_blank"  href="#">倾城智语知识产权</a> </p>
-			
-			      	       <p>	<a rel="nofollow"  target="_blank"  href="#">兰若书香文化传媒</a> </p>
-			
-					        
-			      
-			       
-			
-			          
-			   
-			 </div>
-			 
-			 
-			 
-			 
-			  <div>
-			      <p>
-			          <a target="_blank" href="#"  rel="nofollow">
-			              <strong>自营产品</strong>
-			              <span>SAFE</span>
-			          </a>
-			      </p>
-			 				
-			 				<p>	<a rel="nofollow"  target="_blank"  href="https://doc.youyacao.com/web/#/22/1824">自营产品大全</a> </p>
-			 				    
-			 					
-			 					  <p>	<a rel="nofollow"  target="_blank"  href="https://ai.youyacao.com">AI聚合平台</a> </p>
-			 					  
-			 					  <p>	<a rel="nofollow"  target="_blank"  href="https://aitool.youyacao.com">AI图像视频聚合</a> </p>
-			 					  
-			 					   <p>	<a rel="nofollow"  target="_blank"  href="https://api.youyacao.com">API数据服务（荐）</a> </p>
-			 	
-			 
-			         <p>	<a rel="nofollow"  target="_blank"  href="https://www.chengduyeshenghuo.com">夜成都</a> </p>
-			 
-			       	       <p>	<a rel="nofollow"  target="_blank"  href="https://doc.youyacao.com/web/#/22/2026">优雅草便民工具</a> </p>
-			 
-			 
-			 <p>	<a rel="nofollow"  target="_blank"  href="https://www.youyacao.cn">优雅草APP分发</a> </p>
-			         
-			       
-			        
-			 
-			           
-			    
-			  </div>
-			
-			
-            
-              <div>
-                <p>
-                    <a href="https://www.youyacao.com/kaifa/">
-                        <strong>核心定制业务</strong>
-                        <span>development</span>
-                    </a>
-                </p>
-				     <p><a href="https://www.youyacao.com/kaifa/" target="_blank">整体介绍</a></p>
-							     <p><a href="/kaifa/app" target="_blank">纯原生APP定制/二次开发</a></p>
-								 
-				<p><a href="/kaifa/flutter" target="_blank">flutter端APP定制/二次开发</a></p>
-				    <p><a href="https://www.youyacao.com/kaifa/Blockchain/index.html" target="_blank">区块链开发</a></p>
-				        
-     
-                              <p><a href="/kaifa/uniapp" target="_blank">uniapp端APP定制/二次开发</a></p>
-						   
-                     <p><a href="https://www.youyacao.com/kaifa/Industry/index.html" target="_blank">智慧工业</a></p>
-					   <p><a href="/kaifa/daping/index.html" target="_blank">大屏开发</a></p>
-                 <p><a href="https://doc.youyacao.com/web/#/22/1632" target="_blank">桌面客户端</a></p>
-            </div>
-            
-            <div>
-                <p>
-                    <a href="https://songshu.youyacao.com">
-                        <strong>自研开源产品</strong>
-                        <span>development</span>
-                    </a>
-                </p>
-				<p>		<a href="https://songshu.youyacao.com/mercury.html"  target="_blank" >即时通讯·水银版</a></p>
-				
-				<p>		<a href="https://songshu.youyacao.com/snow.html"  target="_blank" >蜻蜓z·雪花限定版</a></p>
-				
-			<p>		<a href="https://songshu.youyacao.com/qingtingz/mother.html"  target="_blank" >优雅草·月子中心</a></p>
-				<p><a href="https://songshu.youyacao.com/proec.html" target="_blank">蜻蜓EC【专业版】</a></p>
-					    <p><a href="https://songshu.youyacao.com/shadow.html" target="_blank">蜻蜓Z【暗影版】</a></p>
-					    <p><a href="https://songshu.youyacao.com/qingtingz/index.html" target="_blank">蜻蜓Z独立介绍</a></p>
-				    <p><a href="https://songshu.youyacao.com/zhuiju.html" target="_blank">蜻蜓c【影视追剧】</a></p>
-				    <p><a href="https://songshu.youyacao.com/z.html" target="_blank">蜻蜓Z【JAVA第四代】</a></p>
-	
-			
-			
-			
-         
-              
-              
-            </div>
-         
-		   
-	
-             
-            
-          
-       
-        </div>
-    </div>
-
-
-    <header role="banner" class="header-m">
-        <div class="nav-m">
-			
-		
-      <img src="images/logo.png" alt=""> 
-            <button type="button" class="drawer-toggle drawer-hamburger">
-                <span class="sr-only">优雅草官网手机版</span>
-                <span class="drawer-hamburger-icon"></span>
-            </button>
-        </div>
-        <nav class="drawer-nav" role="navigation">
-            <ul class="drawer-menu"
-                style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
-                <li>
-                    <a class="drawer-menu-item" href="#" onclick="show()">
-                        <p>关于我们</p>
-                        <p>INTRODUCTION</p>
-                    </a>
-                </li>
-                
-				
-			
-				
-				<li>
-				    <a class="drawer-menu-item" href="#" >
-				        <p>关于我们</p>
-				        <p>ABOUT US</p>
-				    </a>
-				    <p><a href="https://www.youyacao.com/about/" target="_blank" rel="nofollow" class="second_a">关于优雅草·简介</a></p>
-				    <p><a href="https://doc.youyacao.com/web/#/22/338" target="_blank" class="second_a">详细的·关于我们</a></p>
-				    <p><a href="https://www.youyacao.com/licheng/" target="_blank" rel="nofollow" class="second_a">详细的里程碑</a></p>
-				    <p><a href="https://zhengban.youyacao.com" target="_blank" rel="nofollow" class="second_a">正版授权查询</a></p>
-				    <p><a href="https://www.youyacao.com/news/category-anli.html" target="_blank" class="second_a">经典客户案例</a></p>
-				    <p><a href="https://doc.youyacao.com/web/#/88/1302" target="_blank" rel="nofollow" class="second_a">常见问题整理</a></p>
-				    <p><a href="https://www.youyacao.com/kaifa/" target="_blank" rel="nofollow" class="second_a">软件定制</a></p>
-				</li>
-				
-               
-            
-                
-               
-
-            
-            
-            
-			
-		
-			<li>
-			    <a class="drawer-menu-item" href="#" >
-			        <p>自营产品</p>
-			        <p>SAFE</p>
-			    </a>
-			    <p><a href="https://doc.youyacao.com/web/#/22/1824" target="_blank" rel="nofollow" class="second_a">自营产品大全</a></p>
-			    <p><a href="https://ai.youyacao.com" target="_blank" rel="nofollow" class="second_a">AI聚合平台</a></p>
-			    <p><a href="https://aitool.youyacao.com" target="_blank" rel="nofollow" class="second_a">AI图像视频聚合</a></p>
-			    <p><a href="https://api.youyacao.com" target="_blank" rel="nofollow" class="second_a">API数据服务（荐）</a></p>
-			    <p><a href="https://www.chengduyeshenghuo.com" target="_blank" rel="nofollow" class="second_a">夜成都</a></p>
-			    <p><a href="https://doc.youyacao.com/web/#/22/2026" target="_blank" rel="nofollow" class="second_a">优雅草便民工具</a></p>
-			    <p><a href="https://www.youyacao.cn" target="_blank" rel="nofollow" class="second_a">优雅草APP分发</a></p>
-			</li>
-
-
-<li>
-    <a class="drawer-menu-item" href="https://www.youyacao.com/kaifa/">
-        <p>核心定制业务</p>
-        <p>development</p>
-    </a>
-    <p><a href="https://www.youyacao.com/kaifa/" target="_blank" class="second_a">整体介绍</a></p>
-    <p><a href="/kaifa/app" target="_blank" class="second_a">纯原生APP定制/二次开发</a></p>
-    <p><a href="/kaifa/flutter" target="_blank" class="second_a">flutter端APP定制/二次开发</a></p>
-    <p><a href="https://www.youyacao.com/kaifa/Blockchain/index.html" target="_blank" class="second_a">区块链开发</a></p>
-    <p><a href="/kaifa/uniapp" target="_blank" class="second_a">uniapp端APP定制/二次开发</a></p>
-    <p><a href="https://www.youyacao.com/kaifa/Industry/index.html" target="_blank" class="second_a">智慧工业</a></p>
-    <p><a href="/kaifa/daping/index.html" target="_blank" class="second_a">大屏开发</a></p>
-    <p><a href="https://doc.youyacao.com/web/#/22/1632" target="_blank" class="second_a">桌面客户端</a></p>
-</li>
-
-              
-
-
-<li>
-    <a class="drawer-menu-item" href="https://songshu.youyacao.com">
-        <p>自研开源产品</p>
-        <p>development</p>
-    </a>
-    <p><a href="https://songshu.youyacao.com/mercury.html" class="second_a" target="_blank">即时通讯·水银版</a></p>
-    <p><a href="https://songshu.youyacao.com/snow.html" class="second_a" target="_blank">蜻蜓z·雪花限定版</a></p>
-    <p><a href="https://songshu.youyacao.com/qingtingz/mother.html" class="second_a" target="_blank">优雅草·月子中心</a></p>
-    <p><a href="https://songshu.youyacao.com/proec.html" class="second_a" target="_blank">蜻蜓EC【专业版】</a></p>
-    <p><a href="https://songshu.youyacao.com/shadow.html" class="second_a" target="_blank">蜻蜓Z【暗影版】</a></p>
-    <p><a href="https://songshu.youyacao.com/qingtingz/index.html" class="second_a" target="_blank">蜻蜓Z独立介绍</a></p>
-    <p><a href="https://songshu.youyacao.com/zhuiju.html" class="second_a" target="_blank">蜻蜓c【影视追剧】</a></p>
-    <p><a href="https://songshu.youyacao.com/z.html" class="second_a" target="_blank">蜻蜓Z【JAVA第四代】</a></p>
-    <p><a href="https://songshu.youyacao.com/k.html" class="second_a" target="_blank">蜻蜓k【知识付费】</a></p>
-    <p><a href="https://songshu.youyacao.com/chat.html" class="second_a" target="_blank">蜻蜓i【即时通讯】</a></p>
-    <p><a href="https://songshu.youyacao.com/stq.html" class="second_a" target="_blank">蜻蜓Q【旗舰版】</a></p>
-    <p><a href="https://songshu.youyacao.com/bao.html" class="second_a" target="_blank">爆店宝【火爆·联合推出】</a></p>
-    <p><a href="https://songshu.youyacao.com/g.html" class="second_a" target="_blank">蜻蜓G【纯原生】</a></p>
-    <p><a href="https://songshu.youyacao.com/qingting.html" class="second_a" target="_blank">蜻蜓S系统【uniapp】</a></p>
-    <p><a href="https://songshu.youyacao.com/film.html" class="second_a" target="_blank">蜻蜓F影视系统【uniapp】</a></p>
-    <p><a href="https://songshu.youyacao.com/detail/216.html" class="second_a" target="_blank">蜻蜓Q系统【uniapp】</a></p>
-    <p><a href="https://songshu.youyacao.com/film.html" class="second_a" target="_blank">蜻蜓A系统【flutter】</a></p>
-    <p><a href="https://songshu.youyacao.com/video.html" class="second_a" target="_blank">松鼠系统</a></p>
-</li>
-
-
-
-       
-              
-            </ul>
-        </nav>
-    </header>
-
-    <div class="contact">
-        <ul>
-            <li style="border-bottom: 1px solid #ffffff;">
-                <a href="#">
-                    <img src="images/gfwx.png" style="
-    width: 100px;
-    height: 100px;
-" alt="企业微信扫码">
-                    <p class="title">官方客服</p>
-                    <p class="tap">微信联系</p>
-                </a>
-            </li>
-
-
-          
-
-
-        </ul>
-    </div>
-
-    <div class="introduction-box">
-        <div class="introduction-content">
-            <div class="close" onclick="hide()">
-                <span>
-                    <img style="margin-top: 10px;" src="images/close.svg" alt="关闭图标">
-                </span>
-            </div>
-            <h1>优雅草科技2025业务战略调整与发展规划</h1>
-              <p>在科技飞速发展的2025年，优雅草科技站在时代的风口浪尖，以破竹之势开启全新的发展纪元。经过公司核心团队的深度思考与审慎研讨，我们毅然决然地踏上改革创新之路，力求从传统外包服务模式，迈向自主创新与深度创作的崭新时代，全力打造独特的竞争优势。</p>
-              <p>回首过往，优雅草科技在外包业务领域积累了深厚的技术底蕴与丰富的项目经验。但面对日益激烈的市场竞争和不断变化的行业趋势，我们深刻认识到，单纯依赖外包业务难以实现公司的长远发展和核心价值的最大化。为在未来科技版图中站稳脚跟，我们果断告别传统的常规外包模式，将核心资源与优势力量聚焦于音乐、游戏、小说这三大极具潜力的业务板块，全力进行深度创作与精品打造。</p>
-              <h2>音乐创作</h2>
-              <p>在音乐创作方面，我们将汇聚全球顶尖音乐人才，融合前沿音乐制作技术与创新理念，打造一系列风格独特、影响力广泛的音乐作品。涵盖流行、古典、电子等多元音乐类型，不仅满足听众日益多样化的音乐需求，更要引领音乐创作的新潮流。同时，我们将借助AI技术进行智能编曲、旋律生成以及个性化音乐推荐，让音乐创作更具效率与创意，为用户带来前所未有的音乐体验。</p>
-              <h2>游戏开发</h2>
-              <p>游戏开发领域，优雅草科技将投入大量研发资源，组建专业游戏开发团队，专注开发具有创新性玩法、精美画面和深刻文化内涵的游戏产品。紧跟游戏行业发展趋势，积极探索虚拟现实（VR）、增强现实（AR）等新兴技术在游戏中的应用，结合AI技术实现智能NPC、动态剧情生成以及精准的游戏平衡调整，为玩家带来沉浸式的游戏体验。</p>
-              <h2>小说创作</h2>
-              <p>小说创作板块，我们公司全体员工，有创作能力的人都加入创作，最终以卓伊凡输出内容，实现 IP 价值的最大化。</p>
-              <h2>AI赋能</h2>
-              <p>值得一提的是，为更好地适应时代发展，优雅草全体全栈工程师将深入学习AI的应用，力求用AI赋能加持创作过程。我们将通过内部培训、外部合作等方式，全面提升团队的AI技术应用能力，使AI技术贯穿音乐创作、游戏开发和小说创作的各个环节，实现效率与创意的双重提升。</p>
-              <h2>外包项目承接标准调整</h2>
-              <p>当然，在战略转型的过程中，我们并非完全摒弃外包项目。但从2025年起，我们对外包项目的承接标准将进行严格调整与把控。除了以下三种特殊情况，我们将不再接受任何单纯的外包项目：</p>
-              <ul>
-                  <li>
-                      <strong>合营项目</strong>：对于能够让优雅草科技加入联合运营开发的项目，我们将积极参与其中。这类项目不仅要求我们深度介入项目的开发过程，更重要的是，我们能够以股东的身份参与项目的运营与决策，共同承担风险，共享项目成功带来的丰厚回报。通过合营模式，我们希望与合作伙伴实现资源共享、优势互补，共同打造具有市场竞争力的产品或服务。
-                  </li>
-                  <li>
-                      <strong>高定制化高价项目</strong>：定制化价格远超市场常规水平的项目，将是我们考虑的另一重点。这里所说的高价，并非毫无根据的天价，而是至少达到我们内部设定的常规收费标准1.5倍以上的项目。这类项目通常具有极高的定制化需求，需要我们投入大量的人力、物力和时间成本。因此，只有在价格能够充分覆盖成本并保证一定利润空间的前提下，我们才会承接此类项目。
-                  </li>
-                  <li>
-                      <strong>技术相关定制项目</strong>：当定制项目与优雅草科技当前的技术研究试验方向高度契合，或者与我们自身产品的迭代升级密切相关时，我们也会审慎评估并考虑承接。这类项目不仅能够为我们提供实践技术创新的机会，还有助于我们加速自身产品的研发与优化进程，提升公司的核心竞争力。
-                  </li>
-              </ul>
-              <p>2025年，是优雅草科技的转型之年、创新之年，更是开启新纪元的关键之年。我们坚信，通过此次战略调整与业务聚焦，优雅草科技必将在音乐、游戏、小说等领域创造出更多的价值，为用户带来更加优质的产品与服务，为公司的长远发展奠定坚实的基础。让我们携手共进，迎接优雅草科技更加辉煌的明天！</p>
-
-        </div>
-    </div>
-
-
-
-
-
-    <div class="modal-bg"></div>
-
-    <!-- Swiper JS -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/iscroll.min.js"></script>
-    <script src="js/drawer.js"></script>
-    <!-- Initialize Swiper -->
+    <!-- Custom Tailwind Config -->
     <script>
-        const swiper = new Swiper('.banner_swiper', {
-            autoplay: true,
-            loop: true,
-            effect: 'fade',
-            speed: 2000,
-        });
-
-        const mySwiper = new Swiper ('#announcement', {
-            direction: 'vertical', // 垂直切换选项
-            autoplay: true,
-            loop: true, // 循环模式选项
-        });
-
-        $(document).ready(function () {
-            $('.drawer').drawer();
-            /*$('.drawer').drawer({
-                class: {
-                    nav: 'drawer-nav',
-                    toggle: 'drawer-toggle',
-                    overlay: 'drawer-overlay',
-                    open: 'drawer-open',
-                    close: 'drawer-close',
-                    dropdown: 'drawer-dropdown'
-                },
-                iscroll: {
-                    // Configuring the iScroll
-                    // https://github.com/cubiq/iscroll#configuring-the-iscroll
-                    mouseWheel: true,
-                    preventDefault: false
-                },
-                showOverlay: true
-            });*/
-            /**去除UC广告*/
-            setTimeout(function () {
-                $("[id^='_']").hide();
-            }, 500);
-        });
-
-        function hide() {
-            $('.introduction-box, .modal-bg').fadeOut();
-        }
-        function show() {
-            $('.modal-bg').fadeIn();
-            $('.introduction-box').css({
-                display: 'flex'
-            });
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366F1',
+                        secondary: '#818CF8',
+                        accent: '#10B981',
+                        background: '#F5F3FF',
+                        textPrimary: '#1E1B4B',
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                }
+            }
         }
     </script>
-    <div class="drawer-overlay drawer-toggle"></div>
-</body>
 
+    <!-- Baidu Analytics -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6e606d8481f77f858f575e066a105304";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <style>
+        /* Custom Glassmorphism Styles */
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.08),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+            opacity: 0.6;
+        }
+
+        .glass-dark {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Smooth Transitions */
+        * {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #312E81 100%);
+            overflow: hidden;
+        }
+
+        /* Animated Background Grid */
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Floating Orbs */
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+            animation: float-orb 20s ease-in-out infinite;
+        }
+
+        .hero-orb-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #6366F1, #818CF8);
+            top: -10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .hero-orb-2 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #10B981, #34D399);
+            bottom: -10%;
+            right: -5%;
+            animation-delay: -10s;
+        }
+
+        .hero-orb-3 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+            top: 40%;
+            right: -10%;
+            animation-delay: -5s;
+        }
+
+        @keyframes float-orb {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        /* Tech Lines */
+        .tech-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+            animation: techLineMove 3s ease-in-out infinite;
+        }
+
+        @keyframes techLineMove {
+            0% { transform: translateX(-100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(100%); opacity: 0; }
+        }
+
+        /* Glowing Text Effect */
+        .glow-text {
+            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5),
+                         0 0 40px rgba(99, 102, 241, 0.3),
+                         0 0 60px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .pulse-ring {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* Announcement Ticker */
+        @keyframes scroll-horizontal {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .announcement-track {
+            display: flex;
+            animation: scroll-horizontal 30s linear infinite;
+            will-change: transform;
+        }
+
+        .announcement-track:hover {
+            animation-play-state: paused;
+        }
+
+        .announcement-item {
+            flex-shrink: 0;
+            padding: 0 2rem;
+        }
+
+        /* Card Hover Effect */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 48px rgba(99, 102, 241, 0.2),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .card-hover:hover::before {
+            opacity: 1;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.8), transparent);
+        }
+
+        /* Section Headers */
+        .section-header {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 1rem;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #6366F1, #10B981);
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+        }
+
+        .section-header-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header-wrapper::before,
+        .section-header-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4));
+        }
+
+        .section-header-wrapper::before {
+            right: 100%;
+            margin-right: 1rem;
+            transform: translateY(-50%);
+        }
+
+        .section-header-wrapper::after {
+            left: 100%;
+            margin-left: 1rem;
+            transform: translateY(-50%) scaleX(-1);
+        }
+
+        @media (max-width: 768px) {
+            .section-header-wrapper::before,
+            .section-header-wrapper::after {
+                width: 20px;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+        }
+
+        /* Gradient Text Effect */
+        .gradient-text {
+            background: linear-gradient(135deg, #1E1B4B 0%, #6366F1 50%, #1E1B4B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+
+        /* Subtitle animation */
+        .subtitle-decoration {
+            position: relative;
+            display: inline-block;
+            letter-spacing: 0.2em;
+            opacity: 0.7;
+        }
+
+        .subtitle-decoration::before {
+            content: '•';
+            margin-right: 0.5em;
+            color: #6366F1;
+        }
+
+        .subtitle-decoration::after {
+            content: '•';
+            margin-left: 0.5em;
+            color: #10B981;
+        }
+
+        /* Hero Gradient Background */
+        .hero-gradient {
+            background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #DDD6FE 100%);
+        }
+
+        /* Dark Mode Styles */
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F3FF;
+            --bg-glass: rgba(255, 255, 255, 0.8);
+            --bg-glass-dark: rgba(255, 255, 255, 0.05);
+            --text-primary: #1E1B4B;
+            --text-secondary: rgba(30, 27, 75, 0.7);
+            --border-color: rgba(255, 255, 255, 0.3);
+            --footer-bg: #1E1B4B;
+        }
+
+        .dark {
+            --bg-primary: #0F172A;
+            --bg-glass: rgba(30, 27, 75, 0.8);
+            --bg-glass-dark: rgba(0, 0, 0, 0.3);
+            --text-primary: #E2E8F0;
+            --text-secondary: rgba(226, 232, 240, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        html.dark body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        /* Dark mode specific overrides */
+        .dark .glass {
+            background: var(--bg-glass);
+            border-color: var(--border-color);
+        }
+
+        .dark .glass-dark {
+            background: var(--bg-glass-dark);
+        }
+
+        .dark .text-textPrimary {
+            color: var(--text-primary);
+        }
+
+        .dark .text-textPrimary\/70 {
+            color: var(--text-secondary);
+        }
+
+        /* Announcement ticker dark mode border */
+        .dark section.border-y {
+            border-color: rgba(99, 102, 241, 0.2) !important;
+        }
+
+        /* Section backgrounds with alternating gradient directions */
+        .about-section {
+            background-color: #FFFFFF;
+        }
+
+        /* 1. 关于我们 - 从左到右 */
+        .dark .about-section {
+            background: linear-gradient(90deg, #3730A3 0%, #312E81 50%, #1E1B4B 100%);
+        }
+
+        /* 2. 集团成员企业 - 从右到左 */
+        .dark #group {
+            background: linear-gradient(270deg, #3730A3 0%, #312E81 50%, #1E1B4B 100%);
+        }
+
+        /* 3. 自营产品 - 从左到右 */
+        .dark #products {
+            background: linear-gradient(90deg, #3730A3 0%, #312E81 50%, #1E1B4B 100%);
+        }
+
+        /* 4. 核心定制业务 - 从右到左 */
+        .dark #services {
+            background: linear-gradient(270deg, #3730A3 0%, #312E81 50%, #1E1B4B 100%);
+        }
+
+        /* 5. 自研开源产品 - 从左到右 */
+        .dark #opensource {
+            background: linear-gradient(90deg, #3730A3 0%, #312E81 50%, #1E1B4B 100%);
+        }
+
+        /* Announcement Ticker - 从右到左（在开源产品之后） */
+        .dark .announcement-section {
+            background: linear-gradient(270deg, #3730A3 0%, #312E81 50%, #1E1B4B 100%);
+        }
+
+        /* Cards - consistent style */
+        .dark #about .glass,
+        .dark #group .glass,
+        .dark #products .glass,
+        .dark #services .glass,
+        .dark #opensource .glass {
+            background: rgba(30, 27, 75, 0.6);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        .dark #about .glass:hover,
+        .dark #group .glass:hover,
+        .dark #products .glass:hover,
+        .dark #services .glass:hover,
+        .dark #opensource .glass:hover {
+            background: rgba(30, 27, 75, 0.8);
+        }
+
+        /* Introduction Modal dark mode */
+        .dark #introduction-modal .glass {
+            background: rgba(30, 27, 75, 0.9);
+        }
+
+        .dark #introduction-modal .prose,
+        .dark #introduction-modal .prose p,
+        .dark #introduction-modal .prose li {
+            color: var(--text-primary);
+        }
+
+        .dark #introduction-modal .prose h1,
+        .dark #introduction-modal .prose h2 {
+            color: var(--text-primary);
+        }
+
+        .dark #introduction-modal .prose strong {
+            color: var(--text-primary);
+        }
+
+        .dark #introduction-modal .prose ul {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .theme-toggle .sun-icon,
+        .theme-toggle .moon-icon {
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle .sun-icon {
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+
+        .theme-toggle .moon-icon {
+            opacity: 0;
+            transform: rotate(90deg);
+        }
+
+        .dark .theme-toggle .sun-icon {
+            opacity: 0;
+            transform: rotate(-90deg);
+        }
+
+        .dark .theme-toggle .moon-icon {
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+
+        /* Smooth theme transition */
+        html {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        html *, html *::before, html *::after {
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- Floating Navigation -->
+    <nav class="fixed top-4 left-4 right-4 z-50 glass rounded-2xl shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="优雅草科技" class="h-10 w-auto">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium">关于我们</a>
+                    <a href="#group" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium">集团企业</a>
+                    <a href="#products" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium">自营产品</a>
+                    <a href="#services" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium">定制服务</a>
+                    <a href="#opensource" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium">开源产品</a>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle-desktop" class="theme-toggle" aria-label="切换主题">
+                        <svg class="sun-icon w-5 h-5 text-textPrimary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="moon-icon w-5 h-5 text-textPrimary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+
+                    <a href="https://doc.youyacao.com/web/#/22/338" target="_blank" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-green-600 transition-colors duration-200 cursor-pointer font-medium">联系我们</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-textPrimary hover:text-primary cursor-pointer" aria-label="打开菜单">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobile-menu-overlay"></div>
+        <div class="absolute left-4 right-4 top-20 glass rounded-2xl shadow-xl p-4 max-h-[80vh] overflow-y-auto">
+            <nav class="flex flex-col space-y-1">
+                <a href="#about" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium py-2.5 px-3 rounded-lg hover:bg-primary/5 mobile-menu-link">关于我们</a>
+
+                <a href="#group" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium py-2.5 px-3 rounded-lg hover:bg-primary/5 mobile-menu-link">集团企业</a>
+
+                <a href="#products" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium py-2.5 px-3 rounded-lg hover:bg-primary/5 mobile-menu-link">自营产品</a>
+
+                <a href="#services" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium py-2.5 px-3 rounded-lg hover:bg-primary/5 mobile-menu-link">定制服务</a>
+
+                <a href="#opensource" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium py-2.5 px-3 rounded-lg hover:bg-primary/5 mobile-menu-link">开源产品</a>
+
+                <div class="pt-3 flex items-center justify-between">
+                    <button id="theme-toggle-mobile" class="flex items-center space-x-2 text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium py-2.5 px-3 rounded-lg hover:bg-primary/5">
+                        <svg class="sun-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="moon-icon w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <span class="theme-text">切换主题</span>
+                    </button>
+                    <a href="https://doc.youyacao.com/web/#/22/338" target="_blank" class="bg-accent text-white px-5 py-2.5 rounded-full hover:bg-green-600 transition-colors duration-200 cursor-pointer font-medium text-center">联系我们</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-32 px-4 sm:px-6 lg:px-8 min-h-[80vh] flex items-center">
+        <!-- Animated Background Grid -->
+        <div class="hero-grid"></div>
+
+        <!-- Floating Orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+
+        <!-- Tech Lines -->
+        <div class="tech-line" style="top: 20%; width: 200px; animation-delay: 0s;"></div>
+        <div class="tech-line" style="top: 50%; width: 300px; animation-delay: 1s;"></div>
+        <div class="tech-line" style="top: 80%; width: 250px; animation-delay: 2s;"></div>
+
+        <!-- Content -->
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 glass-dark px-6 py-3 rounded-full mb-8">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
+                </span>
+                <span class="text-white/90 text-sm font-medium">2025 全新战略启动</span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 glow-text">
+                优雅草开源计划
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="font-display text-2xl sm:text-3xl md:text-4xl text-white/80 mb-8">
+                2025年·优雅草集团
+            </p>
+
+            <!-- Description -->
+            <p class="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed">
+                从传统外包服务模式，迈向自主创新与深度创作的崭新时代<br class="hidden sm:block">
+                聚焦音乐、游戏、小说三大核心业务板块
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button onclick="showIntroduction()" class="group relative inline-flex items-center space-x-2 bg-primary text-white px-10 py-5 rounded-full hover:bg-secondary transition-all duration-300 cursor-pointer font-medium text-lg shadow-2xl hover:shadow-primary/50 hover:scale-105">
+                    <span>查看2025战略规划</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </button>
+
+                <a href="#products" class="group inline-flex items-center space-x-2 glass-dark text-white px-10 py-5 rounded-full hover:bg-white/20 transition-all duration-300 cursor-pointer font-medium text-lg border border-white/20 hover:border-white/40">
+                    <span>探索产品</span>
+                    <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 max-w-4xl mx-auto">
+                <div class="glass-dark rounded-2xl p-6 backdrop-blur-xl">
+                    <div class="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
+                    <div class="text-white/70 text-sm">年技术积累</div>
+                </div>
+                <div class="glass-dark rounded-2xl p-6 backdrop-blur-xl">
+                    <div class="text-3xl md:text-4xl font-bold text-white mb-2">17+</div>
+                    <div class="text-white/70 text-sm">开源产品</div>
+                </div>
+                <div class="glass-dark rounded-2xl p-6 backdrop-blur-xl">
+                    <div class="text-3xl md:text-4xl font-bold text-white mb-2">4</div>
+                    <div class="text-white/70 text-sm">集团企业</div>
+                </div>
+                <div class="glass-dark rounded-2xl p-6 backdrop-blur-xl">
+                    <div class="text-3xl md:text-4xl font-bold text-accent mb-2">AI</div>
+                    <div class="text-white/70 text-sm">技术驱动</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+            <div class="flex flex-col items-center space-y-2 animate-bounce">
+                <span class="text-white/50 text-sm">向下滚动</span>
+                <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcement Ticker -->
+    <section class="announcement-section py-8 hero-gradient border-y border-primary/10">
+        <div class="overflow-hidden">
+            <div class="announcement-track">
+                <!-- First set of announcements -->
+                <div class="announcement-item flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                    <a href="https://xingyun.youyacao.com" target="_blank" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium whitespace-nowrap">
+                        <span class="inline-flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <span>优雅草星云物联网AI智控系统-成都星云智控科技有限公司</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="announcement-item flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                    <a href="https://doc.youyacao.com/119/2284" target="_blank" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium whitespace-nowrap">
+                        <span class="inline-flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                            </svg>
+                            <span>花开绽放·优雅草开源产品大全·全面开源·留核心企业级产品</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="announcement-item flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
+                    <a href="https://ai.youyacao.com/" target="_blank" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium whitespace-nowrap">
+                        <span class="inline-flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                            <span>优雅草AI聚合工具-主营业务之一</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="announcement-item flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                    <a href="https://aitool.youyacao.com/" target="_blank" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium whitespace-nowrap">
+                        <span class="inline-flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>优雅草AI图像视频处理·聚合工具-主营业务之一</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="announcement-item flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                    <a href="https://xingyun.youyacao.com" target="_blank" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium whitespace-nowrap">
+                        <span class="inline-flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <span>优雅草星云物联网AI智控系统-成都星云智控科技有限公司</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="announcement-item flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                    <a href="https://doc.youyacao.com/119/2284" target="_blank" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium whitespace-nowrap">
+                        <span class="inline-flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                            </svg>
+                            <span>花开绽放·优雅草开源产品大全·全面开源·留核心企业级产品</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="announcement-item flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
+                    <a href="https://ai.youyacao.com/" target="_blank" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium whitespace-nowrap">
+                        <span class="inline-flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                            <span>优雅草AI聚合工具-主营业务之一</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="announcement-item flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                    <a href="https://aitool.youyacao.com/" target="_blank" class="text-textPrimary hover:text-primary transition-colors duration-200 cursor-pointer font-medium whitespace-nowrap">
+                        <span class="inline-flex items-center space-x-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>优雅草AI图像视频处理·聚合工具-主营业务之一</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 about-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="section-header-wrapper inline-block mb-6">
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold gradient-text section-header">关于我们</h2>
+                </div>
+                <p class="text-xl subtitle-decoration">ABOUT US</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="https://www.youyacao.com/about/" target="_blank" class="glass rounded-xl p-6 text-center card-hover cursor-pointer">
+                    <p class="text-textPrimary font-medium">关于优雅草·简介</p>
+                </a>
+                <a href="https://doc.youyacao.com/web/#/22/338" target="_blank" class="glass rounded-xl p-6 text-center card-hover cursor-pointer">
+                    <p class="text-textPrimary font-medium">详细的·关于我们</p>
+                </a>
+                <a href="https://www.youyacao.com/licheng/" target="_blank" class="glass rounded-xl p-6 text-center card-hover cursor-pointer">
+                    <p class="text-textPrimary font-medium">详细的里程碑</p>
+                </a>
+                <a href="https://zhengban.youyacao.com" target="_blank" class="glass rounded-xl p-6 text-center card-hover cursor-pointer">
+                    <p class="text-textPrimary font-medium">正版授权查询</p>
+                </a>
+                <a href="https://www.youyacao.com/news/category-anli.html" target="_blank" class="glass rounded-xl p-6 text-center card-hover cursor-pointer">
+                    <p class="text-textPrimary font-medium">经典客户案例</p>
+                </a>
+                <a href="https://doc.youyacao.com/web/#/88/1302" target="_blank" class="glass rounded-xl p-6 text-center card-hover cursor-pointer">
+                    <p class="text-textPrimary font-medium">常见问题整理</p>
+                </a>
+                <a href="https://www.youyacao.com/kaifa/" target="_blank" class="glass rounded-xl p-6 text-center card-hover cursor-pointer">
+                    <p class="text-textPrimary font-medium">软件定制</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Member Companies -->
+    <section id="group" class="py-20 px-4 sm:px-6 lg:px-8 hero-gradient">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="section-header-wrapper inline-block mb-6">
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold gradient-text section-header">集团成员企业</h2>
+                </div>
+                <p class="text-xl subtitle-decoration">Group Member Companies</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="https://xingyun.youyacao.com" target="_blank" class="glass rounded-3xl p-8 text-center card-hover cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-textPrimary mb-2">星云智控科技公司</h3>
+                    <p class="text-sm text-textPrimary/70">物联网AI智控</p>
+                </a>
+
+                <div class="glass rounded-3xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-textPrimary mb-2">盈诺汇通财税公司</h3>
+                    <p class="text-sm text-textPrimary/70">财税服务</p>
+                </div>
+
+                <div class="glass rounded-3xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-textPrimary mb-2">倾城智语知识产权</h3>
+                    <p class="text-sm text-textPrimary/70">知识产权服务</p>
+                </div>
+
+                <div class="glass rounded-3xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-textPrimary mb-2">兰若书香文化传媒</h3>
+                    <p class="text-sm text-textPrimary/70">文化传媒</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="section-header-wrapper inline-block mb-6">
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold gradient-text section-header">自营产品</h2>
+                </div>
+                <p class="text-xl subtitle-decoration">Self-Operated Products</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <a href="https://doc.youyacao.com/web/#/22/1824" target="_blank" class="glass rounded-3xl p-6 card-hover cursor-pointer">
+                    <h3 class="font-display text-xl font-bold text-textPrimary mb-2">自营产品大全</h3>
+                    <p class="text-textPrimary/70">查看所有产品</p>
+                </a>
+
+                <a href="https://ai.youyacao.com" target="_blank" class="glass rounded-3xl p-6 card-hover cursor-pointer">
+                    <h3 class="font-display text-xl font-bold text-textPrimary mb-2">AI聚合平台</h3>
+                    <p class="text-textPrimary/70">人工智能工具集成</p>
+                </a>
+
+                <a href="https://aitool.youyacao.com" target="_blank" class="glass rounded-3xl p-6 card-hover cursor-pointer">
+                    <h3 class="font-display text-xl font-bold text-textPrimary mb-2">AI图像视频聚合</h3>
+                    <p class="text-textPrimary/70">图像视频处理工具</p>
+                </a>
+
+                <a href="https://api.youyacao.com" target="_blank" class="glass rounded-3xl p-6 card-hover cursor-pointer">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-display text-xl font-bold text-textPrimary">API数据服务</h3>
+                        <span class="bg-accent text-white px-2 py-1 rounded-full text-xs font-medium">荐</span>
+                    </div>
+                    <p class="text-textPrimary/70">专业API接口服务</p>
+                </a>
+
+                <a href="https://www.chengduyeshenghuo.com" target="_blank" class="glass rounded-3xl p-6 card-hover cursor-pointer">
+                    <h3 class="font-display text-xl font-bold text-textPrimary mb-2">夜成都</h3>
+                    <p class="text-textPrimary/70">本地生活服务</p>
+                </a>
+
+                <a href="https://doc.youyacao.com/web/#/22/2026" target="_blank" class="glass rounded-3xl p-6 card-hover cursor-pointer">
+                    <h3 class="font-display text-xl font-bold text-textPrimary mb-2">优雅草便民工具</h3>
+                    <p class="text-textPrimary/70">实用工具集</p>
+                </a>
+
+                <a href="https://www.youyacao.cn" target="_blank" class="glass rounded-3xl p-6 card-hover cursor-pointer">
+                    <h3 class="font-display text-xl font-bold text-textPrimary mb-2">优雅草APP分发</h3>
+                    <p class="text-textPrimary/70">应用分发平台</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Development Services -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 hero-gradient">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="section-header-wrapper inline-block mb-6">
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold gradient-text section-header">核心定制业务</h2>
+                </div>
+                <p class="text-xl subtitle-decoration">Core Custom Development Services</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="https://www.youyacao.com/kaifa/" target="_blank" class="glass rounded-2xl p-6 text-center card-hover cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">整体介绍</h3>
+                </a>
+
+                <a href="/kaifa/app" target="_blank" class="glass rounded-2xl p-6 text-center card-hover cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">纯原生APP</h3>
+                    <p class="text-sm text-textPrimary/70">定制/二次开发</p>
+                </a>
+
+                <a href="/kaifa/flutter" target="_blank" class="glass rounded-2xl p-6 text-center card-hover cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-accent to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">Flutter开发</h3>
+                    <p class="text-sm text-textPrimary/70">跨平台方案</p>
+                </a>
+
+                <a href="https://www.youyacao.com/kaifa/Blockchain/index.html" target="_blank" class="glass rounded-2xl p-6 text-center card-hover cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">区块链开发</h3>
+                    <p class="text-sm text-textPrimary/70">Web3技术</p>
+                </a>
+
+                <a href="/kaifa/uniapp" target="_blank" class="glass rounded-2xl p-6 text-center card-hover cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">UniApp开发</h3>
+                    <p class="text-sm text-textPrimary/70">多端统一</p>
+                </a>
+
+                <a href="https://www.youyacao.com/kaifa/Industry/index.html" target="_blank" class="glass rounded-2xl p-6 text-center card-hover cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">智慧工业</h3>
+                    <p class="text-sm text-textPrimary/70">工业软件</p>
+                </a>
+
+                <a href="/kaifa/daping/index.html" target="_blank" class="glass rounded-2xl p-6 text-center card-hover cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">大屏开发</h3>
+                    <p class="text-sm text-textPrimary/70">数据可视化</p>
+                </a>
+
+                <a href="https://doc.youyacao.com/web/#/22/1632" target="_blank" class="glass rounded-2xl p-6 text-center card-hover cursor-pointer">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">桌面客户端</h3>
+                    <p class="text-sm text-textPrimary/70">跨平台桌面应用</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Products -->
+    <section id="opensource" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="section-header-wrapper inline-block mb-6">
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold gradient-text section-header">自研开源产品</h2>
+                </div>
+                <p class="text-xl subtitle-decoration">Self-Developed Open Source Products</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <a href="https://songshu.youyacao.com/mercury.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">即时通讯·水银版</h3>
+                    <p class="text-xs text-textPrimary/70">高性能IM系统</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/snow.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓z·雪花限定版</h3>
+                    <p class="text-xs text-textPrimary/70">限定版本</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/qingtingz/mother.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">优雅草·月子中心</h3>
+                    <p class="text-xs text-textPrimary/70">母婴管理系统</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/proec.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓EC【专业版】</h3>
+                    <p class="text-xs text-textPrimary/70">电商系统</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/shadow.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓Z【暗影版】</h3>
+                    <p class="text-xs text-textPrimary/70">暗影系列</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/qingtingz/index.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓Z独立介绍</h3>
+                    <p class="text-xs text-textPrimary/70">产品详情</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/zhuiju.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓c【影视追剧】</h3>
+                    <p class="text-xs text-textPrimary/70">影视平台</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/z.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓Z【JAVA第四代】</h3>
+                    <p class="text-xs text-textPrimary/70">JAVA版本</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/k.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓k【知识付费】</h3>
+                    <p class="text-xs text-textPrimary/70">知识付费系统</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/chat.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓i【即时通讯】</h3>
+                    <p class="text-xs text-textPrimary/70">即时通讯系统</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/stq.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓Q【旗舰版】</h3>
+                    <p class="text-xs text-textPrimary/70">旗舰产品</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/bao.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">爆店宝【火爆·联合推出】</h3>
+                    <p class="text-xs text-textPrimary/70">营销工具</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/g.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓G【纯原生】</h3>
+                    <p class="text-xs text-textPrimary/70">原生开发版本</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/qingting.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓S系统【uniapp】</h3>
+                    <p class="text-xs text-textPrimary/70">UniApp版本</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/film.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓F影视系统【uniapp】</h3>
+                    <p class="text-xs text-textPrimary/70">影视系统</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/detail/216.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">蜻蜓Q系统【uniapp】</h3>
+                    <p class="text-xs text-textPrimary/70">UniApp旗舰版</p>
+                </a>
+
+                <a href="https://songshu.youyacao.com/video.html" target="_blank" class="glass rounded-xl p-4 card-hover cursor-pointer">
+                    <h3 class="font-display text-sm font-bold text-textPrimary mb-1">松鼠系统</h3>
+                    <p class="text-xs text-textPrimary/70">短视频系统</p>
+                </a>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://doc.youyacao.com/119/2284" target="_blank" class="inline-flex items-center text-primary hover:text-secondary transition-colors duration-200 cursor-pointer font-medium text-lg">
+                    查看开源产品大全
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-textPrimary text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="font-display text-xl font-bold mb-4">优雅草科技</h3>
+                    <p class="text-white/70 mb-4">创新科技，赋能未来</p>
+                    <p class="text-white/70 text-sm">技术QQ: 422108995</p>
+                    <p class="text-white/70 text-sm">QQ群: 929353806</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-display text-xl font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.youyacao.com/about/" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">关于我们</a></li>
+                        <li><a href="https://www.youyacao.com/licheng/" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">发展里程碑</a></li>
+                        <li><a href="https://zhengban.youyacao.com" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">正版授权查询</a></li>
+                        <li><a href="https://www.youyacao.com/news/category-anli.html" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">客户案例</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div>
+                    <h3 class="font-display text-xl font-bold mb-4">核心产品</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://ai.youyacao.com/" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">AI聚合工具</a></li>
+                        <li><a href="https://aitool.youyacao.com/" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">AI图像视频处理</a></li>
+                        <li><a href="https://api.youyacao.com" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">API数据服务</a></li>
+                        <li><a href="https://xingyun.youyacao.com" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">星云物联网</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-display text-xl font-bold mb-4">联系方式</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://doc.youyacao.com/web/#/22/1859" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">青羊工业总部基地H区8栋807号</a></li>
+                        <li><a href="https://doc.youyacao.com/web/#/22/338" target="_blank" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">更多联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="flex flex-wrap items-center justify-center gap-6 mb-12 pb-12 border-b border-white/20">
+                <a href="https://zhengban.youyacao.com" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                    <img src="images/zhengban.png" alt="正版授权" class="h-12">
+                </a>
+                <a href="https://xinyong.yunaq.com/certificate?domain=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                    <img src="https://www.youyacao.com/images/chuangyu.png" alt="企业信用" class="h-12">
+                </a>
+                <a href="https://xinyong.yunaq.com/certificate?domain=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                    <img src="https://www.youyacao.com/images/quanguo.png" alt="全国认证" class="h-12">
+                </a>
+                <a href="https://doc.youyacao.com/web/#/22/1297" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                    <img src="https://www.youyacao.com/images/gaoqi.png" alt="高新技术企业" class="h-12">
+                </a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-white/70 text-sm space-y-2">
+                <p>Copyright © 2015-2025 优雅草科技 | 国家高新技术企业: GR202251001737</p>
+                <div class="flex items-center justify-center gap-4 flex-wrap">
+                    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow" class="hover:text-white transition-colors duration-200 cursor-pointer flex items-center gap-1">
+                        <img src="https://www.youyacao.com/images/icp.png" alt="ICP" class="h-4">
+                        工信部蜀ICP备10036293号-7
+                    </a>
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51011402000287" target="_blank" rel="nofollow" class="hover:text-white transition-colors duration-200 cursor-pointer flex items-center gap-1">
+                        <img src="https://www.youyacao.com/images/gongan.png" alt="公安备案" class="h-4">
+                        川公网安备 51011402000287号
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Widget -->
+    <div class="fixed right-6 bottom-6 z-40">
+        <button id="contact-widget" class="glass rounded-full p-4 shadow-xl hover:shadow-2xl transition-all duration-200 cursor-pointer">
+            <img src="images/gfwx.png" alt="联系我们" class="w-12 h-12 rounded-full">
+        </button>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="modal-overlay"></div>
+        <div class="glass rounded-3xl p-8 max-w-md w-full relative z-10">
+            <button id="close-modal" class="absolute top-4 right-4 text-textPrimary/50 hover:text-textPrimary transition-colors duration-200 cursor-pointer" aria-label="关闭">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="text-center">
+                <h3 class="font-display text-2xl font-bold text-textPrimary mb-6">联系我们</h3>
+                <img src="images/gfwx.png" alt="企业微信" class="w-48 h-48 mx-auto mb-6 rounded-2xl">
+                <p class="text-textPrimary mb-2 font-medium">扫码添加官方客服</p>
+                <p class="text-textPrimary/70 text-sm">微信联系，快速响应</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction Modal -->
+    <div id="introduction-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="intro-overlay"></div>
+        <div class="glass rounded-3xl p-8 max-w-4xl w-full max-h-[80vh] overflow-y-auto relative z-10">
+            <button id="close-intro" class="absolute top-4 right-4 text-textPrimary/50 hover:text-textPrimary transition-colors duration-200 cursor-pointer" aria-label="关闭">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Header with Badge -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <span>2025 战略规划</span>
+                </div>
+                <h1 class="font-display text-3xl font-bold text-textPrimary mb-3">优雅草科技业务战略调整</h1>
+                <p class="text-textPrimary/70">开启自主创新与深度创作的崭新时代</p>
+            </div>
+
+            <!-- Introduction -->
+            <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-6 mb-8 border border-primary/10">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-lg font-bold text-textPrimary mb-2">战略转型</h3>
+                        <p class="text-textPrimary/70 text-sm leading-relaxed">从传统外包服务模式，迈向自主创新与深度创作。聚焦音乐、游戏、小说三大核心业务板块。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Business Grid -->
+            <h2 class="font-display text-xl font-bold text-textPrimary mb-4 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+                三大核心业务
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-5 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">音乐创作</h3>
+                    <p class="text-textPrimary/70 text-sm">汇聚全球顶尖音乐人才，融合前沿技术与AI智能编曲，打造独特音乐作品。</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl p-5 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">游戏开发</h3>
+                    <p class="text-textPrimary/70 text-sm">投入研发资源，专注创新玩法与精美画面，探索VR/AR技术应用。</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-xl p-5 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300">
+                    <div class="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-textPrimary mb-2">小说创作</h3>
+                    <p class="text-textPrimary/70 text-sm">全员参与创作，以卓伊凡输出内容，实现IP价值最大化。</p>
+                </div>
+            </div>
+
+            <!-- AI Empowerment -->
+            <div class="bg-gradient-to-r from-accent/5 to-primary/5 rounded-2xl p-6 mb-8 border border-accent/20">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-accent to-green-600 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-lg font-bold text-textPrimary mb-2">AI 赋能创作</h3>
+                        <p class="text-textPrimary/70 text-sm leading-relaxed">全体全栈工程师深入学习AI应用，通过内部培训与外部合作，使AI技术贯穿音乐、游戏、小说创作的各个环节，实现效率与创意的双重提升。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outsourcing Standards -->
+            <h2 class="font-display text-xl font-bold text-textPrimary mb-4 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                </svg>
+                外包项目承接标准
+            </h2>
+            <p class="text-textPrimary/70 text-sm mb-4">从2025年起，除以下三种特殊情况外，不再接受单纯的外包项目：</p>
+
+            <div class="space-y-3 mb-8">
+                <div class="flex items-start space-x-3 bg-primary/5 rounded-xl p-4 border border-primary/10">
+                    <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-sm">1</div>
+                    <div>
+                        <h4 class="font-display font-bold text-textPrimary mb-1">合营项目</h4>
+                        <p class="text-textPrimary/70 text-sm">以股东身份参与运营与决策，共同承担风险，共享回报。</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3 bg-accent/5 rounded-xl p-4 border border-accent/10">
+                    <div class="flex-shrink-0 w-8 h-8 bg-accent rounded-lg flex items-center justify-center text-white font-bold text-sm">2</div>
+                    <div>
+                        <h4 class="font-display font-bold text-textPrimary mb-1">高定制化高价项目</h4>
+                        <p class="text-textPrimary/70 text-sm">价格至少达到常规收费标准1.5倍以上的高定制化需求。</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3 bg-secondary/5 rounded-xl p-4 border border-secondary/10">
+                    <div class="flex-shrink-0 w-8 h-8 bg-secondary rounded-lg flex items-center justify-center text-white font-bold text-sm">3</div>
+                    <div>
+                        <h4 class="font-display font-bold text-textPrimary mb-1">技术相关定制项目</h4>
+                        <p class="text-textPrimary/70 text-sm">与当前技术研究方向高度契合，或与产品迭代升级密切相关。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Message -->
+            <div class="text-center bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl p-6 border border-primary/20">
+                <svg class="w-12 h-12 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                </svg>
+                <h3 class="font-display text-xl font-bold text-textPrimary mb-2">开启新纪元</h3>
+                <p class="text-textPrimary/70 text-sm">2025年，是优雅草科技的转型之年、创新之年。让我们携手共进，迎接更加辉煌的明天！</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Theme Toggle
+        const html = document.documentElement;
+        const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+        // Function to get theme from localStorage or system preference
+        function getInitialTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            }
+            // Check system preference
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return 'dark';
+            }
+            return 'light';
+        }
+
+        // Function to set theme
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+            localStorage.setItem('theme', theme);
+            updateThemeToggleIcons();
+        }
+
+        // Function to update theme toggle icons
+        function updateThemeToggleIcons() {
+            const isDark = html.classList.contains('dark');
+            const mobileSunIcon = themeToggleMobile?.querySelector('.sun-icon');
+            const mobileMoonIcon = themeToggleMobile?.querySelector('.moon-icon');
+
+            if (isDark) {
+                if (mobileSunIcon) mobileSunIcon.classList.add('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.remove('hidden');
+            } else {
+                if (mobileSunIcon) mobileSunIcon.classList.remove('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.add('hidden');
+            }
+        }
+
+        // Initialize theme on page load
+        setTheme(getInitialTheme());
+
+        // Desktop theme toggle
+        themeToggleDesktop?.addEventListener('click', () => {
+            const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // Mobile theme toggle
+        themeToggleMobile?.addEventListener('click', () => {
+            const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            // Only auto-switch if user hasn't manually set a preference
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Modal
+        const contactWidget = document.getElementById('contact-widget');
+        const contactModal = document.getElementById('contact-modal');
+        const closeModal = document.getElementById('close-modal');
+        const modalOverlay = document.getElementById('modal-overlay');
+
+        contactWidget.addEventListener('click', () => {
+            contactModal.classList.remove('hidden');
+            contactModal.classList.add('flex');
+        });
+
+        closeModal.addEventListener('click', () => {
+            contactModal.classList.add('hidden');
+            contactModal.classList.remove('flex');
+        });
+
+        modalOverlay.addEventListener('click', () => {
+            contactModal.classList.add('hidden');
+            contactModal.classList.remove('flex');
+        });
+
+        // Introduction Modal
+        const introductionModal = document.getElementById('introduction-modal');
+        const closeIntro = document.getElementById('close-intro');
+        const introOverlay = document.getElementById('intro-overlay');
+
+        function showIntroduction() {
+            introductionModal.classList.remove('hidden');
+            introductionModal.classList.add('flex');
+        }
+
+        closeIntro.addEventListener('click', () => {
+            introductionModal.classList.add('hidden');
+            introductionModal.classList.remove('flex');
+        });
+
+        introOverlay.addEventListener('click', () => {
+            introductionModal.classList.add('hidden');
+            introductionModal.classList.remove('flex');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offsetTop = target.offsetTop - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                navbar.style.boxShadow = '0 10px 40px rgba(99, 102, 241, 0.1)';
+            } else {
+                navbar.style.boxShadow = '0 10px 40px rgba(99, 102, 241, 0.2)';
+            }
+        });
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                mobileMenu.classList.add('hidden');
+                contactModal.classList.add('hidden');
+                contactModal.classList.remove('flex');
+                introductionModal.classList.add('hidden');
+                introductionModal.classList.remove('flex');
+            }
+        });
+    </script>
+
+    <!-- QQ Customer Service -->
+    <script id="qd2885750701da9f1fb2d57d20b73c58df1eb155fa29" src="https://wp.qiye.qq.com/qidian/2885750701/da9f1fb2d57d20b73c58df1eb155fa29" charset="utf-8" async defer></script>
+</body>
 </html>
