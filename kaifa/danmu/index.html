@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>弹幕游戏定制开发｜优雅草科技 2026 核心业务</title>
+  <meta name="keywords" content="弹幕游戏开发,弹幕互动游戏,弹幕游戏定制,直播弹幕游戏,优雅草科技,游戏定制开发,互动游戏开发" />
+  <meta name="description" content="优雅草科技 2026 年 1 月重磅推出：弹幕游戏定制开发业务。支持官方版/第三方游戏版定制开发；卓伊凡同步发布弹幕开发系列教程共 19 节（云桧牵头制作）；弹幕游戏将在 2026 年陆续上线并招募主播合作。" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <canvas id="dmStarfield" aria-hidden="true"></canvas>
+
+  <header class="dm-header">
+    <div class="dm-wrap dm-header__inner">
+      <a class="dm-brand" href="/kaifa/index.html" title="返回开发栏目">
+        <span class="dm-brand__mark" aria-hidden="true"></span>
+        <span class="dm-brand__text">优雅草科技 · 开发</span>
+      </a>
+      <nav class="dm-nav" aria-label="页面导航">
+        <a href="#intro">业务介绍</a>
+        <a href="#scope">可定制范围</a>
+        <a href="#tutorial">教程发布</a>
+        <a href="#plan">2026 上线计划</a>
+        <a class="dm-nav__cta" href="#contact">联系合作</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="dm-hero" id="intro">
+      <div class="dm-wrap dm-hero__inner">
+        <div class="dm-hero__badge">
+          <span class="dm-dot"></span>
+          2026 · 核心推出 · 1 月重磅业务
+        </div>
+        <h1 class="dm-hero__title">
+          弹幕游戏定制开发
+          <span class="dm-hero__glow" aria-hidden="true"></span>
+        </h1>
+        <p class="dm-hero__desc">
+          优雅草科技对外接受<strong>弹幕游戏开发定制</strong>：无论<strong>官方版</strong>还是<strong>第三方游戏版</strong>，均可按玩法、节奏、互动机制与运营需求进行定制。
+          这是优雅草科技在 2026 年 1 月推出的重磅业务方向。
+        </p>
+
+        <div class="dm-hero__stats" role="list" aria-label="业务亮点">
+          <div class="dm-stat" role="listitem">
+            <div class="dm-stat__k">支持范围</div>
+            <div class="dm-stat__v">官方版 / 第三方版</div>
+            <div class="dm-stat__s">按场景与平台适配</div>
+          </div>
+          <div class="dm-stat" role="listitem">
+            <div class="dm-stat__k">教程系列</div>
+            <div class="dm-stat__v">完整 19 节</div>
+            <div class="dm-stat__s">云桧牵头良心制作</div>
+          </div>
+          <div class="dm-stat" role="listitem">
+            <div class="dm-stat__k">发布节奏</div>
+            <div class="dm-stat__v">2026 陆续上线</div>
+            <div class="dm-stat__s">同步招募主播合作</div>
+          </div>
+        </div>
+
+        <div class="dm-hero__actions">
+          <a class="dm-btn dm-btn--primary" href="#contact">立即联系 · 获取方案</a>
+          <a class="dm-btn dm-btn--ghost" href="#scope">先看可定制范围</a>
+        </div>
+
+        <div class="dm-hero__note">
+          <span class="dm-kbd">提示</span>
+          该页面样式完全独立，CSS/JS 位于 <code>/kaifa/danmu/</code>，不与官网样式冲突。
+        </div>
+      </div>
+      <div class="dm-hero__grid" aria-hidden="true"></div>
+      <div class="dm-hero__orbs" aria-hidden="true">
+        <span class="dm-orb dm-orb--a"></span>
+        <span class="dm-orb dm-orb--b"></span>
+        <span class="dm-orb dm-orb--c"></span>
+      </div>
+    </section>
+
+    <section class="dm-section" id="scope">
+      <div class="dm-wrap">
+        <div class="dm-section__head">
+          <h2 class="dm-h2">可定制范围</h2>
+          <p class="dm-sub">
+            从玩法设计到工程交付，一次性把“弹幕互动”做成可运营、可迭代、可增长的游戏产品。
+          </p>
+        </div>
+
+        <div class="dm-cards">
+          <article class="dm-card">
+            <h3>弹幕互动玩法定制</h3>
+            <p>按你的直播节奏与内容定位，定制弹幕触发、投票、道具、连击、队伍、Boss、地图事件等玩法。</p>
+            <ul class="dm-list">
+              <li>关键词 / 指令 / 数值弹幕触发</li>
+              <li>房间规则、积分与排行榜</li>
+              <li>道具系统、掉落与概率策略</li>
+            </ul>
+          </article>
+
+          <article class="dm-card">
+            <h3>官方版 / 第三方游戏版</h3>
+            <p>不论你要做“官方弹幕游戏”，还是对接第三方游戏形成互动玩法，我们都支持按需开发与适配。</p>
+            <ul class="dm-list">
+              <li>平台对接与消息处理（弹幕/礼物/关注等）</li>
+              <li>事件总线与规则引擎</li>
+              <li>第三方游戏联动（按项目评估）</li>
+            </ul>
+          </article>
+
+          <article class="dm-card">
+            <h3>运营与交付体系</h3>
+            <p>让产品可持续：配置化、可观测、可回放、可风控，做到可运营、可维护、可升级。</p>
+            <ul class="dm-list">
+              <li>后台配置：玩法、道具、概率、活动</li>
+              <li>日志与数据：实时看板、数据沉淀</li>
+              <li>交付源代码 + 文档 + 上线部署支持</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dm-section dm-section--alt" id="tutorial">
+      <div class="dm-wrap">
+        <div class="dm-section__head">
+          <h2 class="dm-h2">教程发布 · 19 节完整系列</h2>
+          <p class="dm-sub">
+            优雅草科技品牌 IP 账号<strong>卓伊凡</strong>同步发布弹幕开发系列教程（共 19 节完整），由资深开发工程师<strong>云桧</strong>牵头良心制作。
+          </p>
+        </div>
+
+        <div class="dm-split">
+          <div class="dm-panel">
+            <h3 class="dm-h3">你将看到</h3>
+            <ul class="dm-check">
+              <li>弹幕消息接入、过滤、解析与风控</li>
+              <li>规则引擎：触发、权重、状态与结算</li>
+              <li>游戏服务端架构与并发/稳定性设计</li>
+              <li>配置化运营后台与数据统计思路</li>
+              <li>发布部署与线上观测（可运维）</li>
+            </ul>
+          </div>
+          <div class="dm-panel dm-panel--glow">
+            <h3 class="dm-h3">适合人群</h3>
+            <p class="dm-p">
+              想做互动直播产品的团队、游戏策划、独立开发者、直播公会，以及希望把“弹幕互动”做成真正商业化产品的运营方。
+            </p>
+            <div class="dm-mini">
+              <div class="dm-mini__k">系列规模</div>
+              <div class="dm-mini__v">19 节 · 完整闭环</div>
+            </div>
+            <div class="dm-mini">
+              <div class="dm-mini__k">制作牵头</div>
+              <div class="dm-mini__v">云桧 · 资深工程师</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dm-section" id="plan">
+      <div class="dm-wrap">
+        <div class="dm-section__head">
+          <h2 class="dm-h2">2026 陆续发布 · 主播合作招募</h2>
+          <p class="dm-sub">
+            优雅草科技弹幕游戏将在 2026 年持续发布上线，并<strong>大量招募游戏主播合作</strong>：一起把互动玩法做成更强的内容增长引擎。
+          </p>
+        </div>
+
+        <div class="dm-timeline" role="list">
+          <div class="dm-step" role="listitem">
+            <div class="dm-step__tag">阶段 01</div>
+            <div class="dm-step__title">需求梳理 & 玩法定版</div>
+            <div class="dm-step__desc">围绕直播场景、玩法目标、节奏与商业化，输出可落地的方案与工期评估。</div>
+          </div>
+          <div class="dm-step" role="listitem">
+            <div class="dm-step__tag">阶段 02</div>
+            <div class="dm-step__title">定制开发 & 联调测试</div>
+            <div class="dm-step__desc">按官方版/第三方版需求进行开发与适配，完成联调、压力测试与稳定性加固。</div>
+          </div>
+          <div class="dm-step" role="listitem">
+            <div class="dm-step__tag">阶段 03</div>
+            <div class="dm-step__title">上线运营 & 数据迭代</div>
+            <div class="dm-step__desc">上线后持续优化：运营配置、活动玩法、数据分析与迭代升级，保持长期竞争力。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dm-section dm-section--contact" id="contact">
+      <div class="dm-wrap">
+        <div class="dm-contact">
+          <div class="dm-contact__left">
+            <h2 class="dm-h2">联系优雅草科技 · 获取定制方案</h2>
+            <p class="dm-sub">
+              需要弹幕游戏定制开发、第三方游戏弹幕互动联动、或想加入 2026 主播合作计划，请直接联系优雅草科技团队人员。
+            </p>
+            <div class="dm-contact__cta">
+              <a class="dm-btn dm-btn--primary" href="tel:13708021643">电话咨询：13708021643（卓）</a>
+              <a class="dm-btn dm-btn--ghost" target="_blank" rel="nofollow noopener" href="http://wpa.qq.com/msgrd?v=3&uin=800139566&site=qq&menu=yes">QQ 在线：800139566</a>
+            </div>
+            <p class="dm-tip">工作方式：定制开发 / 联合共创 / 主播合作。项目细节以沟通评估为准。</p>
+          </div>
+          <div class="dm-contact__right">
+            <div class="dm-qr">
+              <div class="dm-qr__head">
+                <span class="dm-qr__dot"></span>
+                微信咨询
+              </div>
+              <img class="dm-qr__img" src="https://www.youyacao.com/images/gfwx.png" alt="优雅草科技 微信二维码" loading="lazy" />
+              <div class="dm-qr__foot">扫码联系 · 获取方案与报价评估</div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="dm-footer">
+          <div class="dm-footer__links">
+            <a href="/kaifa/index.html">返回 /kaifa</a>
+            <span class="dm-sep">·</span>
+            <a href="/">返回官网首页</a>
+          </div>
+          <div class="dm-footer__copy">
+            Copyright 2015-2026 · 成都市一颗优雅草科技有限公司
+          </div>
+          <div style="margin-top:10px;display:flex;justify-content:center;gap:8px;align-items:center;flex-wrap:wrap;">
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener noreferrer" title="正版授权验证">
+              <img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" style="height:32px;" />
+            </a>
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener noreferrer" title="正版授权验证">
+              <img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" style="height:32px;" />
+            </a>
+          </div>
+          <div style="margin-top:10px;max-width:980px;text-align:center;font-size:12px;line-height:1.7;color:rgba(255,255,255,.62);">
+            <div>办公地址：成都市青羊工业总部基地H区8栋807号（2024年注册租用地址）。公司已完成整体升级搬迁，2026年将在青羊工业园启用全新办公与研发空间，敬请期待。</div>
+            <div style="margin-top:6px;">发展基地：成都市双流区大渡路33号。感谢2025年九江街道办蛟龙社区党群服务中心在企业发展阶段给予的大力支持与帮助，优雅草科技铭记于心。</div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
