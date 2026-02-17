@@ -1,35 +1,120 @@
-# 【2025优雅草开源计划进行中01】-优雅草科技官网-纯静态页面-开源-首页为优雅草吴银满工程师原创-优雅草卓伊凡发布
+# 优雅草科技官方网站
 
-# 源码介绍
-这是优雅草科技的官方网站，大家可以下载并且修改使用，这是更新了很多年的官网，所有的内容都是静态html+css+JavaScript，因为品类繁多，不得不这样。
+> 2026 年 2 月 17 日（农历大年初一），优雅草科技正式启用最新版官网。本仓库为官网源码，**欢迎下载、学习与合规使用**。
 
-# 开源地址
+---
 
-https://gitee.com/youyacao/www.youyacao.com
+## 重要日期
 
+- **2026 年 2 月 17 日**（农历丙午年正月初一）：优雅草科技全面启用**最新版本官方网站**，并同步推进全系列产品开源与商业授权体系。  
+- 即日起，官网与开源产品均以本仓库及 [优雅草开源组织](https://gitee.com/youyacao) 为统一入口，欢迎开发者与创作者使用、反馈与共建。
 
-# 截图
+---
 
-以下截图只是小部分，更多内容可以自行对比官网查看。
+## 项目简介
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=a04f445cde9a5a0d6783b13de9051576)
+本仓库为**成都市一颗优雅草科技有限公司**（优雅草科技）的官方网站前端源码，采用**纯静态**技术栈（HTML + CSS + JavaScript），便于部署、修改与二次使用。官网历经多年迭代，涵盖公司介绍、自营产品、自研开源产品、开发服务、集团成员企业等完整板块。
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=9c2bca4a72662012c67f39a34296d763)
+### 技术栈与特点
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=98fefd22a93827a3ff8cdb12ae9b750e)
+- **纯静态**：无后端依赖，可直接部署至任意静态托管或 CDN。
+- **Tailwind CSS**：使用 Tailwind 构建响应式与主题样式，支持明暗主题切换。
+- **现代前端**：玻璃拟态（Glassmorphism）、渐变、动效与无障碍考虑。
+- **多端适配**：桌面与移动端友好，含移动端导航与触控优化。
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=d363f1612342d5d94f5e848ac5278f53)
+### 官网主要内容结构
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=d9e4121d486b8511a8501456e3a38635)
+| 板块       | 说明 |
+|------------|------|
+| 关于我们   | 公司简介、2026 战略规划、拥抱科技与四大创作领域（音乐、游戏、文学、漫画） |
+| 集团成员企业 | 关联企业与业务布局 |
+| 自营产品   | Flutter / UniApp / 大屏 / 区块链 / 行业定制等开发服务与产品入口 |
+| 自研开源产品 | 优雅草全系列开源产品展示与跳转 |
+| 外包与合作政策 | 2026 年起：仅接受定制化开发（高精尖客户）、全面开源 + 商业授权、技术方向合作与战略合营 |
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=fa77fb80a431d7b0a3d7d41f5815524d)
+业务与授权相关说明以官网及 [正版授权查询站 zhengban.youyacao.com](https://zhengban.youyacao.com) 为准。
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=31fb232f28e31cdb042d584718682da3)
+### 截图（新版官网）
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=455330e448fbe6b7f0d9bf2813a85725)
+以下为新版官网界面截图，仅供参考。
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=07c585fee0b8c0303f997db96c290fb4)
+![](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=420aa729af354b5e5a3034bc157c9a16)
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=19fdd61475ea41afb1e13ef1eabc6eba)
+![](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=5c0a463976a2b20d739c504787d20539)
 
-![](https://doc2.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=82c1f45e8e2bd4aab8daeeb7799b90f7)
+![](https://doc.youyacao.com/server/index.php?s=/api/attachment/visitFile&sign=0dd3e4eedc32c9f5bdd5e3d41b4738cb)
+
+---
+
+## 仓库结构概览
+
+```
+├── index.html          # 官网首页（最新版）
+├── yindao.html         # 引导/落地页
+├── kaifa/              # 开发服务相关子页
+│   ├── index.html      # 开发服务首页
+│   ├── app/            # APP 开发
+│   ├── flutter/        # Flutter 开发
+│   ├── uniapp/         # UniApp 开发
+│   ├── daping/         # 大屏开发
+│   ├── Blockchain/     # 区块链开发
+│   ├── Industry/       # 行业方案
+│   ├── custom/         # 定制开发
+│   └── danmu/          # 弹幕等
+├── tool/               # 小工具与演示
+├── licheng/            # 历程等
+├── images/             # 图片资源
+├── css/、js/           # 全局样式与脚本
+├── README.md           # 本说明（中文）
+├── README.en.md        # 英文说明
+└── LICENSE             # 优雅草 2026 开源与授权协议
+```
+
+具体页面与资源以实际目录为准，可克隆后本地查看。
+
+---
+
+## 如何使用
+
+1. **克隆或下载**
+   ```bash
+   git clone https://gitee.com/youyacao/www.youyacao.com.git
+   cd www.youyacao.com
+   ```
+2. **本地预览**  
+   用浏览器直接打开 `index.html`，或使用任意本地静态服务（如 `npx serve .`、VS Code Live Server 等）。
+3. **部署**  
+   将整个目录上传至支持静态托管的服务器或对象存储（如 Nginx、OSS、Vercel、GitHub Pages 等），将根目录或 `index.html` 设为首页即可。
+4. **修改与二次使用**  
+   可在遵守 [LICENSE](LICENSE) 的前提下修改文案、样式、结构；商业使用须取得授权，详见 LICENSE 及 [zhengban.youyacao.com](https://zhengban.youyacao.com)。
+
+---
+
+## 开源与授权说明
+
+- 本官网源码在**个人非商业用途**下可免费使用；**企业或个人的商业用途**须获得优雅草商业授权。
+- 授权查询与验证的**唯一官方网站**：[**zhengban.youyacao.com**](https://zhengban.youyacao.com)。
+- 完整条款见仓库根目录 [**LICENSE**](LICENSE) 文件（优雅草 2026 年 2 月 17 日发布的开源与授权协议最新版）。
+
+---
+
+## 相关链接
+
+| 名称         | 链接 |
+|--------------|------|
+| 官网         | https://www.youyacao.com |
+| 正版授权查询 | https://zhengban.youyacao.com |
+| 优雅草 Gitee | https://gitee.com/youyacao |
+| 技术社区     | https://bbs.youyacao.com |
+| 文档与更新   | https://doc.youyacao.com |
+
+---
+
+## 致谢与欢迎
+
+感谢您关注并使用优雅草科技官网与开源产品。  
+**2026 年 2 月 17 日，我们正式以最新版官网与大家见面，欢迎使用、反馈与共建。**
+
+---
+
+*成都市一颗优雅草科技有限公司 · 优雅草科技*
