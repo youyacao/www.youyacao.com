@@ -4,97 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniApp 定制开发 / 小程序 / 多端 - 优雅草科技</title>
-    <meta name="description" content="UniApp 一套代码多端发布：APP、小程序、H5，快速上线、低成本迭代。">
+    <meta name="description" content="UniApp 一套代码多端发布：APP、微信/支付宝/百度等小程序、H5，快速上线、低成本迭代。">
     <meta name="keywords" content="UniApp开发,uniapp定制,小程序开发,多端开发,优雅草科技">
     <link rel="shortcut icon" href="https://www.youyacao.com/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#6366F1', accent: '#10B981', dark: '#0F172A' },
-                    fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                    colors: { uniapp: { green: '#07c160', dark: '#1aad19', gray: '#576b95' } },
+                    fontFamily: { sans: ['Noto Sans SC', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        .hero-bg { background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #312E81 100%); }
+        .hero-uniapp { background: linear-gradient(160deg, #07c160 0%, #06ad56 30%, #1a1a2e 70%); }
+        .uniapp-card { border: 1px solid rgba(7, 193, 96, 0.2); }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased">
-    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <a href="https://www.youyacao.com" class="font-display font-bold text-slate-800 text-lg">优雅草科技</a>
-            <div class="hidden md:flex items-center gap-6 text-sm">
-                <a href="../index.html" class="text-slate-600 hover:text-primary transition">开发首页</a>
-                <a href="../app/index.html" class="text-slate-600 hover:text-primary transition">APP开发</a>
-                <a href="../Industry/index.html" class="text-slate-600 hover:text-primary transition">智慧工业</a>
-                <a href="../Blockchain/index.html" class="text-slate-600 hover:text-primary transition">区块链</a>
-                <a href="index.html" class="text-primary font-medium">UniApp</a>
-                <a href="../flutter/index.html" class="text-slate-600 hover:text-primary transition">Flutter</a>
-                <a href="../daping/index.html" class="text-slate-600 hover:text-primary transition">大屏</a>
-                <a href="../custom/index.html" class="text-slate-600 hover:text-primary transition">定制</a>
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">在线咨询</a>
+<body class="bg-emerald-50/50 font-sans text-slate-800 antialiased">
+    <nav class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+            <a href="https://www.youyacao.com" class="font-semibold text-slate-800">优雅草科技</a>
+            <div class="hidden md:flex items-center gap-5 text-sm text-slate-600">
+                <a href="../index.html" class="hover:text-uniapp-green">开发首页</a>
+                <a href="../app/index.html" class="hover:text-uniapp-green">APP开发</a>
+                <a href="../Industry/index.html" class="hover:text-uniapp-green">智慧工业</a>
+                <a href="../Blockchain/index.html" class="hover:text-uniapp-green">区块链</a>
+                <a href="index.html" class="text-uniapp-green font-semibold">UniApp</a>
+                <a href="../flutter/index.html" class="hover:text-uniapp-green">Flutter</a>
+                <a href="../daping/index.html" class="hover:text-uniapp-green">大屏</a>
+                <a href="../custom/index.html" class="hover:text-uniapp-green">定制</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-uniapp-green text-white px-4 py-2 rounded-lg hover:bg-emerald-600 transition">在线咨询</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-bg text-white py-20 sm:py-28 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-block bg-white/10 text-white/90 text-xs font-medium uppercase tracking-wider px-3 py-1 rounded-full mb-6">UniApp</span>
-            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">UniApp 定制开发</h1>
-            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">一套代码，多端发布：微信 / 支付宝 / 百度等小程序、APP、H5。快速上线、低成本迭代，适合业务型与运营型产品。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition shadow-lg">免费评估需求与报价</a>
+    <!-- Hero：绿/深色，偏“多端/小程序” -->
+    <section class="hero-uniapp text-white py-24 sm:py-32 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="inline-block text-emerald-200 text-sm font-medium tracking-wider mb-4">UniApp · 一套代码多端</span>
+            <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-6">UniApp 定制开发</h1>
+            <p class="text-lg text-slate-200 leading-relaxed max-w-3xl mx-auto mb-8">
+                UniApp 基于 Vue.js，使用同一套代码可发布为 <strong>微信 / 支付宝 / 百度 / 字节 / QQ 等小程序</strong>、<strong>APP（iOS/Android）</strong>、<strong>H5</strong>。适合以小程序和 H5 为主、兼顾 APP 的业务型与运营型产品，快速上线、低成本迭代，并充分利用各端流量与能力。
+            </p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex bg-white text-uniapp-dark font-semibold px-6 py-3 rounded-lg hover:bg-emerald-50 transition">免费评估需求与报价</a>
         </div>
     </section>
 
-    <section class="py-16 sm:py-24 px-4 bg-white">
+    <!-- 多端与核心流程 -->
+    <section class="py-20 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="font-display text-3xl font-bold text-slate-900 text-center mb-4">核心开发流程</h2>
-            <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">从需求到上架，全流程专业交付。</p>
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">一套代码，多端发布</h2>
+            <p class="text-slate-600 mb-12">UniApp 将 Vue 语法与各端运行时结合，通过条件编译与平台 API 适配，实现多端一致与差异处理。</p>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="uniapp-card rounded-xl bg-emerald-50/80 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-3">小程序端</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        微信、支付宝、百度、字节、QQ 等小程序共用一套业务代码，发布时选择对应平台即可。适合需要快速触达微信/支付宝等生态内用户的产品，如电商、预约、工具、内容等。各平台 API 与审核规则有差异，我们会在开发阶段做好条件编译与兼容。
+                    </p>
+                    <p class="text-slate-500 text-xs">典型：商城、预约、表单、内容、工具类小程序</p>
+                </div>
+                <div class="uniapp-card rounded-xl bg-emerald-50/80 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-3">APP 端</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        同一套代码可打包为 iOS 与 Android 应用，通过应用市场上架。适合在保留小程序/H5 能力的同时需要独立 APP 的场景。APP 端可调用更多原生能力（如部分硬件、推送、存储），我们可根据需求做原生插件或条件编译优化。
+                    </p>
+                    <p class="text-slate-500 text-xs">典型：与小程序同构的 APP、独立安装包分发</p>
+                </div>
+                <div class="uniapp-card rounded-xl bg-emerald-50/80 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-3">H5 端</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        编译为普通 H5 页面，可部署在自有域名或嵌入公众号、APP 等。适合分享、活动页、轻量业务入口。H5 与小程序/APP 共享逻辑与大部分 UI，仅做少量适配即可，便于多端统一运营与迭代。
+                    </p>
+                    <p class="text-slate-500 text-xs">典型：活动页、分享页、轻量工具、内嵌页</p>
+                </div>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">核心开发流程</h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl font-bold mb-4">1</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">需求梳理与文档</h3>
-                    <p class="text-slate-600 text-sm">沟通、整理需求，撰写需求文档，明确功能与验收标准。</p>
+                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+                    <span class="text-uniapp-green font-bold">01</span>
+                    <h3 class="font-semibold text-slate-900 mt-2 mb-1">需求梳理与文档</h3>
+                    <p class="text-slate-600 text-sm">沟通、整理需求，明确功能与多端差异（如小程序审核、支付能力），撰写 PRD 与需求文档，作为合同与验收依据。</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold mb-4">2</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">体验与 UI 设计</h3>
-                    <p class="text-slate-600 text-sm">用户体验设计、原型与界面、视觉与交互规范。</p>
+                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+                    <span class="text-uniapp-green font-bold">02</span>
+                    <h3 class="font-semibold text-slate-900 mt-2 mb-1">体验与 UI 设计</h3>
+                    <p class="text-slate-600 text-sm">用户体验设计、用户场景与原型、界面与视觉规范，兼顾多端适配（如小程序与 APP 的导航、安全区）。</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">3</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">前端与后端开发</h3>
-                    <p class="text-slate-600 text-sm">UniApp 多端前端开发，接口与后台管理系统开发。</p>
+                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+                    <span class="text-uniapp-green font-bold">03</span>
+                    <h3 class="font-semibold text-slate-900 mt-2 mb-1">前端与后端开发</h3>
+                    <p class="text-slate-600 text-sm">UniApp 多端前端开发（Vue 语法 + 条件编译），接口与后台管理系统开发，支付/登录/推送等能力对接。</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center text-xl font-bold mb-4">4</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">测试验收与运维</h3>
-                    <p class="text-slate-600 text-sm">多端测试、BUG 修复、上架与后续维护与运营支撑。</p>
+                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+                    <span class="text-uniapp-green font-bold">04</span>
+                    <h3 class="font-semibold text-slate-900 mt-2 mb-1">测试验收与运维</h3>
+                    <p class="text-slate-600 text-sm">多端功能与兼容性测试、BUG 修复与优化、小程序提审与 APP 上架、验收文档与后续维护与运营支撑。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-y border-slate-200/60">
+    <!-- 适用场景与交付 -->
+    <section class="py-20 px-4 bg-emerald-50/50 border-y border-slate-200/80">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">适用场景与交付</h2>
+            <p class="text-slate-600 mb-8">电商、预约、工具、内容、企业应用等均可采用 UniApp；我们按标准流程交付并支持后续迭代。</p>
+            <div class="rounded-xl border border-slate-200 bg-white p-6">
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    <strong>适合 UniApp 的典型场景</strong>：以小程序和 H5 为主要入口的电商、预约/报名、表单收集、内容与资讯、轻量工具、企业内部应用等。若业务以运营与迭代速度为主、对极致原生性能要求不高，UniApp 可在成本与体验间取得较好平衡。<br><br>
+                    <strong>与现有系统对接</strong>：我们可对接您现有的后台、ERP、CRM 或第三方服务（支付、短信、地图等），实现账号统一、数据同步与业务流程打通。从需求到上线，我们提供全流程交付与技术支持，并可根据需要提供运维与运营支撑。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-4 bg-uniapp-green text-white">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">有 UniApp 或小程序定制需求？</h2>
-            <p class="text-slate-600 mb-8">一套代码多端发布，快速上线、持续迭代。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-600 transition">立即咨询</a>
+            <h2 class="text-2xl font-bold mb-3">有 UniApp 或小程序定制需求？</h2>
+            <p class="text-emerald-100 mb-8">一套代码多端发布，快速上线、持续迭代。</p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex bg-white text-uniapp-dark font-semibold px-6 py-3 rounded-lg hover:bg-emerald-50 transition">立即咨询</a>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white/80 py-10 px-4">
-        <div class="max-w-6xl mx-auto text-center text-sm">
-            <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
-            <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
-            </div>
+    <footer class="bg-slate-900 text-white/80 py-10 px-4 text-center text-sm">
+        <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
+        <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
+        <div class="mt-4 flex justify-center gap-4">
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
         </div>
     </footer>
 </body>

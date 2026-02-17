@@ -8,88 +8,131 @@
     <meta name="keywords" content="数据大屏,可视化,数字驾驶舱,监控指挥中心,优雅草科技">
     <link rel="shortcut icon" href="https://www.youyacao.com/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#6366F1', accent: '#10B981', dark: '#0F172A' },
-                    fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                    colors: { screen: { dark: '#0c1222', cyan: '#22d3ee', violet: '#8b5cf6' } },
+                    fontFamily: { sans: ['IBM Plex Sans', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        .hero-bg { background: linear-gradient(135deg, #0F172A 0%, #1e1b4b 50%, #0F172A 100%); }
+        .hero-screen { background: radial-gradient(ellipse 80% 60% at 50% 0%, #1e1b4b 0%, #0c1222 50%, #020617 100%); }
+        .screen-glow { box-shadow: 0 0 40px rgba(34, 211, 238, 0.08); }
+        .border-cyan { border-color: rgba(34, 211, 238, 0.2); }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased">
-    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <a href="https://www.youyacao.com" class="font-display font-bold text-slate-800 text-lg">优雅草科技</a>
-            <div class="hidden md:flex items-center gap-6 text-sm">
-                <a href="../index.html" class="text-slate-600 hover:text-primary transition">开发首页</a>
-                <a href="../app/index.html" class="text-slate-600 hover:text-primary transition">APP开发</a>
-                <a href="../Industry/index.html" class="text-slate-600 hover:text-primary transition">智慧工业</a>
-                <a href="../Blockchain/index.html" class="text-slate-600 hover:text-primary transition">区块链</a>
-                <a href="../uniapp/index.html" class="text-slate-600 hover:text-primary transition">UniApp</a>
-                <a href="../flutter/index.html" class="text-slate-600 hover:text-primary transition">Flutter</a>
-                <a href="index.html" class="text-primary font-medium">大屏</a>
-                <a href="../custom/index.html" class="text-slate-600 hover:text-primary transition">定制</a>
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">在线咨询</a>
+<body class="bg-slate-950 font-sans text-slate-200 antialiased">
+    <nav class="sticky top-0 z-50 bg-slate-900/90 border-b border-slate-700/80 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+            <a href="https://www.youyacao.com" class="font-semibold text-white">优雅草科技</a>
+            <div class="hidden md:flex items-center gap-5 text-sm text-slate-400">
+                <a href="../index.html" class="hover:text-screen-cyan">开发首页</a>
+                <a href="../app/index.html" class="hover:text-white">APP开发</a>
+                <a href="../Industry/index.html" class="hover:text-white">智慧工业</a>
+                <a href="../Blockchain/index.html" class="hover:text-white">区块链</a>
+                <a href="../uniapp/index.html" class="hover:text-white">UniApp</a>
+                <a href="../flutter/index.html" class="hover:text-white">Flutter</a>
+                <a href="index.html" class="text-screen-cyan font-medium">大屏</a>
+                <a href="../custom/index.html" class="hover:text-white">定制</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-screen-cyan text-slate-900 font-medium px-4 py-2 rounded-lg hover:bg-cyan-400 transition">在线咨询</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-bg text-white py-20 sm:py-28 px-4">
+    <!-- Hero：深色 + 青/紫光感，偏“数据/大屏” -->
+    <section class="hero-screen text-white py-24 sm:py-32 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-block bg-white/10 text-white/90 text-xs font-medium uppercase tracking-wider px-3 py-1 rounded-full mb-6">Data Visualization</span>
-            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">数据大屏与可视化</h1>
-            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">数字看板、数字驾驶舱、数字孪生与监控指挥中心，将数据与业务场景深度融合，助力实时决策与展示。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition shadow-lg">告诉我们您的大屏需求</a>
+            <span class="inline-block text-screen-cyan text-sm font-medium tracking-wider mb-4">Data Visualization · 大屏</span>
+            <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-6">数据大屏与可视化</h1>
+            <p class="text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto mb-8">
+                将业务数据与地理信息、实时监控、三维场景结合，打造数字看板、数字驾驶舱与监控指挥中心。适用于政府、企业、园区、交通、能源等场景的指挥调度、汇报展示与决策支撑，让数据一目了然、决策有据可依。
+            </p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex mt-6 bg-screen-cyan text-slate-900 font-semibold px-6 py-3 rounded-lg hover:bg-cyan-400 transition">告诉我们您的大屏需求</a>
         </div>
     </section>
 
-    <section class="py-16 sm:py-24 px-4 bg-white">
+    <!-- 应用场景 -->
+    <section class="py-20 px-4 bg-slate-900/50 border-y border-slate-800">
         <div class="max-w-6xl mx-auto">
-            <h2 class="font-display text-3xl font-bold text-slate-900 text-center mb-4">应用场景</h2>
-            <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">从业务看板到指挥中心，覆盖多行业数据展示与决策支撑。</p>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl font-bold mb-4">1</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">数字看板</h3>
-                    <p class="text-slate-600 text-sm">数据可视化看板，集成多源数据、监控业务指标、共享分析结果，一目了然。</p>
+            <h2 class="text-3xl font-bold text-white mb-2">典型应用场景</h2>
+            <p class="text-slate-400 mb-12">从业务看板到指挥中心，覆盖多行业的数据展示与决策支撑。</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="rounded-xl border border-cyan bg-slate-800/50 p-6 screen-glow">
+                    <h3 class="font-semibold text-screen-cyan mb-3">数字看板</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        数据看板是可视化工具，通过图表、指标卡与地图等组件，将多源数据（业务系统、IoT、数据库）集成到同一界面。适用于经营分析、产线监控、销售看板等场景，支持实时刷新与下钻分析，帮助管理者快速掌握关键指标与异常。
+                    </p>
+                    <p class="text-slate-500 text-xs">典型组件：折线/柱状/饼图、地图、表格、指标卡、时间轴</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold mb-4">2</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">数字驾驶舱</h3>
-                    <p class="text-slate-600 text-sm">多维度数据协同、在线化与智能化展示，支撑实时研判与科学决策。</p>
+                <div class="rounded-xl border border-cyan bg-slate-800/50 p-6 screen-glow">
+                    <h3 class="font-semibold text-screen-cyan mb-3">数字驾驶舱</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        数字驾驶舱在看板基础上，更强调“一屏总览、多维联动”。将核心 KPI、趋势、分布与告警集中展示，支持多维度筛选与联动下钻。适用于城市运行、企业运营、园区管理等场景，为决策者提供实时、全面的数据视图。
+                    </p>
+                    <p class="text-slate-500 text-xs">典型能力：多数据源融合、实时/准实时、大屏适配与响应式</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">3</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">监控指挥中心</h3>
-                    <p class="text-slate-600 text-sm">大屏拼接、视频监控、会议与调度系统集成，打造一体化指挥与展示空间。</p>
+                <div class="rounded-xl border border-slate-600 bg-slate-800/50 p-6 md:col-span-2">
+                    <h3 class="font-semibold text-screen-violet mb-3">监控指挥中心</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        监控指挥中心将大屏显示、视频监控、会议与调度系统集成，形成一体化指挥与展示空间。大屏拼接显示（多屏/异形屏）、视频上墙、信号切换与集中控制是常见需求。适用于应急指挥、交通调度、园区安防、生产调度等场景。我们可提供大屏前端（数据可视化 + 视频/地图）、与现有监控/会议系统的对接，以及控制端与运维方案。
+                    </p>
+                    <p class="text-slate-500 text-xs">典型系统：大屏拼接、视频监控、视频会议、GIS、业务系统对接</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-y border-slate-200/60">
+    <!-- 行业与能力 -->
+    <section class="py-20 px-4 bg-slate-950">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-2">行业与能力</h2>
+            <p class="text-slate-400 mb-10">轨道交通、智慧园区、智慧旅游、能源、政府等场景均可定制。</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
+                    <h3 class="font-semibold text-white mb-2">轨道交通</h3>
+                    <p class="text-slate-400 text-sm">站点与线路可视化、客流/票务/运营数据看板、调度与应急展示。</p>
+                </div>
+                <div class="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
+                    <h3 class="font-semibold text-white mb-2">智慧园区</h3>
+                    <p class="text-slate-400 text-sm">园区三维、产业/资产/能效/安防等指标综合监测与一张图。</p>
+                </div>
+                <div class="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
+                    <h3 class="font-semibold text-white mb-2">智慧旅游</h3>
+                    <p class="text-slate-400 text-sm">景区地图、人流/票务/车流实时展示与指挥调度。</p>
+                </div>
+                <div class="rounded-xl border border-slate-700 bg-slate-900/80 p-5">
+                    <h3 class="font-semibold text-white mb-2">政府与能源</h3>
+                    <p class="text-slate-400 text-sm">城市运行、应急、能源监测等大屏与驾驶舱定制。</p>
+                </div>
+            </div>
+            <div class="mt-10 rounded-xl border border-slate-700 bg-slate-900/80 p-6">
+                <h3 class="font-semibold text-white mb-3">技术栈与交付</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    前端常用 ECharts、AntV、Mapbox/高德等做图表与地图，配合 Vue/React 等框架与大屏适配方案（分辨率、比例、字体）。数据层支持接口、WebSocket、数据库直连等多种方式，可与现有业务系统、IoT 平台对接。我们提供从需求梳理、原型与视觉、开发部署到后续迭代与运维的全流程服务，并可根据需要配合硬件（大屏、中控）选型与集成。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-4 bg-screen-cyan/10 border-t border-screen-cyan/20">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">有数据大屏或指挥中心需求？</h2>
-            <p class="text-slate-600 mb-8">轨道交通、智慧园区、智慧旅游等场景均可定制。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-600 transition">立即咨询</a>
+            <h2 class="text-2xl font-bold text-white mb-3">有数据大屏或指挥中心需求？</h2>
+            <p class="text-slate-400 mb-8">轨道交通、智慧园区、智慧旅游等场景均可定制，欢迎洽谈。</p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex bg-screen-cyan text-slate-900 font-semibold px-6 py-3 rounded-lg hover:bg-cyan-400 transition">立即咨询</a>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white/80 py-10 px-4">
-        <div class="max-w-6xl mx-auto text-center text-sm">
-            <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
-            <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
-            </div>
+    <footer class="bg-slate-900 text-white/80 py-10 px-4 text-center text-sm border-t border-slate-800">
+        <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
+        <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
+        <div class="mt-4 flex justify-center gap-4">
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
         </div>
     </footer>
 </body>

@@ -4,97 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flutter 定制开发 / 二次开发 - 优雅草科技</title>
-    <meta name="description" content="Flutter 跨端 APP 定制开发，一套代码多端运行，高性能与高效率兼得。">
+    <meta name="description" content="Flutter 跨端 APP 定制：一套代码多端运行，高性能与高一致性 UI，低成本快速迭代。">
     <meta name="keywords" content="Flutter开发,Flutter定制,跨端APP,优雅草科技">
     <link rel="shortcut icon" href="https://www.youyacao.com/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#02569B', accent: '#54C5F8', dark: '#0F172A' },
-                    fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                    colors: { flutter: { blue: '#02569B', light: '#54C5F8', dark: '#013a6b' } },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        .hero-bg { background: linear-gradient(135deg, #02569B 0%, #013a6b 50%, #0F172A 100%); }
+        .hero-flutter { background: linear-gradient(135deg, #02569B 0%, #013a6b 40%, #0d47a1 100%); }
+        .flutter-card { border: 1px solid rgba(84, 197, 248, 0.2); }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased">
-    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <a href="https://www.youyacao.com" class="font-display font-bold text-slate-800 text-lg">优雅草科技</a>
-            <div class="hidden md:flex items-center gap-6 text-sm">
-                <a href="../index.html" class="text-slate-600 hover:text-primary transition">开发首页</a>
-                <a href="../app/index.html" class="text-slate-600 hover:text-primary transition">APP开发</a>
-                <a href="../Industry/index.html" class="text-slate-600 hover:text-primary transition">智慧工业</a>
-                <a href="../Blockchain/index.html" class="text-slate-600 hover:text-primary transition">区块链</a>
-                <a href="../uniapp/index.html" class="text-slate-600 hover:text-primary transition">UniApp</a>
-                <a href="index.html" class="text-primary font-medium">Flutter</a>
-                <a href="../daping/index.html" class="text-slate-600 hover:text-primary transition">大屏</a>
-                <a href="../custom/index.html" class="text-slate-600 hover:text-primary transition">定制</a>
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">在线咨询</a>
+<body class="bg-blue-50/50 font-sans text-slate-800 antialiased">
+    <nav class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+            <a href="https://www.youyacao.com" class="font-semibold text-slate-800">优雅草科技</a>
+            <div class="hidden md:flex items-center gap-5 text-sm text-slate-600">
+                <a href="../index.html" class="hover:text-flutter-blue">开发首页</a>
+                <a href="../app/index.html" class="hover:text-flutter-blue">APP开发</a>
+                <a href="../Industry/index.html" class="hover:text-flutter-blue">智慧工业</a>
+                <a href="../Blockchain/index.html" class="hover:text-flutter-blue">区块链</a>
+                <a href="../uniapp/index.html" class="hover:text-flutter-blue">UniApp</a>
+                <a href="index.html" class="text-flutter-blue font-semibold">Flutter</a>
+                <a href="../daping/index.html" class="hover:text-flutter-blue">大屏</a>
+                <a href="../custom/index.html" class="hover:text-flutter-blue">定制</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-flutter-blue text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">在线咨询</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-bg text-white py-20 sm:py-28 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-block bg-white/10 text-white/90 text-xs font-medium uppercase tracking-wider px-3 py-1 rounded-full mb-6">Flutter</span>
-            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">Flutter 定制开发</h1>
-            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">一套代码，iOS / Android / Web 多端运行。高性能、高一致性 UI，低成本快速迭代，让优雅草用 Flutter 为您打造高端跨端产品。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition shadow-lg">免费评估需求与报价</a>
+    <!-- Hero：Flutter 蓝，偏“开发/跨端” -->
+    <section class="hero-flutter text-white py-24 sm:py-32 px-4">
+        <div class="max-w-5xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+            <div class="max-w-2xl">
+                <span class="inline-block text-flutter-light text-sm font-medium tracking-wider mb-4">Flutter · Cross-Platform</span>
+                <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-6">Flutter 定制开发</h1>
+                <p class="text-lg text-blue-100 leading-relaxed mb-8">
+                    Flutter 是 Google 开源的 UI 工具包，使用 Dart 语言，一套代码可编译为 <strong>iOS、Android、Web、桌面</strong> 等多端应用。自绘引擎（Skia）带来接近原生的性能与流畅度，UI 在多端高度一致且可高度自定义，适合对体验与迭代速度都有要求的中大型移动端项目。
+                </p>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex bg-white text-flutter-blue font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition">免费评估需求与报价</a>
+            </div>
+            <div class="hidden lg:block text-center text-6xl font-bold text-white/20">Flutter</div>
         </div>
     </section>
 
-    <section class="py-16 sm:py-24 px-4 bg-white">
+    <!-- 为什么选 Flutter -->
+    <section class="py-20 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="font-display text-3xl font-bold text-slate-900 text-center mb-4">为什么选 Flutter</h2>
-            <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">跨端一致性与原生级性能，适合中大型与高体验要求的移动端项目。</p>
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">为什么选 Flutter 做定制开发</h2>
+            <p class="text-slate-600 mb-12">在跨端一致性、性能与开发效率之间取得较好平衡，适合中大型与高体验要求的移动端产品。</p>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="flutter-card rounded-xl bg-blue-50/50 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-3">一套代码，多端发布</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        同一套 Dart 代码可编译为 iOS、Android、Web 甚至 Windows/macOS/Linux 桌面应用，业务逻辑与 UI 高度复用。相比原生双端开发，人力与维护成本显著降低；相比 H5+WebView，性能与动效能力更强，适合复杂交互与列表、图表等场景。
+                    </p>
+                    <p class="text-slate-500 text-xs">典型场景：电商、社交、工具、企业办公、内容类 APP</p>
+                </div>
+                <div class="flutter-card rounded-xl bg-blue-50/50 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-3">高性能与高一致性 UI</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Flutter 使用 Skia 自绘引擎直接绘制 UI，不依赖系统原生控件，因此多端表现一致且可完全自定义。滚动、动画与复杂布局性能接近原生，适合对流畅度与视觉一致性要求高的产品。热重载（Hot Reload）可大幅提升开发与调试效率。
+                    </p>
+                    <p class="text-slate-500 text-xs">适合：强动效、复杂列表、图表、游戏化界面</p>
+                </div>
+            </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl font-bold mb-4">1</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">一套代码多端</h3>
-                    <p class="text-slate-600 text-sm">iOS、Android、Web 共用一套业务与 UI 逻辑，降低维护成本。</p>
+                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+                    <h3 class="font-semibold text-slate-900 mb-2">生态与插件</h3>
+                    <p class="text-slate-600 text-sm">pub.dev 上有丰富的包与插件，支付、地图、推送、存储等常用能力均可集成。</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold mb-4">2</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">高性能渲染</h3>
-                    <p class="text-slate-600 text-sm">自绘引擎，接近原生性能与流畅度，复杂动效与列表表现优秀。</p>
+                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+                    <h3 class="font-semibold text-slate-900 mb-2">人才与维护</h3>
+                    <p class="text-slate-600 text-sm">Google 背书、社区活跃，Flutter 开发者储备充足，便于后续维护与扩展。</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">3</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">UI 一致与可控</h3>
-                    <p class="text-slate-600 text-sm">多端视觉与交互一致，自定义 UI 与动效能力强。</p>
+                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+                    <h3 class="font-semibold text-slate-900 mb-2">适用边界</h3>
+                    <p class="text-slate-600 text-sm">部分系统级能力（如部分蓝牙/硬件）需通过 Platform Channel 与原生桥接，我们具备丰富桥接经验。</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center text-xl font-bold mb-4">4</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">生态与人才</h3>
-                    <p class="text-slate-600 text-sm">Google 背书、生态成熟，团队具备多年 Flutter 项目经验。</p>
+                <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+                    <h3 class="font-semibold text-slate-900 mb-2">交付与运维</h3>
+                    <p class="text-slate-600 text-sm">从需求、设计、开发、测试到上架与后续迭代，全流程交付与技术支持。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-y border-slate-200/60">
+    <!-- 典型场景与交付 -->
+    <section class="py-20 px-4 bg-blue-50/50 border-y border-slate-200/80">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">典型场景与交付流程</h2>
+            <p class="text-slate-600 mb-10">电商、内容、工具、企业应用等均可采用 Flutter；我们按标准软件工程流程交付。</p>
+            <div class="rounded-xl border border-slate-200 bg-white p-6">
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    <strong>需求与原型</strong>：梳理功能与多端差异（如 iOS/Android/Web 的审核与能力差异），输出 PRD 与原型。<br>
+                    <strong>UI 与架构</strong>：界面与交互设计、状态管理（如 Provider/Riverpod）与路由设计、接口与数据层设计。<br>
+                    <strong>开发与联调</strong>：Flutter 多端开发、与后端/第三方 SDK 联调、性能与兼容性测试。<br>
+                    <strong>上架与运维</strong>：各端打包与上架、审核配合、线上监控与后续迭代。我们可提供 Flutter 与现有原生/混合项目的混合集成方案，或从零搭建 Flutter 多端应用。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-4 bg-flutter-blue text-white">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">有 Flutter 定制或二次开发需求？</h2>
-            <p class="text-slate-600 mb-8">低成本、高性能、多端一致，欢迎洽谈。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-blue-700 transition">立即咨询</a>
+            <h2 class="text-2xl font-bold mb-3">有 Flutter 定制或二次开发需求？</h2>
+            <p class="text-blue-100 mb-8">低成本、高性能、多端一致，欢迎洽谈。</p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex bg-white text-flutter-blue font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition">立即咨询</a>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white/80 py-10 px-4">
-        <div class="max-w-6xl mx-auto text-center text-sm">
-            <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
-            <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
-            </div>
+    <footer class="bg-slate-900 text-white/80 py-10 px-4 text-center text-sm">
+        <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
+        <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
+        <div class="mt-4 flex justify-center gap-4">
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
         </div>
     </footer>
 </body>

@@ -4,93 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>区块链开发 · 智能合约 · 链上应用 - 优雅草科技</title>
-    <meta name="description" content="定制化区块链解决方案、智能合约开发、数字货币与代币发行、供应链溯源，安全可靠。">
-    <meta name="keywords" content="区块链开发,智能合约,代币发行,供应链,优雅草科技">
+    <meta name="description" content="定制化区块链解决方案、智能合约开发、DApp、代币与供应链溯源，安全可靠。">
+    <meta name="keywords" content="区块链开发,智能合约,代币发行,供应链,DApp,优雅草科技">
     <link rel="shortcut icon" href="https://www.youyacao.com/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#6366F1', accent: '#10B981', dark: '#0F172A' },
-                    fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                    colors: {
+                        chain: { dark: '#0d1117', card: '#161b22', border: '#30363d', green: '#3fb950', cyan: '#58a6ff' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        .hero-bg { background: linear-gradient(135deg, #0F172A 0%, #1a1a2e 50%, #16213e 100%); }
-        .card-glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+        .hero-chain { background: #0d1117; }
+        .chain-card { background: #161b22; border: 1px solid #30363d; }
+        .glow-green { box-shadow: 0 0 20px rgba(63, 185, 80, 0.15); }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased">
-    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <a href="https://www.youyacao.com" class="font-display font-bold text-slate-800 text-lg">优雅草科技</a>
-            <div class="hidden md:flex items-center gap-6 text-sm">
-                <a href="../index.html" class="text-slate-600 hover:text-primary transition">开发首页</a>
-                <a href="../app/index.html" class="text-slate-600 hover:text-primary transition">APP开发</a>
-                <a href="../Industry/index.html" class="text-slate-600 hover:text-primary transition">智慧工业</a>
-                <a href="index.html" class="text-primary font-medium">区块链</a>
-                <a href="../uniapp/index.html" class="text-slate-600 hover:text-primary transition">UniApp</a>
-                <a href="../flutter/index.html" class="text-slate-600 hover:text-primary transition">Flutter</a>
-                <a href="../daping/index.html" class="text-slate-600 hover:text-primary transition">大屏</a>
-                <a href="../custom/index.html" class="text-slate-600 hover:text-primary transition">定制</a>
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">在线咨询</a>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased">
+    <nav class="sticky top-0 z-50 bg-chain-dark border-b border-chain-border">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+            <a href="https://www.youyacao.com" class="font-semibold text-white">优雅草科技</a>
+            <div class="hidden md:flex items-center gap-5 text-sm text-slate-300">
+                <a href="../index.html" class="hover:text-chain-green">开发首页</a>
+                <a href="../app/index.html" class="hover:text-white">APP开发</a>
+                <a href="../Industry/index.html" class="hover:text-white">智慧工业</a>
+                <a href="index.html" class="text-chain-green font-medium">区块链</a>
+                <a href="../uniapp/index.html" class="hover:text-white">UniApp</a>
+                <a href="../flutter/index.html" class="hover:text-white">Flutter</a>
+                <a href="../daping/index.html" class="hover:text-white">大屏</a>
+                <a href="../custom/index.html" class="hover:text-white">定制</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-chain-green text-chain-dark font-medium px-4 py-2 rounded-lg hover:opacity-90 transition">在线咨询</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-bg text-white py-20 sm:py-28 px-4">
+    <!-- Hero：深色 + 绿色点缀，偏“链”感 -->
+    <section class="hero-chain text-white py-20 sm:py-28 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-block bg-white/10 text-white/90 text-xs font-medium uppercase tracking-wider px-3 py-1 rounded-full mb-6">Blockchain</span>
-            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">区块链开发与链上应用</h1>
-            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">定制化区块链解决方案、智能合约开发、数字货币与代币发行、供应链溯源与存证，助力企业安全、透明、高效地融入数字经济。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition shadow-lg">咨询区块链方案</a>
+            <span class="inline-block text-chain-green text-sm font-medium tracking-wider mb-4">Blockchain · Smart Contract · DApp</span>
+            <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-6">区块链开发与链上应用</h1>
+            <p class="text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                为企业提供定制化区块链解决方案：公链/联盟链选型、智能合约设计与开发、DApp 与钱包对接、数字货币与代币发行、供应链溯源与存证。从链上逻辑到前端与运维，全链路交付，助力业务可信、透明、可追溯。
+            </p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex mt-8 bg-chain-green text-chain-dark font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition">咨询区块链方案</a>
         </div>
     </section>
 
-    <section class="py-16 sm:py-24 px-4 bg-white">
+    <!-- 链与 DApp -->
+    <section class="py-20 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="font-display text-3xl font-bold text-slate-900 text-center mb-4">区块链开发服务</h2>
-            <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">从链选型、合约设计到安全审计与运维，提供全链路专业服务。</p>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl font-bold mb-4">1</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">定制化链与 DApp</h3>
-                    <p class="text-slate-600 text-sm">根据业务场景选型公链/联盟链，设计并开发 DApp、钱包对接与链上数据服务。</p>
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">链选型与 DApp 定制</h2>
+            <p class="text-slate-600 mb-10">根据业务场景选择公链、联盟链或私有链，并设计链上数据模型与前端应用。</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="chain-card rounded-xl p-6 text-white glow-green">
+                    <h3 class="font-semibold text-chain-green mb-3">公链与联盟链</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        公链（如以太坊、BSC、Polygon）适合公开透明、需代币激励或 DeFi/NFT 的场景；联盟链（如 FISCO BCOS、Hyperledger）适合企业间协作、数据共享与合规要求高的场景。我们协助完成链选型、节点部署与网络配置。
+                    </p>
+                    <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside">
+                        <li>节点部署与网络接入</li>
+                        <li>链上数据模型与索引设计</li>
+                        <li>钱包对接与签名流程</li>
+                    </ul>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold mb-4">2</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">智能合约开发</h3>
-                    <p class="text-slate-600 text-sm">合约设计、开发、测试与部署，提升业务自动化与可信执行能力。</p>
-                </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">3</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">供应链与存证</h3>
-                    <p class="text-slate-600 text-sm">溯源、防伪、存证与多方协同，数据上链可查可验，增强信任与效率。</p>
+                <div class="chain-card rounded-xl p-6 text-white">
+                    <h3 class="font-semibold text-chain-cyan mb-3">DApp 与前端</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        DApp（去中心化应用）将业务逻辑与链上合约、链下服务结合。我们开发 Web3 前端（如 ethers.js / web3.js）、钱包连接（MetaMask、WalletConnect）、交易发起与状态查询，以及后台管理端与数据看板。
+                    </p>
+                    <ul class="text-slate-400 text-sm space-y-1 list-disc list-inside">
+                        <li>Web3 前端与钱包集成</li>
+                        <li>交易与事件监听、状态展示</li>
+                        <li>后台与运营工具</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-y border-slate-200/60">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">有区块链或链上业务需求？</h2>
-            <p class="text-slate-600 mb-8">欢迎洽谈定制开发与战略合作。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-600 transition">立即咨询</a>
+    <!-- 智能合约与代币、供应链 -->
+    <section class="py-20 px-4 bg-slate-50 border-y border-slate-200/80">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">智能合约与业务场景</h2>
+            <p class="text-slate-600 mb-10">合约实现链上逻辑，代币与供应链是常见落地形态；安全审计与合规需前置考虑。</p>
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl p-6 border border-slate-200/80">
+                    <h3 class="font-semibold text-slate-900 mb-2">智能合约开发</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                        使用 Solidity（EVM）等语言编写合约：代币标准（ERC-20/721/1155）、投票、拍卖、质押、跨链桥等。包含单元测试、本地/测试网部署与主网发布，并可配合第三方做安全审计。
+                    </p>
+                    <p class="text-slate-500 text-xs">Gas 优化、权限与升级策略、事件与索引</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200/80">
+                    <h3 class="font-semibold text-slate-900 mb-2">代币与发行</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                        功能性代币、治理代币或 NFT 的设计与发行：总量、分配、锁仓与释放规则、合约权限管理。配合交易所或 DEX 上线、流动性方案与运营侧需求。
+                    </p>
+                    <p class="text-slate-500 text-xs">合规与披露、多链部署</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200/80">
+                    <h3 class="font-semibold text-slate-900 mb-2">供应链与存证</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                        将生产、物流、质检等环节的关键数据上链，实现防篡改、可追溯。适用于食品、医药、奢侈品等行业的溯源与防伪，以及电子合同、证照等存证场景。
+                    </p>
+                    <p class="text-slate-500 text-xs">多角色权限、链上链下数据映射</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white/80 py-10 px-4">
-        <div class="max-w-6xl mx-auto text-center text-sm">
-            <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
-            <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
+    <!-- 安全与交付 -->
+    <section class="py-16 px-4 bg-chain-dark text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6">安全与持续运维</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        合约上线前建议进行安全审计（内部或第三方），避免重入、溢出、权限漏洞等常见问题。私钥与助记词管理、多签与冷热钱包方案需在架构设计阶段纳入。我们提供合约开发、测试、部署与运维支持，并可根据需求对接审计与合规咨询。
+                    </p>
+                </div>
+                <div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        链上数据与链下业务系统的对接（Oracle、事件监听、索引服务）我们也有成熟实践，可保障 DApp 与后台数据一致、查询高效，并支持多链与跨链扩展。
+                    </p>
+                </div>
             </div>
+            <div class="mt-10 text-center">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex bg-chain-green text-chain-dark font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition">立即咨询</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white/80 py-10 px-4 text-center text-sm">
+        <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
+        <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
+        <div class="mt-4 flex justify-center gap-4">
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
         </div>
     </footer>
 </body>

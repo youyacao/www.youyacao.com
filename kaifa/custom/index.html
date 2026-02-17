@@ -3,98 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>软件 / APP / 网站 定制开发 - 优雅草科技</title>
-    <meta name="description" content="高端定制网站、移动端、微信生态与运维服务，从需求到上线一站式交付。">
-    <meta name="keywords" content="成都网站定制,成都APP定制,成都软件开发,定制开发,优雅草科技">
+    <title>软件 / APP / 网站 高端定制开发 - 优雅草科技</title>
+    <meta name="description" content="高精尖定制：网站、移动端、微信生态与运维，从需求到上线一站式交付。">
+    <meta name="keywords" content="成都网站定制,成都APP定制,高端定制,优雅草科技">
     <link rel="shortcut icon" href="https://www.youyacao.com/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#6366F1', accent: '#10B981', dark: '#0F172A' },
-                    fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                    colors: { custom: { gold: '#b8860b', dark: '#1a1a2e', purple: '#4c1d95' } },
+                    fontFamily: { serif: ['Cormorant Garamond', 'serif'], sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        .hero-bg { background: linear-gradient(135deg, #0F172A 0%, #312e81 50%, #1e1b4b 100%); }
+        .hero-custom { background: linear-gradient(145deg, #1a1a2e 0%, #16213e 30%, #0f3460 70%, #1a1a2e 100%); }
+        .custom-accent { color: #d4af37; }
+        .border-gold { border-color: rgba(212, 175, 55, 0.3); }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased">
-    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <a href="https://www.youyacao.com" class="font-display font-bold text-slate-800 text-lg">优雅草科技</a>
-            <div class="hidden md:flex items-center gap-6 text-sm">
-                <a href="../index.html" class="text-slate-600 hover:text-primary transition">开发首页</a>
-                <a href="../app/index.html" class="text-slate-600 hover:text-primary transition">APP开发</a>
-                <a href="../Industry/index.html" class="text-slate-600 hover:text-primary transition">智慧工业</a>
-                <a href="../Blockchain/index.html" class="text-slate-600 hover:text-primary transition">区块链</a>
-                <a href="../uniapp/index.html" class="text-slate-600 hover:text-primary transition">UniApp</a>
-                <a href="../flutter/index.html" class="text-slate-600 hover:text-primary transition">Flutter</a>
-                <a href="../daping/index.html" class="text-slate-600 hover:text-primary transition">大屏</a>
-                <a href="index.html" class="text-primary font-medium">定制</a>
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">在线咨询</a>
+<body class="bg-amber-50/30 font-sans text-slate-800 antialiased">
+    <nav class="sticky top-0 z-50 bg-white/95 border-b border-amber-200/80 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+            <a href="https://www.youyacao.com" class="font-serif text-xl font-semibold text-slate-800">优雅草科技</a>
+            <div class="hidden md:flex items-center gap-5 text-sm text-slate-600">
+                <a href="../index.html" class="hover:text-custom-gold">开发首页</a>
+                <a href="../app/index.html" class="hover:text-custom-gold">APP开发</a>
+                <a href="../Industry/index.html" class="hover:text-custom-gold">智慧工业</a>
+                <a href="../Blockchain/index.html" class="hover:text-custom-gold">区块链</a>
+                <a href="../uniapp/index.html" class="hover:text-custom-gold">UniApp</a>
+                <a href="../flutter/index.html" class="hover:text-custom-gold">Flutter</a>
+                <a href="../daping/index.html" class="hover:text-custom-gold">大屏</a>
+                <a href="index.html" class="text-custom-gold font-semibold">定制</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-custom-dark text-amber-100 px-4 py-2 rounded-lg hover:bg-custom-purple transition">在线咨询</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-bg text-white py-20 sm:py-28 px-4">
+    <!-- Hero：深色 + 金/琥珀点缀，偏“高端” -->
+    <section class="hero-custom text-white py-24 sm:py-32 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-block bg-white/10 text-white/90 text-xs font-medium uppercase tracking-wider px-3 py-1 rounded-full mb-6">Custom Development</span>
-            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">高端定制开发</h1>
-            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">网站、APP、小程序、业务系统与运维服务，从需求梳理、设计开发到上线运维，一站式交付，一切从您的业务目标出发。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition shadow-lg">免费需求梳理与报价</a>
+            <span class="inline-block custom-accent text-sm font-medium tracking-[0.2em] mb-4">HIGH-END CUSTOM</span>
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">高端定制开发</h1>
+            <p class="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto mb-8">
+                自 2026 年起，优雅草仅接受<strong class="custom-accent">高精尖定制化</strong>项目：面向有明确业务目标、预算与周期预期的客户，提供网站、APP、小程序、业务系统与运维的一站式交付。一切从您的业务目标出发，从需求梳理、架构设计到上线与持续迭代，全程专业对接。
+            </p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex mt-6 bg-amber-500/90 text-custom-dark font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 transition">免费需求梳理与报价</a>
         </div>
     </section>
 
-    <section class="py-16 sm:py-24 px-4 bg-white">
+    <!-- 高精尖定制说明 -->
+    <section class="py-20 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="font-display text-3xl font-bold text-slate-900 text-center mb-4">定制服务范围</h2>
-            <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">品牌官网、营销站、电商、移动端与微信生态，全栈定制。</p>
+            <h2 class="font-serif text-3xl font-bold text-slate-900 mb-2">何为“高精尖”定制</h2>
+            <p class="text-slate-600 mb-10">我们不再承接通用型、低预算的外包需求，而是聚焦于有清晰业务场景、愿意为质量与交付付费的客户。</p>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="rounded-xl border border-amber-300/60 bg-amber-50/50 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-3">高：标准与要求高</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                        需求明确、验收标准清晰，对架构、性能、安全与可维护性有要求。我们提供完整的需求文档、技术方案与项目计划，并在开发与测试阶段严格按标准执行，确保交付质量与后续可扩展性。
+                    </p>
+                    <p class="text-slate-500 text-xs">适合：中大型企业、政府与事业单位、有长期信息化规划的项目</p>
+                </div>
+                <div class="rounded-xl border border-amber-300/60 bg-amber-50/50 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-3">精：方案与实现精</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                        技术选型与架构设计针对业务场景量身定制，不堆功能、不凑页面。代码结构清晰、注释与文档完善，便于后续团队接手与二次开发。我们注重安全（权限、数据、接口）与性能（响应时间、并发、资源占用），并在上线前做充分测试与优化。
+                    </p>
+                    <p class="text-slate-500 text-xs">适合：对稳定性、安全与长期维护有明确要求的系统</p>
+                </div>
+            </div>
+            <div class="rounded-xl border border-slate-200 bg-slate-50/80 p-6">
+                <h3 class="font-semibold text-slate-900 mb-3">尖：技术与方向尖</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    “尖”既指技术深度（如复杂业务逻辑、高并发、大数据与 AI 结合），也指与优雅草战略方向高度契合的项目（如音乐/游戏/文学/漫画创作工具、工业软件、数据可视化等）。此类项目我们可提供更深度的技术投入，乃至战略合营等合作模式。若您的需求与我们的技术栈与方向高度契合，欢迎直接沟通。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 定制服务范围 -->
+    <section class="py-20 px-4 bg-amber-50/30 border-y border-amber-200/60">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-3xl font-bold text-slate-900 mb-2">定制服务范围</h2>
+            <p class="text-slate-600 mb-10">网站、移动端、微信生态与运维，均可按项目制或长期合作方式交付。</p>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl font-bold mb-4">1</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">高端网站建设</h3>
-                    <p class="text-slate-600 text-sm">品牌官网、集团站、营销型站、响应式与电商平台定制。</p>
+                <div class="bg-white rounded-xl p-6 border border-slate-200/80 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">高端网站建设</h3>
+                    <p class="text-slate-600 text-sm">品牌官网、集团站、营销型站、响应式与电商平台，从设计到后端与 SEO。</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold mb-4">2</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">移动端解决方案</h3>
-                    <p class="text-slate-600 text-sm">手机站、APP、H5 与多端统一体验设计开发。</p>
+                <div class="bg-white rounded-xl p-6 border border-slate-200/80 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">移动端解决方案</h3>
+                    <p class="text-slate-600 text-sm">手机站、APP（原生/Flutter/UniApp）、H5 与多端统一体验设计开发。</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">3</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">微信生态开发</h3>
-                    <p class="text-slate-600 text-sm">公众号、小程序、微官网与 H5 互动与运营支撑。</p>
+                <div class="bg-white rounded-xl p-6 border border-slate-200/80 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">微信生态开发</h3>
+                    <p class="text-slate-600 text-sm">公众号、小程序、微官网与 H5 互动与运营支撑，与现有系统对接。</p>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center text-xl font-bold mb-4">4</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">运维与云服务</h3>
-                    <p class="text-slate-600 text-sm">云主机、网站与系统运维、持续迭代与技术支持。</p>
+                <div class="bg-white rounded-xl p-6 border border-slate-200/80 shadow-sm">
+                    <h3 class="font-semibold text-slate-900 mb-2">运维与云服务</h3>
+                    <p class="text-slate-600 text-sm">云主机、网站与系统运维、持续迭代与技术支持，保障稳定运行。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 px-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-y border-slate-200/60">
+    <!-- CTA -->
+    <section class="py-16 px-4 bg-custom-dark text-white">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">有定制开发需求？</h2>
-            <p class="text-slate-600 mb-8">2026 年起仅接受高精尖定制化项目，欢迎洽谈。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-600 transition">立即咨询</a>
+            <h2 class="font-serif text-2xl font-bold mb-3">有高精尖定制需求？</h2>
+            <p class="text-slate-400 mb-8">欢迎洽谈项目合作与战略合营，我们仅接受定制化、高标准的开发需求。</p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex bg-amber-500 text-custom-dark font-semibold px-6 py-3 rounded-lg hover:bg-amber-400 transition">立即咨询</a>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white/80 py-10 px-4">
-        <div class="max-w-6xl mx-auto text-center text-sm">
-            <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
-            <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
-            </div>
+    <footer class="bg-slate-900 text-white/80 py-10 px-4 text-center text-sm">
+        <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
+        <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
+        <div class="mt-4 flex justify-center gap-4">
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
         </div>
     </footer>
 </body>

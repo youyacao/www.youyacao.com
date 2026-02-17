@@ -4,103 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>纯原生 APP 定制开发 / 二次开发 - 优雅草科技</title>
-    <meta name="description" content="高端 APP 定制开发专家，原生 / 混合多端方案，专业团队从需求到上线一站式服务。">
+    <meta name="description" content="高端 APP 定制开发：原生 iOS/Android、混合与跨端方案，从需求到上架一站式交付。">
     <meta name="keywords" content="成都APP开发,纯原生APP,APP定制开发,二次开发,优雅草科技">
     <link rel="shortcut icon" href="https://www.youyacao.com/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#6366F1', accent: '#10B981', dark: '#0F172A' },
-                    fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                    colors: { primary: '#2563eb', accent: '#0ea5e9', dark: '#0f172a' },
+                    fontFamily: { sans: ['DM Sans', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
                 }
             }
         }
     </script>
     <style>
-        .hero-bg { background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #312E81 100%); }
-        .card-glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+        .hero-app { background: linear-gradient(120deg, #0f172a 0%, #1e3a8a 40%, #0f172a 100%); }
+        .grid-pattern { background-image: linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px); background-size: 24px 24px; }
+        .card-border { border: 1px solid rgba(59,130,246,0.15); }
     </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased">
-    <!-- Nav -->
-    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <a href="https://www.youyacao.com" class="font-display font-bold text-slate-800 text-lg">优雅草科技</a>
-            <div class="hidden md:flex items-center gap-6 text-sm">
-                <a href="../index.html" class="text-slate-600 hover:text-primary transition">开发首页</a>
+    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+            <a href="https://www.youyacao.com" class="font-semibold text-slate-800">优雅草科技</a>
+            <div class="hidden md:flex items-center gap-5 text-sm">
+                <a href="../index.html" class="text-slate-500 hover:text-primary">开发首页</a>
                 <a href="index.html" class="text-primary font-medium">APP开发</a>
-                <a href="../Industry/index.html" class="text-slate-600 hover:text-primary transition">智慧工业</a>
-                <a href="../Blockchain/index.html" class="text-slate-600 hover:text-primary transition">区块链</a>
-                <a href="../uniapp/index.html" class="text-slate-600 hover:text-primary transition">UniApp</a>
-                <a href="../flutter/index.html" class="text-slate-600 hover:text-primary transition">Flutter</a>
-                <a href="../daping/index.html" class="text-slate-600 hover:text-primary transition">大屏</a>
-                <a href="../custom/index.html" class="text-slate-600 hover:text-primary transition">定制</a>
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">在线咨询</a>
+                <a href="../Industry/index.html" class="text-slate-500 hover:text-primary">智慧工业</a>
+                <a href="../Blockchain/index.html" class="text-slate-500 hover:text-primary">区块链</a>
+                <a href="../uniapp/index.html" class="text-slate-500 hover:text-primary">UniApp</a>
+                <a href="../flutter/index.html" class="text-slate-500 hover:text-primary">Flutter</a>
+                <a href="../daping/index.html" class="text-slate-500 hover:text-primary">大屏</a>
+                <a href="../custom/index.html" class="text-slate-500 hover:text-primary">定制</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">在线咨询</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero-bg text-white py-20 sm:py-28 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-block bg-white/10 text-white/90 text-xs font-medium uppercase tracking-wider px-3 py-1 rounded-full mb-6">Native / Hybrid</span>
-            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">纯原生 APP 定制开发</h1>
-            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">高端移动端解决方案，原生性能与跨端效率兼得。从需求梳理、架构设计到上架运维，一站式交付，助力企业数字化升级。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition shadow-lg">免费评估需求与报价</a>
+    <!-- Hero：左对齐 + 网格底纹，偏技术感 -->
+    <section class="hero-app grid-pattern text-white py-24 sm:py-32 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+            <div class="max-w-2xl">
+                <span class="inline-block font-mono text-xs text-blue-300/90 tracking-wider mb-4">Native / Hybrid / Cross-Platform</span>
+                <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-6">移动端定制开发</h1>
+                <p class="text-lg text-slate-300 leading-relaxed mb-8">
+                    面向企业级与高体验需求的 APP 定制：纯原生（iOS / Android 双端独立开发）、混合开发（WebView + 原生壳）、以及 Flutter / UniApp 等跨端方案。根据业务场景、预算与迭代节奏选型，从需求梳理、架构设计、开发测试到上架与运维，一站式交付。
+                </p>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-blue-500 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-600 transition">免费评估需求与报价</a>
+            </div>
+            <div class="hidden lg:block w-80 h-80 rounded-2xl border border-blue-500/20 bg-blue-500/5 flex items-center justify-center font-mono text-blue-400/60 text-sm">iOS · Android · 多端</div>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="py-16 sm:py-24 px-4 bg-white">
+    <!-- 技术选型：原生 vs 混合 vs 跨端 -->
+    <section class="py-20 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="font-display text-3xl font-bold text-slate-900 text-center mb-4">为什么选择我们</h2>
-            <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">多年移动端交付经验，技术栈覆盖 iOS / Android 原生与 Flutter、UniApp 等跨端方案。</p>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl font-bold mb-4">1</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">多端支持 · 数据互通</h3>
-                    <p class="text-slate-600 text-sm">iOS、Android、Web、小程序多端协同，一套业务逻辑多端落地，管理更高效。</p>
+            <h2 class="text-3xl font-bold text-slate-900 mb-3">技术选型：如何选择适合您的方案</h2>
+            <p class="text-slate-600 max-w-3xl mb-12">不同方案在性能、成本、迭代速度与多端一致性上各有侧重，我们根据业务目标与资源帮您做合理选型。</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="rounded-xl card-border bg-slate-50/80 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-2">纯原生开发</h3>
+                    <p class="text-slate-600 text-sm mb-4">iOS 使用 Swift/Objective-C，Android 使用 Kotlin/Java，两套代码独立维护。性能与系统 API 支持最佳，适合对流畅度、硬件能力（相机、传感器、推送）要求高的产品。</p>
+                    <ul class="text-slate-600 text-sm space-y-1 list-disc list-inside">
+                        <li>性能与兼容性最优</li>
+                        <li>开发与维护成本较高</li>
+                        <li>适合中大型、长线产品</li>
+                    </ul>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold mb-4">2</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">性能与兼容性</h3>
-                    <p class="text-slate-600 text-sm">原生级性能与系统 API 深度支持，兼容性优秀，适配主流机型与系统版本。</p>
+                <div class="rounded-xl card-border bg-slate-50/80 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-2">混合开发（H5 + 原生壳）</h3>
+                    <p class="text-slate-600 text-sm mb-4">核心业务用 H5 实现，用原生壳承载 WebView、导航与部分原生能力。开发效率高、热更新灵活，适合内容与表单为主、对极致性能要求不高的应用。</p>
+                    <ul class="text-slate-600 text-sm space-y-1 list-disc list-inside">
+                        <li>一套 H5 多端复用</li>
+                        <li>热更新、发版灵活</li>
+                        <li>复杂动效与性能有上限</li>
+                    </ul>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">3</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">专业团队 · 全程服务</h3>
-                    <p class="text-slate-600 text-sm">需求梳理、原型与 UI、开发测试、上架与运维，全流程专业交付。</p>
+                <div class="rounded-xl card-border bg-slate-50/80 p-6">
+                    <h3 class="font-semibold text-slate-900 mb-2">跨端框架（Flutter / UniApp）</h3>
+                    <p class="text-slate-600 text-sm mb-4">一套代码编译为 iOS、Android、Web 或小程序。Flutter 偏高性能与 UI 一致性，UniApp 偏小程序与 H5 多端快速上线。适合业务型、运营型产品，在成本与体验间取得平衡。</p>
+                    <ul class="text-slate-600 text-sm space-y-1 list-disc list-inside">
+                        <li>一套代码多端发布</li>
+                        <li>人力与维护成本低</li>
+                        <li>部分原生能力需插件或桥接</li>
+                    </ul>
                 </div>
-                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
-                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center text-xl font-bold mb-4">4</div>
-                    <h3 class="font-display font-semibold text-slate-900 mb-2">SDK 与生态</h3>
-                    <p class="text-slate-600 text-sm">支付、地图、推送、统计等主流 SDK 集成经验丰富，快速对接业务需求。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 典型业务场景与交付 -->
+    <section class="py-20 px-4 bg-slate-50 border-y border-slate-200/80">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900 mb-3">典型业务场景与交付流程</h2>
+            <p class="text-slate-600 max-w-3xl mb-10">电商、教育、企业办公、IoT 控制、媒体与工具类等场景，我们均有成熟交付经验。</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200/80">
+                    <span class="text-2xl font-bold text-primary/80">01</span>
+                    <h3 class="font-semibold text-slate-900 mt-2 mb-1">需求与原型</h3>
+                    <p class="text-slate-600 text-sm">梳理功能、用户场景与优先级，输出 PRD 与原型，明确验收标准。</p>
                 </div>
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200/80">
+                    <span class="text-2xl font-bold text-primary/80">02</span>
+                    <h3 class="font-semibold text-slate-900 mt-2 mb-1">UI 与架构</h3>
+                    <p class="text-slate-600 text-sm">界面与交互设计、技术架构选型、接口与数据方案设计。</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200/80">
+                    <span class="text-2xl font-bold text-primary/80">03</span>
+                    <h3 class="font-semibold text-slate-900 mt-2 mb-1">开发与联调</h3>
+                    <p class="text-slate-600 text-sm">前后端开发、多端联调、支付/地图/推送等 SDK 对接与测试。</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200/80">
+                    <span class="text-2xl font-bold text-primary/80">04</span>
+                    <h3 class="font-semibold text-slate-900 mt-2 mb-1">上架与运维</h3>
+                    <p class="text-slate-600 text-sm">应用市场上架、审核配合、线上监控与后续迭代与运维支持。</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-slate-200/80">
+                <h3 class="font-semibold text-slate-900 mb-3">多终端与数据互通</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    商家端、用户端、管理端多端协同时，我们注重账号体系、权限与数据一致性设计；与现有 ERP、CRM 或后台系统的对接经验丰富，可做单点登录、数据同步与报表打通，让移动端真正融入企业信息化体系。
+                </p>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-16 px-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-y border-slate-200/60">
+    <section class="py-16 px-4 bg-primary text-white">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">准备好启动您的移动项目了吗？</h2>
-            <p class="text-slate-600 mb-8">提供免费需求梳理与报价评估，欢迎高精尖定制与战略合作。</p>
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-600 transition">立即咨询</a>
+            <h2 class="text-2xl font-bold mb-3">准备好启动您的移动项目了吗？</h2>
+            <p class="text-blue-100 mb-8">提供免费需求梳理与报价评估，欢迎高精尖定制与战略合作。</p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-slate-100 transition">立即咨询</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white/80 py-10 px-4">
-        <div class="max-w-6xl mx-auto text-center text-sm">
-            <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
-            <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
-                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
-            </div>
+    <footer class="bg-slate-900 text-white/80 py-10 px-4 text-center text-sm">
+        <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
+        <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
+        <div class="mt-4 flex justify-center gap-4">
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
+            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
         </div>
     </footer>
 </body>
