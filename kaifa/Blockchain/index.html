@@ -1,394 +1,97 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>区块链开发首页 - 区块链开发|网站开发|钱包对接开发-专业-一颗优雅草科技</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/common.css">	
-<link rel="stylesheet" type="text/css" href="css/swiper-4.4.2.min.css" />
-<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>区块链开发 · 智能合约 · 链上应用 - 优雅草科技</title>
+    <meta name="description" content="定制化区块链解决方案、智能合约开发、数字货币与代币发行、供应链溯源，安全可靠。">
+    <meta name="keywords" content="区块链开发,智能合约,代币发行,供应链,优雅草科技">
+    <link rel="shortcut icon" href="https://www.youyacao.com/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#6366F1', accent: '#10B981', dark: '#0F172A' },
+                    fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg { background: linear-gradient(135deg, #0F172A 0%, #1a1a2e 50%, #16213e 100%); }
+        .card-glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+    </style>
 </head>
-	
-<body>
-<div class="index-header clearfix">
-	<div class="index-logo fl">
-		<a href=""><img src="images/logo.png" height="45"></a>
-	</div>
-	<ul class="index-nav fl">
-		<li><a href="index.html">首页</a></li>
-		<li><a href="contact.html">联系我们</a></li>
-	</ul>
-	<div class="index-header-right fr">
-		<!-- <a href="" class="search-btn">搜索</a>	 -->
-		<a href="" class="erweima">
-			<div class="erweima-pic">
-				<img src="images/pic1.jpg" height="100">
-			</div>
-		</a>
-	</div>
-	<div class="clear"></div>
-</div>
-	
-<!-- <div class="search_sec">
-	<a href="#" title="" class="close-search"><i class=" la-close"><img src="images/icon5.png"></i></a>
-	<div class="search_field">
-		<div class="container">
-			<form>
-				<input type="text" name="search" placeholder="Search for...">
-				<button type="submit"><img src="images/search2.png" alt=""></button>
-			</form>
-		</div>
-	</div>
-</div>	 -->
-<!--search_sec end-->
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+            <a href="https://www.youyacao.com" class="font-display font-bold text-slate-800 text-lg">优雅草科技</a>
+            <div class="hidden md:flex items-center gap-6 text-sm">
+                <a href="../index.html" class="text-slate-600 hover:text-primary transition">开发首页</a>
+                <a href="../app/index.html" class="text-slate-600 hover:text-primary transition">APP开发</a>
+                <a href="../Industry/index.html" class="text-slate-600 hover:text-primary transition">智慧工业</a>
+                <a href="index.html" class="text-primary font-medium">区块链</a>
+                <a href="../uniapp/index.html" class="text-slate-600 hover:text-primary transition">UniApp</a>
+                <a href="../flutter/index.html" class="text-slate-600 hover:text-primary transition">Flutter</a>
+                <a href="../daping/index.html" class="text-slate-600 hover:text-primary transition">大屏</a>
+                <a href="../custom/index.html" class="text-slate-600 hover:text-primary transition">定制</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">在线咨询</a>
+            </div>
+        </div>
+    </nav>
 
-<div id="bloc">
-	<article id="index">
-		<div class="banner-position">
-			<div class="index-banner swiper-container">
-			    <div class="swiper-wrapper">
-			        <div class="swiper-slide">
-			          <img src="images/banner1.png">
-			        </div>
-			        <div class="swiper-slide">
-			          <img src="images/banner1.png">
-			        </div>
-			        <div class="swiper-slide">
-			          <img src="images/banner1.png">
-			        </div>
-			    </div>
-			    <!-- Add Navigation -->
-			    <div class="swiper-button-prev swiper-button-white"></div>
-			    <div class="swiper-button-next swiper-button-white"></div>
-		  	</div>
-			<div class="banner-wave">
-				<svg viewBox="0 0 120 28">
-			
-					<defs>
-			
-						<filter id="goo">
-			
-							<feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
-			
-							<feColorMatrix in="blur" mode="matrix" values="
-			
-							   1 0 0 0 0  
-							
-							   0 1 0 0 0  
-							
-							   0 0 1 0 0  
-							
-							   0 0 0 13 -9" result="goo" />
-			
-							<xfeBlend in="SourceGraphic" in2="goo" />
-			
-						</filter>
-			
-						<path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
-			
-					</defs>
-			
-					<use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
-			
-					<use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
-			
+    <section class="hero-bg text-white py-20 sm:py-28 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block bg-white/10 text-white/90 text-xs font-medium uppercase tracking-wider px-3 py-1 rounded-full mb-6">Blockchain</span>
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">区块链开发与链上应用</h1>
+            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">定制化区块链解决方案、智能合约开发、数字货币与代币发行、供应链溯源与存证，助力企业安全、透明、高效地融入数字经济。</p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition shadow-lg">咨询区块链方案</a>
+        </div>
+    </section>
 
-				</svg>
-			</div>
-		</div>
-		<div class="clear"></div>
-			<!--about-->
-			<div class="index-about">
-				<div class="index-con clearfix">
-					<div class="index-about-text fl">
-						<div class="index-title">
-							<h3 class="scroll-animate" data-effect="fadeInUpSmall">YOUYACAO</h3>
-							<h2 class="scroll-animate" data-delay="0.2" data-effect="fadeInUpSmall">about us</h2>
-							<span></span>
-						</div>
-						<p  class="scroll-animate" data-delay="0.6" data-effect="fadeInUpSmall">成都市一颗优雅草科技有限公司2015年成立以来一直从事于网站设计、制作、APP研发、系统开发等；集研发、销售、服务于 一体<br />
-						与此同时，我们一直在 技术和应用上进行创新和突破，2019年自研发松鼠系列系统，2020年发布蜻蜓系列系统，持续在大数据，人脸识别，内容算法，云计算产品，中间件开发与对接与服务，图像算法等人工智能领域研究，2021年将持续提升技术并发布更领先的产品，力争上游 努力奋斗，2022年新开拓散仙建模，松鼠拍视频两条业务线，2022年7月起重心转移至大型行业应用软件，工业软件。</p>
-						<div class="index-more">
-							<a href="">view more +</a>
-						</div>
-					</div>	
-					<div class="index-about-pic fr">
-						<a href="" >
-							<img src="images/pic2.jpg" class="scroll-animate classGo" data-Tclass="go">
-						</a>
-					</div>
-				</div>
-				<div class="wave_box1">
-					<img src="images/wavs.gif">
-				</div>
-			</div>
-			<div class="clear"></div>
-			
-			<!--业务范围-->
-			<div class="index-yewu">
-				<div class="index-con clearfix">
-					<div class="index-title">
-						<h3>YOUYACAO</h3>
-						<h2>区块链开发服务</h2>			
-					</div>
-					
-					<div class="index-yewu-info clearfix">
-						<div class="index-yewu-pic fl">
-							<a href="" >
-								<img src="images/pic3.jpg" class="scroll-animate classGo" data-Tclass="go">
-							</a>
-						</div>
-						<ul class="index-yewu-list clearfix fr">
-							<li>
-								<a href="">
-									<em><img src="images/ico1.png"></em>
-									<div class="text">
-										<h2>定制化区块链解决方案</h2>
-										<span>YOUYACAO</span>
-										<p>为不同行业需求量身定制，打造高效、安全、透明的区块链应用。</p>
-									</div>
-									<div class="button bz-buttonAnimat clockwise both">
-										<div class="inner"></div>
-									</div>									
-								</a>
-							</li>
-							<li>
-								<a href="">
-									<em><img src="images/ico2.png"></em>
-									<div class="text">
-										<h2>智能合约开发</h2>
-										<span>YOUYACAO</span>
-										<p>通过智能合约简化交易流程，提高业务自动化水平，降低成本。</p>
-									</div>	
-									<div class="button bz-buttonAnimat clockwise both">
-										<div class="inner"></div>
-									</div>	
-								</a>
-							</li>
-							<li>
-								<a href="">
-									<em><img src="images/ico3.png"></em>
-									<div class="text">
-										<h2>数字货币和代币发行</h2>
-										<span>YOUYACAO</span>
-										<p>提供数字货币及代币的发行、管理和交易服务，助力企业快速融入数字经济。</p>
-									</div>	
-									<div class="button bz-buttonAnimat clockwise both">
-										<div class="inner"></div>
-									</div>	
-								</a>
-							</li>
-							<li>
-								<a href="">
-									<em><img src="images/ico4.png"></em>
-									<div class="text">
-										<h2>供应链管理</h2>
-										<span>YOUYACAO</span>
-										<p>利用区块链技术，实现产品从源头到终端的全程透明追踪，增强消费者信任。</p>
-									</div>	
-									<div class="button bz-buttonAnimat clockwise both">
-										<div class="inner"></div>
-									</div>	
-								</a>
-							</li>
-							<li>
-								<a href="">
-									<em><img src="images/ico5.png"></em>
-									<div class="text">
-										<h2>安全审计与维护</h2>
-										<span>YOUYACAO</span>
-										<p>确保区块链系统的安全性，提供持续的技术支持和系统维护。</p>
-									</div>	
-									<div class="button bz-buttonAnimat clockwise both">
-										<div class="inner"></div>
-									</div>	
-								</a>
-							</li>
-							<li>
-								<a href="">
-									<em><img src="images/ico6.png"></em>
-									<div class="text">
-										<h2>行为分析</h2>
-										<span>YOUYACAO</span>
-										<p>互联网为依托，对商家的线上服务、客户的线下体验以及与现代物流进行深度融合</p>
-									</div>	
-									<div class="button bz-buttonAnimat clockwise both">
-										<div class="inner"></div>
-									</div>	
-								</a>
-							</li>
-						</ul>
-					</div>			
-				</div>
-			</div>
-			<div class="clear"></div>
-			
-			<div class="position-yuan clearfix">			
-				<div class="bg scr-el" data-v="1" data-speed-x="12" data-offset="150 "></div>
-			</div>
-			<div class="clear"></div>
-			<!--产品-->
-			<div class="index-product clearfix">
-				<div class="index-con clearfix">
-					<div class="index-title">
-						<h3>YOUYACAO</h3>
-						<h2>我们的承诺</h2>			
-					</div>
-					<ul class="clearfix index-product-list clearfix">
-						<li>
-							<a href="">
-								<em><img src="images/pic4.jpg"></em>
-								<div class="text">
-									<h2>创新驱动 </h2>
-									<p>持续投入研发，引领区块链技术发展前沿。</p>
-									<span><img src="images/jt.png"></span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<em><img src="images/pic5.jpg"></em>
-								<div class="text">
-									<h2>客户至上 </h2>
-									<p>深入理解客户需求，提供个性化的定制服务。</p>
-									<span><img src="images/jt.png"></span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<em><img src="images/pic6.jpg"></em>
-								<div class="text">
-									<h2>安全可靠 </h2>
-									<p>采用行业领先加密技术，保障数据安全和隐私。</p>
-									<span><img src="images/jt.png"></span>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="clear"></div>
-			
-			<!--news-->
-<!-- 			<div class="index-news">
-				<div class="index-con clearfix">
-					<div class="index-title">
-						<h3>bailuozhineng</h3>
-						<h2>news</h2>			
-					</div>
-					<ul class="index-news-list clearfix">
-						<li class="trs02 an_up">
-							<a href="">
-								<em><img src="images/pic7.jpg"></em>
-								<div class="text">
-									<span></span>
-									<p>AI人脸识别，助力智慧社区建设升级慧社区建！</p>
-									<i>2019.09.25</i>
-								</div>
-							</a>
-						</li>
-						<li class="trs03 an_up">
-							<a href="">
-								<em><img src="images/pic7.jpg"></em>
-								<div class="text">
-									<span></span>
-									<p>AI人脸识别，助力智慧社区建设升级慧社区建！</p>
-									<i>2019.09.25</i>
-								</div>
-							</a>
-						</li>
-						<li class="trs04 an_up">
-							<a href="">
-								<em><img src="images/pic7.jpg"></em>
-								<div class="text">
-									<span></span>
-									<p>AI人脸识别，助力智慧社区建设升级慧社区建！</p>
-									<i>2019.09.25</i>
-								</div>
-							</a>
-						</li>
-						<li class="trs05 an_up">
-							<a href="">
-								<em><img src="images/pic7.jpg"></em>
-								<div class="text">
-									<span></span>
-									<p>AI人脸识别，助力智慧社区建设升级慧社区建！</p>
-									<i>2019.09.25</i>
-								</div>
-							</a>
-						</li>
-					</ul>
-					<div class="clear"></div>
-				</div>
-			</div> -->
-			
-			<!--footer-->
-			<div class="index-footer">										
-				<div class="clearfix index-footer-info index-con">
-					<div class="logo fl">
-						<img src="images/logo.png" height="80">
-					</div>
-					<div class="lianxi fl">
-						<h2>联系方式</h2>
-						<p>固话座机:028-65235329 </p>
-						<P>地址：青羊工业总部基地H区8栋807号</P>
-					</div>
-					<div class="phone fl">			
-						137-0802-1643
-					</div>
-					<div class="erweima fr">
-						<img src="images/pic1.jpg">
-						<p>二维码</p>
-					</div>
-				</div>
-				
-				<div class="index-footer-bottom">
-					<div class="index-con clearfix">
-						<p class="fl">版权所有 © 2015-2024 成都市一颗优雅草科技有限公司  蜀ICP备10036293号-7 川公网安备 51011402000287号</p>
-						<a href="https://www.youyacao.com/" target="_blank" class="fr">优雅草科技主官网</a>
-						<div style="clear:both;"></div>
-						<div style="margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-							<a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener noreferrer" title="正版授权验证">
-								<img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" style="height:32px;" />
-							</a>
-							<a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener noreferrer" title="正版授权验证">
-								<img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" style="height:32px;" />
-							</a>
-						</div>
-						<div style="margin-top:8px;font-size:12px;line-height:18px;color:#999;max-width:980px;">
-							办公地址：成都市青羊工业总部基地H区8栋807号（2024年注册租用地址）。公司已完成整体升级搬迁，2026年将在青羊工业园启用全新办公与研发空间，敬请期待。<br>
-							发展基地：成都市双流区大渡路33号。感谢2025年九江街道办蛟龙社区党群服务中心在企业发展阶段给予的大力支持与帮助，优雅草科技铭记于心。
-						</div>
-					</div>
-				</div>
-			</div>	
-			<div class="clear"></div>		
-	</article>
-</div>
+    <section class="py-16 sm:py-24 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-3xl font-bold text-slate-900 text-center mb-4">区块链开发服务</h2>
+            <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">从链选型、合约设计到安全审计与运维，提供全链路专业服务。</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl font-bold mb-4">1</div>
+                    <h3 class="font-display font-semibold text-slate-900 mb-2">定制化链与 DApp</h3>
+                    <p class="text-slate-600 text-sm">根据业务场景选型公链/联盟链，设计并开发 DApp、钱包对接与链上数据服务。</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold mb-4">2</div>
+                    <h3 class="font-display font-semibold text-slate-900 mb-2">智能合约开发</h3>
+                    <p class="text-slate-600 text-sm">合约设计、开发、测试与部署，提升业务自动化与可信执行能力。</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">3</div>
+                    <h3 class="font-display font-semibold text-slate-900 mb-2">供应链与存证</h3>
+                    <p class="text-slate-600 text-sm">溯源、防伪、存证与多方协同，数据上链可查可验，增强信任与效率。</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src='js/modernizr.custom.js'></script>
-<script src="js/more.js"></script>
-<script src="js/swiper-4.4.2.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type='text/javascript' src='js/base.js'></script>
-<script type="text/javascript" src='js/app.js'></script>
-<script>
-var swiper = new Swiper('.index-banner.swiper-container', {
-  speed: 600,
-  parallax: true,   
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-scrolly.init({
-	wrapper: '#bloc',
-	targets: '.scr-el',
-	bgParallax: true,
-	wrapperSpeed: 0.08
-});
-</script>
+    <section class="py-16 px-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-y border-slate-200/60">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">有区块链或链上业务需求？</h2>
+            <p class="text-slate-600 mb-8">欢迎洽谈定制开发与战略合作。</p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-600 transition">立即咨询</a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white/80 py-10 px-4">
+        <div class="max-w-6xl mx-auto text-center text-sm">
+            <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
+            <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
+            <div class="mt-4 flex justify-center gap-4">
+                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
+                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

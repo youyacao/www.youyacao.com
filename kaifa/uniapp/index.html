@@ -1,387 +1,101 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<title>uniapp定制开发/uniapp二次开发/uniapp小程序开发-优雅草科技</title>
-
-
-
-
-	
-	<meta name="keywords"
-	    content="什么是uniappAPP开发，为什么uniappAPP开发很贵,uniappAPP定制开发,定制开发APP,定制开发软件,成都软件开发">
-    <meta name="description"
-        content="成都市一颗优雅草科技有限公司uniappAPP定制开发/二次开发官网介绍页，什么是uniappAPP开发，为什么uniappAPP开发很贵,uniappAPP定制开发." />
-		
-		  <link rel="shortcut icon" href="https://www.youyacao.com/favicon.ico">
-
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-<!-- css -->
-
-<link rel="stylesheet" type="text/css" href="css/common.css"/>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
-<link rel="stylesheet" type="text/css" href="css/owl.theme.css"/>
-<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
-
-<!--[if lt IE 9]>
-
-    <script src="js/html5shiv.min.js"></script>
-
-    <script src="js/respond.min.js"></script>
-
-    <![endif]-->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniApp 定制开发 / 小程序 / 多端 - 优雅草科技</title>
+    <meta name="description" content="UniApp 一套代码多端发布：APP、小程序、H5，快速上线、低成本迭代。">
+    <meta name="keywords" content="UniApp开发,uniapp定制,小程序开发,多端开发,优雅草科技">
+    <link rel="shortcut icon" href="https://www.youyacao.com/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#6366F1', accent: '#10B981', dark: '#0F172A' },
+                    fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg { background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #312E81 100%); }
+    </style>
 </head>
-
-<body style="overflow: hidden;">
-
-<!--导航条--> 
-
-<!--<div class="header">
-
-		<div class="header_n clearfix">
-
-			<div class="logo fl"><a href="index.html"><img src="images/logo.png" alt="logo" width="200" height="57"></a></div>
-
-			<ul class="fl clearfix">
-
-				<li><a href="index.html" class="activeo">首 页</a></li>
-
-				<li><a href="about.html">关于我们 </a></li>
-
-				<li><a href="hexin.html">核心业务</a></li>
-
-				<li><a href="news.html">新闻中心</a></li>
-
-				<li><a href="service.html">客户服务</a></li>
-
-				<li><a href="recruitment.html">人才招聘</a></li>
-
-				<li><a href="contantus.html">联系我们</a></li>
-
-			</ul>
-
-			<div class="tel fr">
-
-				<img src="images/tel.png" alt="tel" width="33" height="33">
-
-				4008-888-888
-
-			</div>
-
-		</div>
-
-		<span class="line"></span>
-
-	</div>--> 
-
-<!--导航条-->
-
-<div class="section-group" id="dowebok">
-  <div class="section"> 
-    
-    <!--导航条-->
-    
-    <div class="header">
-      <div class="header_n clearfix">
-        <div class="logo fl"><a href="index.html"><img src="images/logo.png" alt="logo" width="200" height="57"></a></div>
-        <ul class="fl clearfix">
-          <li><a href="index.html" class="activeo">uniapp定制开发介绍首页</a></li>
-          <li> <a href="/kaifa/flutter/">flutter定制</a></li>
-         
-          <li><a href="/kaifa/Blockchain/index.html">区块链开发</a></li>
-    
-          <li> <a href="/kaifa/app/">纯原生APP开发</a>  </li>
-				<li><a 	<a href="/kaifa/wx/">小程序定制</a></li>
-      
-		  
-		  
-	       
-		  
-        </ul>
-        <div class="tel fr"> <img src="images/tel.png" alt="tel" width="33" height="33"> 13708021643 </div>
-      </div>
-      <span class="line"></span> </div>
-    
-    <!--导航条--> 
-    
-    <!-- banner -->
-    
-    <div class="bannerWrap">
-      <div class="index_banner">
-        <div class="hd">
-          <ul>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-          </ul>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+            <a href="https://www.youyacao.com" class="font-display font-bold text-slate-800 text-lg">优雅草科技</a>
+            <div class="hidden md:flex items-center gap-6 text-sm">
+                <a href="../index.html" class="text-slate-600 hover:text-primary transition">开发首页</a>
+                <a href="../app/index.html" class="text-slate-600 hover:text-primary transition">APP开发</a>
+                <a href="../Industry/index.html" class="text-slate-600 hover:text-primary transition">智慧工业</a>
+                <a href="../Blockchain/index.html" class="text-slate-600 hover:text-primary transition">区块链</a>
+                <a href="index.html" class="text-primary font-medium">UniApp</a>
+                <a href="../flutter/index.html" class="text-slate-600 hover:text-primary transition">Flutter</a>
+                <a href="../daping/index.html" class="text-slate-600 hover:text-primary transition">大屏</a>
+                <a href="../custom/index.html" class="text-slate-600 hover:text-primary transition">定制</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">在线咨询</a>
+            </div>
         </div>
-        <div class="bd">
-          <ul>
-            <li style="background-image:url(images/banner01_bg.jpg)" class="item bgSize"><a href="javascript:;" class="banner01"> <img src="images/banner01_wz01.png" alt="创业虽苦，坚持很酷。" title="创业虽苦，坚持很酷。" class="img1" /> <img src="images/banner01_wz02.png" alt="一颗优雅草科技，伴你一路前行。" title="一颗优雅草科技，伴你一路前行。" class="img2"/></a> </li>
-            <li style="background-image:url(images/banner02_bg.jpg)" class="item bgSize"><a href="javascript:;" class="banner01"> <img src="images/banner02_wz01.png" alt="创业虽苦，坚持很酷。" title="创业虽苦，坚持很酷。" class="img1" /> <img src="images/banner02_wz02.png" alt="一颗优雅草科技，伴你一路前行。" title="一颗优雅草科技，伴你一路前行。" class="img2"/></a> </li>
-            <li style="background-image:url(images/banner03_bg.jpg)" class="item bgSize"><a href="javascript:;" class="banner01"> <img src="images/banner03_wz01.png" alt="创业虽苦，坚持很酷。" title="创业虽苦，坚持很酷。" class="img1" /> <img src="images/banner03_wz02.png" alt="一颗优雅草科技，伴你一路前行。" title="一颗优雅草科技，伴你一路前行。" class="img2"/></a> </li>
-          </ul>
-        </div>
-      </div>
-      <div class="down"><img src="images/down.png" alt="向下点击" class="img1" /><img src="images/down.png" alt="向下点击" class="img2"/></div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="index_o">
-      <div class="index_o_o">
-        <p>核心Uniapp开发业务</p>
-        <span>PRIMARY  BUSINESS</span> </div>
-      <div class="index_o_s">
-        <ul class="clearfix">
-          <li class="fl">
-            <div><img src="images/index_hx1.png" alt="需求梳理" width="62" height="62"></div>
-            <span>需求梳理</span>
-            <p>沟通、整理和明确客户需求</p>
-            <a href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=%E6%9D%BE%E9%BC%A0%E5%AE%98%E7%BD%91&Menu=yes&from=app">联系我们</a> </li>
-          <li class="fl">
-            <div><img src="images/index_hx2.png" alt="需求梳理" width="62" height="42"></div>
-            <span>撰写文档</span>
-            <p>撰写文档·书写详细需求文档立于合同</p>
-            <a href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=%E6%9D%BE%E9%BC%A0%E5%AE%98%E7%BD%91&Menu=yes&from=app">联系我们</a> </li>
-          <li class="fl">
-            <div><img src="images/index_hx3.png" alt="体验设计" width="53" height="59"></div>
-            <span>体验设计</span>
-            <p>用户体验设计、用户场景模拟、原型设计</p>
-           <a href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=%E6%9D%BE%E9%BC%A0%E5%AE%98%E7%BD%91&Menu=yes&from=app">联系我们</a> </li>
-          <li class="fl">
-            <div><img src="images/index_hx4.png" alt="UI设计" width="55" height="56"></div>
-            <span>UI设计</span>
-            <p>界面、色彩视觉设计、图标设计及布局设计</p>
-            <a href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=%E6%9D%BE%E9%BC%A0%E5%AE%98%E7%BD%91&Menu=yes&from=app">联系我们</a></li>
-          <li class="fl">
-            <div><img src="images/index_hx5.png" alt="前端开发" width="62" height="48"></div>
-            <span>前端开发</span>
-            <p>前端H5/苹果及安卓端开发</p>
-             <a href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=%E6%9D%BE%E9%BC%A0%E5%AE%98%E7%BD%91&Menu=yes&from=app">联系我们</a></li>
-          <li class="fl">
-            <div><img src="images/index_hx6.png" alt="后端开发" width="55" height="56"></div>
-            <span>后端开发</span>
-            <p>服务器端|接口开发|后台管理系统开发</p>
-             <a href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=%E6%9D%BE%E9%BC%A0%E5%AE%98%E7%BD%91&Menu=yes&from=app">联系我们</a> </li>
-          <li class="fl">
-            <div><img src="images/index_hx7.png" alt="测试验收" width="62" height="62"></div>
-            <span>测试验收</span>
-            <p>BUG修改、功能调整和优化、验收文档完善，上线应用市场</p>
-           <a href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=%E6%9D%BE%E9%BC%A0%E5%AE%98%E7%BD%91&Menu=yes&from=app">联系我们</a></li>
-          <li class="fl">
-            <div><img src="images/index_hx8.png" alt="售后服务" width="58" height="57"></div>
-            <span>售后服务</span>
-            <p>后续技术维护、持续跟进、项目运营支撑</p>
-            <a href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=%E6%9D%BE%E9%BC%A0%E5%AE%98%E7%BD%91&Menu=yes&from=app">联系我们</a></li>
-          <li class="fl">
-            <div><img src="images/index_hx9.png" alt="原生SDK插件开发" width="56" height="56"></div>
-            <span>原生SDK插件开发</span>
-            <p>uniapp市场原生sdk插件开发</p>
-            <a href="http://wpa.qq.com/msgrd?V=3&uin=422108995&Site=%E6%9D%BE%E9%BC%A0%E5%AE%98%E7%BD%91&Menu=yes&from=app">联系我们</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="index_t">
-      <div class="index_t_o clearfix">
-        <ul class="fl">
-          <li class="li1"><img src="images/index_ys1.png" alt="资深行业经验" width="42" height="39"></li>
-          <li class="li2">资深行业经验 </li>
-          <li class="li3">6年资深行业沉淀<br>
-            服务客户1000+</li>
-        </ul>
-        <ul class="fl mar0">
-          <li class="li1"><img src="images/index_ys2.png" alt="专业团队" width="46" height="34"></li>
-          <li class="li2">专业团队</li>
-          <li class="li3">打造行业领军品牌<br>
-           名校毕业核心研发团队·精英</li>
-        </ul>
-        <ul class="fl">
-          <li class="li1"><img src="images/index_ys3.png" alt="多元服务" width="42" height="42"></li>
-          <li class="li2">多元服务 </li>
-          <li class="li3">开启多元化服务模式<br>
-            线上线下协同发展</li>
-        </ul>
-        <ul class="fl mar0">
-          <li class="li1"><img src="images/index_ys4.png" alt="规模宏大" width="42" height="42"></li>
-          <li class="li2">学无止境 </li>
-          <li class="li3">放眼未来<br>
-            与时俱进<br>
-            </li>
-        </ul>
-      </div>
-      <div class="index_t_s">
-        <p>YOUYACAO<br>
-          SUPERIORITY</p>
-        <span>优雅草核心·优势</span> </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="index_s index_sub">
-      <div class="index_t_s">
-        <p>Classic<br>
-           Cases</p>
-        <span>Uniapp经典的案例</span> </div>
-      <div class="index_s_s w1600">
-        <div  class="owl-carousel list">
-          <div class="item">
-            <div class="img"><img src="images/index_fb1.jpg" alt="大量uniapp经典案例集合" title="大量uniapp经典案例集合"> </div>
-            <h5>大量uniapp经典案例集合</h5>
-          </div>
-          <div class="item">
-            <div class="img"><img src="images/index_fb2.jpg" alt="大量uniapp经典案例集合" title="大量uniapp经典案例集合"> </div>
-            <h5>大量uniapp经典案例集合</h5>
-          </div>
-          <div class="item">
-            <div class="img"><img src="images/index_fb5.jpg" alt="蜻蜓S" title="蜻蜓S"> </div>
-            <h5>蜻蜓S</h5>
-          </div>
-          <div class="item">
-            <div class="img"><img src="images/index_fb3.jpg" alt="YYC松鼠短视频" title="YYC松鼠短视频"> </div>
-            <h5>YYC松鼠短视频</h5>
-          </div>
-          <div class="item">
-            <div class="img"><img src="images/index_fb4.jpg" alt="YYC蜻蜓Q/蜻蜓F/蜻蜓S" title="YYC蜻蜓Q/蜻蜓F/蜻蜓S"> </div>
-            <h5>YYC蜻蜓Q/蜻蜓F/蜻蜓S</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="index_f">
-      <div class="index_f_lg">
-        <div class="index_f_lg_s clearfix">
-          <div class="z fl">
-            <p>Uniapp重大动态</p>
-            <span>NEWS INFORMATION</span> </div>
-        <!--  <a href="news.html" class="y fr clearfix">查看全部<img src="images/index_yj.png" alt="yj" class="fr"></a> --> </div>
-        <div class="index_f_lg_x clearfix">
-          <div class="le fl">
-            <p>26</p>
-            <span>2018-8</span> </div>
-          <div class="ri fl"> <a href="https://dcloud.io/150914/index.html?t=1523879749232" rel="nofollow">侵权判决</a>
-            <p>法院判APICloud累计需要向DCloud赔付损失及诉讼费用支出共计184.48万元，并向DCloud公开道歉。</p>
-          </div>
-        </div>
-        <div class="index_f_lg_x clearfix index_f_lg_xs">
-          <div class="le fl">
-            <p>24</p>
-            <span>2018-03</span> </div>
-          <div class="ri fl"> <a href="https://ask.dcloud.net.cn/article/986" rel="nofollow">HTML5中产联正式挂靠</a>
-            <p>HTML5中国产业联盟正式挂靠到工信部下。</p>
-          </div>
-        </div>
-      </div>
-      <div class="index_f_lg index_f_lgs">
-        <div class="index_f_lg_s clearfix">
-          <div class="z fl">
-            <p></p>
-            <span>INDUSTRY NEWS</span> </div>
-         <!-- <a href="news.html" class="y fr clearfix">查看全部<img src="images/index_yj.png" alt="yj" class="fr"></a> --></div>
-        <div class="index_f_lg_x clearfix">
-          <div class="le fl">
-            <p>31</p>
-            <span>2020-10</span> </div>
-          <div class="ri fl"> <a href="https://ask.dcloud.net.cn/article/37957" rel="nofollow" >uni-app支持PC版，完成大一统！</a>
-            <p>uni-app支持PC版，完成大一统！； 云端一体提升10倍开发效率 ；HBuilderX 3.1，强化nvue css、新增uni_module、datacom。</p>
-          </div>
-        </div>
-        <div class="index_f_lg_x clearfix index_f_lg_xs">
-          <div class="le fl">
-            <p>至今</p>
-            <span>2021-2</span> </div>
-          <div class="ri fl"> <a href="https://dcloud.io/hr/" rel="nofollow" >Dcloud2021年大招聘</a>
-            <p>DCloud是W3C会员、中国HTML5产业联盟发起单位-2021年大招聘，前途无量。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="index_w">
-      <div class="index_hz">
-        <div class="index_o_o index_w_o">
-          <p>合作伙伴</p>
-          <span>COOPERATIVE PARTNER</span> </div>
-        <div class="index_w_s clearfix">
-          <p class="p1"></p>
-          <p class="p2"></p>
-          <p class="p3"></p>
-          <p class="p4"></p>
-          <p class="p5"></p>
-          <p class="p6"></p>
-          <p class="p7"></p>
-          <p class="p8"></p>
-          <p class="p9"></p>
-          <p class="p10"></p>
-          <p class="p11"></p>
-          <p class="p12"></p>
-        </div>
-      </div>
-      
-      <!--底部-->
-      
-      <div class="footer">
-        <div class="footer_o clearfix">
-          <div class="footer_o_o fl"> <img src="images/logo.png" alt="logo" width="200" height="57"> </div>
-          <div class="footer_o_t fl">
-            <p>全国热线</p>
-            <span>13708021643</span> </div>
-          <div class="footer_o_t footer_o_s fl">
-            <p>市场合作</p>
-            <span>bd@youyacao.com</span> </div>
-          <div class="footer_o_f fr"> <img src="images/index_ewm.png" alt="ewm" width="140"> </div>
-        </div>
-        <div class="footer_t"> 点击返回官网-  <a href="https://www.youyacao.com" target="_blank">成都市一颗优雅草科技有限公司</a> -点击联系我们<!-- WPA start -->
-<script id="qd2885750701da9f1fb2d57d20b73c58df1eb155fa29" src="https://wp.qiye.qq.com/qidian/2885750701/da9f1fb2d57d20b73c58df1eb155fa29" charset="utf-8" async defer></script>
-<!-- WPA end --> 2015-2024 copyright All rights reserved </br> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502032897" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"> <img src="https://www.youyacao.com/images/gongan.png" style="float:left;"/> <span class="p" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">川公网安备 51011402000287号--工信部蜀ICP备10036293号-7</br> </span> </a>  </div>
-        <div style="padding:12px 10px 0;text-align:center;clear:both;">
-          <div style="display:inline-flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;">
-            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener noreferrer" title="正版授权验证">
-              <img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" style="height:32px;" />
-            </a>
-            <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener noreferrer" title="正版授权验证">
-              <img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" style="height:32px;" />
-            </a>
-          </div>
-          <div style="margin-top:8px;font-size:12px;line-height:1.7;color:#fff;opacity:.85;max-width:1100px;margin-left:auto;margin-right:auto;">
-            办公地址：成都市青羊工业总部基地H区8栋807号（2024年注册租用地址）。公司已完成整体升级搬迁，2026年将在青羊工业园启用全新办公与研发空间，敬请期待。<br>
-            发展基地：成都市双流区大渡路33号。感谢2025年九江街道办蛟龙社区党群服务中心在企业发展阶段给予的大力支持与帮助，优雅草科技铭记于心。
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </nav>
 
-<!-- js --> 
+    <section class="hero-bg text-white py-20 sm:py-28 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block bg-white/10 text-white/90 text-xs font-medium uppercase tracking-wider px-3 py-1 rounded-full mb-6">UniApp</span>
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">UniApp 定制开发</h1>
+            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10">一套代码，多端发布：微信 / 支付宝 / 百度等小程序、APP、H5。快速上线、低成本迭代，适合业务型与运营型产品。</p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition shadow-lg">免费评估需求与报价</a>
+        </div>
+    </section>
 
-<script src="js/jquery-1.10.2.min.js"></script> 
-<script type="text/javascript" src="js/jquery.min.js"></script> 
-<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script> 
-<script type="text/javascript" src="js/jquery.fullPage.js"></script> 
-<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script> 
-<script type="text/javascript" src="js/owl.carousel.min.js"></script> 
-<script type="text/javascript" src="js/style2.js"></script> 
-<script type="text/javascript">
-		$(function(){
+    <section class="py-16 sm:py-24 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-3xl font-bold text-slate-900 text-center mb-4">核心开发流程</h2>
+            <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">从需求到上架，全流程专业交付。</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl font-bold mb-4">1</div>
+                    <h3 class="font-display font-semibold text-slate-900 mb-2">需求梳理与文档</h3>
+                    <p class="text-slate-600 text-sm">沟通、整理需求，撰写需求文档，明确功能与验收标准。</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl font-bold mb-4">2</div>
+                    <h3 class="font-display font-semibold text-slate-900 mb-2">体验与 UI 设计</h3>
+                    <p class="text-slate-600 text-sm">用户体验设计、原型与界面、视觉与交互规范。</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">3</div>
+                    <h3 class="font-display font-semibold text-slate-900 mb-2">前端与后端开发</h3>
+                    <p class="text-slate-600 text-sm">UniApp 多端前端开发，接口与后台管理系统开发。</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200/80 bg-slate-50/50 p-6 hover:border-primary/30 hover:shadow-lg transition">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center text-xl font-bold mb-4">4</div>
+                    <h3 class="font-display font-semibold text-slate-900 mb-2">测试验收与运维</h3>
+                    <p class="text-slate-600 text-sm">多端测试、BUG 修复、上架与后续维护与运营支撑。</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		    $('#dowebok').fullpage({
+    <section class="py-16 px-4 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 border-y border-slate-200/60">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-display text-2xl font-bold text-slate-900 mb-4">有 UniApp 或小程序定制需求？</h2>
+            <p class="text-slate-600 mb-8">一套代码多端发布，快速上线、持续迭代。</p>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=422108995&site=qq&menu=yes" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-indigo-600 transition">立即咨询</a>
+        </div>
+    </section>
 
-				'navigation': true,
-
-		    });
-
-		});
-
-		
-	</script>
+    <footer class="bg-slate-900 text-white/80 py-10 px-4">
+        <div class="max-w-6xl mx-auto text-center text-sm">
+            <p><a href="https://www.youyacao.com" class="text-white hover:underline">优雅草科技</a> · <a href="../index.html" class="hover:underline">开发服务首页</a></p>
+            <p class="mt-2">© 2015-2026 成都市一颗优雅草科技有限公司</p>
+            <div class="mt-4 flex justify-center gap-4">
+                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" class="h-8" /></a>
+                <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener"><img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" class="h-8" /></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
