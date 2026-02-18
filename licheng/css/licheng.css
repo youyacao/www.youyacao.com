@@ -1,8 +1,77 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap);
 
 body{
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Noto Sans SC', 'Raleway', 'PingFang SC', sans-serif;
   color: #333;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  margin: 0;
+  padding: 1rem 0 3rem;
+}
+
+.licheng-page{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.licheng-header{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.licheng-header h1{
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem;
+  color: #1e293b;
+}
+
+.licheng-header .header-desc{
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.year-tabs-nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.year-tab{
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #475569;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.year-tab:hover{
+  color: #00c4f3;
+  border-color: #00c4f3;
+  background: rgba(0,196,243,0.05);
+}
+
+.year-tab.active{
+  color: #fff;
+  background: linear-gradient(135deg,#00c4f3,#0099cc);
+  border-color: #00c4f3;
+  box-shadow: 0 2px 8px rgba(0,196,243,0.3);
+}
+
+.year-filter-hint{
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
 }
 
 header h1{
@@ -11,10 +80,10 @@ header h1{
   margin-top: 0;
 }
   
- header p{
-   text-align: center;
-   margin-bottom: 0;
- }
+header p{
+  text-align: center;
+  margin-bottom: 0;
+}
 
 .hexa{
   border: 0px;
