@@ -8,6 +8,81 @@ body{
   padding: 1rem 0 3rem;
 }
 
+/* 顶部导航 */
+.licheng-top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,196,243,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.licheng-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.licheng-nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.licheng-nav-logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.licheng-nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.licheng-nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.licheng-nav-links a:hover {
+  color: #00c4f3;
+}
+
+.licheng-nav-current {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #00c4f3;
+}
+
+.licheng-nav-cta {
+  padding: 0.4rem 1rem !important;
+  background: linear-gradient(135deg,#00c4f3,#0099cc) !important;
+  color: #fff !important;
+  border-radius: 9999px;
+}
+
+.licheng-nav-cta:hover {
+  opacity: 0.9;
+  color: #fff !important;
+}
+
+.licheng-page-with-nav {
+  padding-top: 1.5rem;
+}
+
 .licheng-page{
   max-width: 900px;
   margin: 0 auto;
