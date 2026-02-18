@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- 版权所有 © 2015-2026 成都市一颗优雅草科技有限公司 | 官网：https://www.youyacao.com -->
 <html lang="zh-CN">
 
 <head>
@@ -75,6 +76,24 @@
             color: rgba(255,255,255,0.7);
             letter-spacing: 0.2em;
             text-transform: uppercase;
+        }
+
+        .licheng-link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--neon-blue);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(0, 212, 255, 0.4);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .licheng-link:hover {
+            color: #fff;
+            background: rgba(0, 212, 255, 0.15);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
         }
 
         .nav-countdown {
@@ -241,6 +260,22 @@
 
         .hero-cta:hover::before {
             opacity: 1;
+        }
+
+        .hero-licheng {
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease-out 0.7s both;
+        }
+
+        .hero-licheng:hover {
+            color: var(--neon-blue);
+            text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
         }
 
         /* Scroll Indicator */
@@ -899,6 +934,7 @@
     <!-- Floating Nav -->
     <nav class="floating-nav">
         <div class="nav-logo">优雅草科技</div>
+        <a href="/licheng/index.html" class="licheng-link">优雅草科技的来时路</a>
         <div class="nav-countdown">
             <span class="nav-countdown-text">跳转官网</span>
             <div class="countdown-circle" id="countdown">120</div>
@@ -915,7 +951,7 @@
         <p class="hero-subtitle">韬光养晦 · 养精蓄锐 · 厚积薄发</p>
         <blockquote class="hero-quote">所有其他行业都是要博得外行的认可，只有软件开发、编程行业 20 年如一日，需要博得内行的认可。卓伊凡告诉大家：真的没有那么多靠谱的程序员，但凡请人定制过软件的个人或者企业或者老板都懂。</blockquote>
         <a href="index.html" class="hero-cta">点击直接进入详细官网</a>
-
+        <a href="/licheng/index.html" class="hero-licheng">优雅草科技的来时路 →</a>
         <div class="scroll-indicator">
             <span class="scroll-indicator-text">Scroll</span>
             <div class="scroll-indicator-arrow"></div>
