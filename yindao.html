@@ -179,8 +179,22 @@
             font-size: 1.5rem;
             color: rgba(255,255,255,0.5);
             letter-spacing: 0.5em;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             animation: fadeIn 1s ease-out 0.4s both;
+        }
+
+        .hero-quote {
+            max-width: 720px;
+            margin: 0 auto 3rem;
+            padding: 1.5rem 2rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.6);
+            font-style: italic;
+            border-left: 3px solid var(--neon-blue);
+            background: rgba(0, 212, 255, 0.05);
+            text-align: left;
+            animation: fadeIn 1s ease-out 0.5s both;
         }
 
         @keyframes fadeIn {
@@ -531,6 +545,65 @@
             text-shadow: 0 0 40px var(--neon-blue);
         }
 
+        .info-block {
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .info-block .info-row {
+            border-bottom: none;
+        }
+        .info-desc {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.45);
+            margin: -0.5rem 0 1rem 0;
+            padding-left: 0.5rem;
+        }
+        .info-founders {
+            max-width: 900px;
+            margin: 4rem auto 0;
+            padding: 2.5rem 2rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(0, 212, 255, 0.03);
+        }
+        .info-founders-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--neon-purple);
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .info-founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .info-founder-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .info-founder-label {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .info-founder-names {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.5;
+        }
+        .info-motto {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            text-align: center;
+            margin: 0;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
         /* Links Section - Minimal Line Style */
         .links-section {
             padding: 4rem 2rem 6rem;
@@ -689,17 +762,32 @@
             padding-top: 2rem;
             border-top: 1px solid var(--border-glow);
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
+            text-align: center;
             gap: 1rem;
         }
 
         .footer-badges {
             display: flex;
-            gap: 2rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
             font-size: 0.75rem;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.5);
+        }
+        .footer-filing {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .footer-filing a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .footer-filing a:hover {
+            color: rgba(255,255,255,0.8);
         }
 
         .footer-copy {
@@ -719,6 +807,10 @@
         }
 
         @media (max-width: 768px) {
+            .hero-quote {
+                padding: 1rem 1.25rem;
+                font-size: 0.85rem;
+            }
             .floating-nav {
                 padding: 0.75rem 1.5rem;
                 gap: 1rem;
@@ -750,6 +842,9 @@
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
+            }
+            .info-founders-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -814,10 +909,11 @@
     <section class="hero">
         <div class="hero-badge">
             <span class="hero-badge-indicator"></span>
-            <span class="hero-badge-text">2025年·优雅草脱颖囊锥·得到青睐</span>
+            <span class="hero-badge-text">2026年·我们准备好了·大干一场</span>
         </div>
         <h1 class="hero-title">前程似锦</h1>
         <p class="hero-subtitle">韬光养晦 · 养精蓄锐 · 厚积薄发</p>
+        <blockquote class="hero-quote">所有其他行业都是要博得外行的认可，只有软件开发、编程行业 20 年如一日，需要博得内行的认可。卓伊凡告诉大家：真的没有那么多靠谱的程序员，但凡请人定制过软件的个人或者企业或者老板都懂。</blockquote>
         <a href="index.html" class="hero-cta">点击直接进入详细官网</a>
 
         <div class="scroll-indicator">
@@ -890,26 +986,57 @@
     <!-- Info Section -->
     <section class="info-section">
         <div class="info-container">
-            <div class="info-row">
-                <span class="info-key">开源交流群</span>
-                <span class="info-separator"></span>
-                <span class="info-number">929353806</span>
+            <div class="info-block">
+                <div class="info-row">
+                    <span class="info-key">开源交流群</span>
+                    <span class="info-separator"></span>
+                    <span class="info-number">929353806</span>
+                </div>
+                <p class="info-desc">欢迎大家加入交流技术和开源使用问题</p>
             </div>
-            <div class="info-row">
-                <span class="info-key">CTO QQ</span>
-                <span class="info-separator"></span>
-                <span class="info-number">422108995</span>
+            <div class="info-block">
+                <div class="info-row">
+                    <span class="info-key">CTO QQ</span>
+                    <span class="info-separator"></span>
+                    <span class="info-number">422108995</span>
+                </div>
+                <p class="info-desc">卓伊凡 · 抖音号同名</p>
             </div>
-            <div class="info-row">
-                <span class="info-key">成立年份</span>
-                <span class="info-separator"></span>
-                <span class="info-number">2015</span>
+            <div class="info-block">
+                <div class="info-row">
+                    <span class="info-key">成立年份</span>
+                    <span class="info-separator"></span>
+                    <span class="info-number">2015</span>
+                </div>
+                <p class="info-desc">成都市一颗优雅草科技有限公司</p>
             </div>
-            <div class="info-row">
-                <span class="info-key">开源计划</span>
-                <span class="info-separator"></span>
-                <span class="info-number">2025</span>
+            <div class="info-block">
+                <div class="info-row">
+                    <span class="info-key">开源计划</span>
+                    <span class="info-separator"></span>
+                    <span class="info-number">2026</span>
+                </div>
+                <p class="info-desc">2026 年全面开源 · 商业授权</p>
             </div>
+        </div>
+
+        <div class="info-founders">
+            <h4 class="info-founders-title">元老贡献人（以表敬意）</h4>
+            <div class="info-founders-grid">
+                <div class="info-founder-group">
+                    <span class="info-founder-label">原始成员</span>
+                    <span class="info-founder-names">杜江（卓伊凡）、黎旭东、吴银满、李侑杭、谢方强、张涛、辉耀（艺名·博士研究生）</span>
+                </div>
+                <div class="info-founder-group">
+                    <span class="info-founder-label">中途成员</span>
+                    <span class="info-founder-names">卢健、彭双文、陆玉、高杨、李意英、老八云桧（艺名·在读研究生）</span>
+                </div>
+                <div class="info-founder-group">
+                    <span class="info-founder-label">后期加入研发</span>
+                    <span class="info-founder-names">卢晓枫、马玉亮、蒙超、曾珍</span>
+                </div>
+            </div>
+            <p class="info-motto">不忘初心，方得始终。突然发展起来那一天，这些元老会得到很好的对待。2026 年，必须展翅飞翔的一年。</p>
         </div>
     </section>
 
@@ -940,7 +1067,7 @@
             <div class="footer-col">
                 <h4>关于我们</h4>
                 <ul>
-                    <li><a href="https://doc.youyacao.com/web/#/22/1024">关于优雅草</a></li>
+                    <li><a href="https://doc.youyacao.com/web/#/22/1028">关于优雅草</a></li>
                     <li><a href="https://doc.youyacao.com/web/#/22/1024">联系优雅草</a></li>
                     <li><a href="https://doc.youyacao.com/web/#/22/1027">加入优雅草</a></li>
                     <li><a href="https://doc.youyacao.com/web/#/22/1025">代理商招募</a></li>
@@ -1017,11 +1144,25 @@
 
         <div class="footer-bottom">
             <div class="footer-badges">
-                <span>工信部蜀ICP备10036293号-7</span>
-                <span>川公网安备 51011402000287号</span>
-                <span>国家高新技术企业：GR202251001737</span>
+                <p>Copyright © 2015-2026 优雅草科技 | 国家高新技术企业：GR202251001737</p>
+                <div class="footer-filing">
+                    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">工信部蜀ICP备10036293号-7</a>
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51011402000287" target="_blank" rel="nofollow">川公网安备 51011402000287号</a>
+                </div>
+                <div class="footer-zhengban" style="margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;">
+                    <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener noreferrer" title="正版授权验证">
+                        <img src="https://zhengban.youyacao.com/static/red.png" alt="正版授权" style="height:32px;" />
+                    </a>
+                    <a href="https://zhengban.youyacao.com/pc/query/result?keyword=%E4%BC%98%E9%9B%85%E8%8D%89" target="_blank" rel="noopener noreferrer" title="正版授权验证">
+                        <img src="https://zhengban.youyacao.com/static/green.png" alt="正版授权" style="height:32px;" />
+                    </a>
+                </div>
+                <div class="footer-address" style="margin-top:8px;font-size:12px;line-height:1.7;color:rgba(255,255,255,.75);max-width:980px;margin-left:auto;margin-right:auto;">
+                    办公地址：成都市青羊工业总部基地H区8栋807号（2024年注册租用地址）。公司已完成整体升级搬迁，2026年将在青羊工业园启用全新办公与研发空间，敬请期待。<br>
+                    发展基地：成都市双流区大渡路33号。感谢2025年九江街道办蛟龙社区党群服务中心在企业发展阶段给予的大力支持与帮助，优雅草科技铭记于心。
+                </div>
             </div>
-            <div class="footer-copy">© 成都市一颗优雅草科技有限公司·官方网站 www.youyacao.com</div>
+            <div class="footer-copy">© 成都市一颗优雅草科技有限公司 · 官方网站 <a href="https://www.youyacao.com" target="_blank" style="color:inherit;">www.youyacao.com</a></div>
         </div>
     </footer>
 
